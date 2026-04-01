@@ -5,7 +5,7 @@ Attestation storage and enriched SPDX 2.3 SBOM generator.
 Receives signed witness attestations, enriches them with syft package scans,
 and exposes a GUAC collector endpoint for ingestion into the supply chain graph.
 
-## Changes (per Santiago Torres-Arias)
+## Changes
 
 1. **Syft as subprocess** — syft is called directly via `subprocess.Popen`
    with the right params (`syft <dir> -o spdx-json`), decoupled from sbomit.
