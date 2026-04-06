@@ -1,13 +1,6 @@
 # SBOMit Attestation Pipeline
 
-Software supply chain attestation pipeline for the Linux Foundation SBOMit project.
-Generates enriched SBOMs by combining witness attestations with syft package scans.
-
----
-
-## What This Does
-
-The pipeline runs on two GCP VMs:
+Two GCP VMs work together to attest software builds and generate enriched SBOMs:
 
 - **sbomit-worker** — runs witness attestation on each project, streams logs to the web UI
 - **sbomit-server** — stores attestations, runs syft, generates enriched SBOMs
@@ -34,8 +27,9 @@ Flask API running on the worker VM. Orchestrates the full pipeline:
 Witness attestation runner:
 - Detects build system: Makefile → tox.ini → go.mod
 - Pre-warms Go module cache before attestation
-- Runs `witness run` on each target, signing with ED25519
-- Applies `--trace` (ptrace) selectively — only for fast steps, disabled for `go test -race`
+- Runs `witness run` on each build target, signing each attestation with an ED25519 key
+- Witness wraps each target and records: environment variables, files read before execution (materials), stdout/stderr/exit code, and files written after execution (products)
+- Optionally enables `--trace` (Linux ptrace) for fast steps — captures the full process tree at syscall level, recording every file opened by the compiler and all child processes. Disabled for `go test -race` due to extreme overhead.
 
 ### `parse_makefile.py`
 Build target parser:
