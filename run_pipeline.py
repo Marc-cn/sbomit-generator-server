@@ -189,6 +189,53 @@ def get_trace_flag(step_name, mode):
     return "--trace"  # default: trace all other steps (fmt, tidy, vet, etc.)
 
 
+def parse_attestation_timing(out_file):
+    """
+    Read a completed attestation file and print a timing summary per attestor.
+    Shows starttime, endtime, and duration for each attestor phase.
+    """
+    try:
+        import base64
+        with open(out_file) as f:
+            data = json.load(f)
+        payload_raw = data.get("payload", "")
+        if isinstance(payload_raw, str):
+            try:
+                payload = json.loads(base64.b64decode(payload_raw + "=="))
+            except Exception:
+                payload = json.loads(base64.b64decode(payload_raw))
+        else:
+            payload = payload_raw
+
+        attestations = payload.get("predicate", {}).get("attestations", [])
+        if not attestations:
+            return
+
+        print("  Attestor timing:")
+        for a in attestations:
+            atype = a.get("type", "")
+            # Extract short name: environment, material, command-run, product
+            short = atype.split("/")[-2] if "/" in atype else atype
+            start = a.get("starttime", "")
+            end   = a.get("endtime", "")
+            duration = None
+            if start and end:
+                try:
+                    s = re.sub(r'(\.\d{6})\d+Z$', r'\1+00:00', start)
+                    e = re.sub(r'(\.\d{6})\d+Z$', r'\1+00:00', end)
+                    from datetime import datetime as dt
+                    duration = round(
+                        (dt.fromisoformat(e) - dt.fromisoformat(s)).total_seconds(), 3
+                    )
+                except Exception:
+                    pass
+            start_short = start[:19].replace("T", " ") if start else "n/a"
+            dur_str = f"{duration}s" if duration is not None else "n/a"
+            print(f"    {short:<15} start={start_short}  duration={dur_str}")
+    except Exception as e:
+        pass  # timing is informational, never block the pipeline
+
+
 def run_step(step_name, cmd, attestation_dir, mode, skip_set):
     """Attest a single build step with witness."""
     if step_name in skip_set:
@@ -215,6 +262,7 @@ def run_step(step_name, cmd, attestation_dir, mode, skip_set):
     if out_file.exists():
         size = subprocess.check_output(["du", "-h", str(out_file)]).decode().split()[0]
         print(f"OK: {step_name} ({size})")
+        parse_attestation_timing(out_file)
     else:
         print(f"FAIL: {step_name} — output file not written")
 
