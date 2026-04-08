@@ -34,27 +34,18 @@ Unified Python runner — replaces the previous run_pipeline.sh + parse_makefile
 - Prints attestor timing after each step (environment, material, command-run, product)
 
 ### `disambiguate.py`
-Cross-references witness --trace attestation with SBOM packages. Requires a Deep run first.
+Disambiguates which packages were actually compiled into the binary vs declared but never used.
+Runs sbomit generate twice and diffs the outputs. Requires a Deep run first.
 
 ```bash
-# Witness trace vs syft SBOM
 python3 disambiguate.py --project gittuf
-
-# Add sbomit vs syft delta (--compare-catalogs)
-python3 disambiguate.py --project gittuf --compare-catalogs
-
-# Output formats
 python3 disambiguate.py --project gittuf --format json --output report.json
 python3 disambiguate.py --project gittuf --format csv  --output report.csv
 ```
 
-Parses attestations by type (material vs command-run vs product) with timestamps.
-Shows which processes opened which modules, attestor durations, and multi-version conflicts.
+**How it works:** runs sbomit alone (--trace syscall data) then sbomit --catalog syft (+ filesystem scan). The delta = packages syft reports that the compiler never opened.
 
-**sbomit vs syft delta on gittuf:**
-- sbomit: 443 packages, 442/443 with SHA256 checksums, all with primaryPackagePurpose: LIBRARY
-- syft: 231 packages, 0 checksums, all UNSET
-- sbomit finds golang.org/toolchain; syft over-reports 11 Windows/test packages
+**Results on gittuf:** 442 compiled packages, 94 syft-only (all GitHub Actions CI packages — never compiled into binary, safe to suppress in CVE scans). No multi-version conflicts.
 
 ### `server.py`
 Flask API running on the server VM (Docker). New endpoints added:
