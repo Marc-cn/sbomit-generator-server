@@ -64,30 +64,111 @@ def normalize(module_set):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Extract modules from witness trace
+# Parse witness attestation by attestor type
 # ─────────────────────────────────────────────────────────────────────────────
 
-def extract_trace_modules(attestation_path):
-    """Extract Go module@version paths from a witness --trace attestation."""
+def parse_attestations_by_type(attestation_path):
+    """Parse a witness attestation and return attestors indexed by short type name."""
     with open(attestation_path) as f:
         data = json.load(f)
     payload = decode_payload(data)
-    raw = json.dumps(payload)
+    attestations = payload.get("predicate", {}).get("attestations", [])
+    by_type = {}
+    for a in attestations:
+        t = a.get("type", "")
+        for short in ["material", "command-run", "product", "environment"]:
+            if short in t:
+                by_type[short] = a
+                break
+    return by_type
 
-    paths = re.findall(
-        r'/(?:home/\w+|root)/go/pkg/mod/([a-zA-Z0-9._/\-]+@v[a-zA-Z0-9._\-]+)', raw
-    )
 
-    version_map = collections.defaultdict(set)
-    trace_modules = set()
-    for path in paths:
-        m = re.match(r"(.+)@(v[^/]+)", path)
-        if m:
-            mod, ver = m.group(1), m.group(2)
-            trace_modules.add(f"{mod}@{ver}")
-            version_map[mod].add(ver)
+def extract_module_path(filepath):
+    """Extract (module, version) from a Go module cache file path."""
+    m = re.search(r'/go/pkg/mod/([a-zA-Z0-9._/\-]+@v[a-zA-Z0-9._\-]+)', filepath)
+    if m:
+        mm = re.match(r"(.+)@(v[^/]+)", m.group(1))
+        if mm:
+            return mm.group(1), mm.group(2)
+    return None, None
 
-    return trace_modules, version_map
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Extract modules from witness trace — per attestor and per process
+# ─────────────────────────────────────────────────────────────────────────────
+
+def extract_trace_modules(attestation_path):
+    """
+    Extract Go module@version from witness --trace attestation.
+    Parses by attestor type (material vs command-run) and per process.
+
+    Returns:
+        trace_modules   - set of module@version strings
+        version_map     - {module: set(versions)} for multi-version detection
+        per_process     - list of {program, pid, cmdline, modules}
+        attestor_times  - {attestor_type: {starttime, endtime, duration_s}}
+        material_modules - modules seen in material attestor (pre-execution)
+    """
+    by_type = parse_attestations_by_type(attestation_path)
+
+    trace_modules    = set()
+    version_map      = collections.defaultdict(set)
+    per_process      = []
+    attestor_times   = {}
+    material_modules = set()
+
+    # Record timing for each attestor
+    for atype, a in by_type.items():
+        start = a.get("starttime", "")
+        end   = a.get("endtime", "")
+        duration = None
+        if start and end:
+            try:
+                s = re.sub(r'(\.\d{6})\d+Z$', r'\1+00:00', start)
+                e = re.sub(r'(\.\d{6})\d+Z$', r'\1+00:00', end)
+                from datetime import datetime as dt
+                duration = round(
+                    (dt.fromisoformat(e) - dt.fromisoformat(s)).total_seconds(), 3
+                )
+            except Exception:
+                pass
+        attestor_times[atype] = {
+            "starttime":  start,
+            "endtime":    end,
+            "duration_s": duration,
+        }
+
+    # Material attestor — files read BEFORE execution
+    if "material" in by_type:
+        for filepath in by_type["material"]["attestation"]:
+            mod, ver = extract_module_path(filepath)
+            if mod:
+                key = f"{mod}@{ver}"
+                material_modules.add(key)
+                trace_modules.add(key)
+                version_map[mod].add(ver)
+
+    # Command-run attestor — per-process opened files (ptrace)
+    if "command-run" in by_type:
+        for proc in by_type["command-run"]["attestation"].get("processes", []):
+            proc_modules = {}
+            for filepath, digest in proc.get("openedfiles", {}).items():
+                mod, ver = extract_module_path(filepath)
+                if mod:
+                    key = f"{mod}@{ver}"
+                    proc_modules[key] = digest.get("sha256", "") if digest else ""
+                    trace_modules.add(key)
+                    version_map[mod].add(ver)
+            if proc_modules:
+                per_process.append({
+                    "program":   proc.get("program", ""),
+                    "pid":       proc.get("processid"),
+                    "parentpid": proc.get("parentpid"),
+                    "cmdline":   proc.get("cmdline", "")[:120],
+                    "modules":   proc_modules,
+                })
+
+    return trace_modules, version_map, per_process, attestor_times, material_modules
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -162,7 +243,8 @@ def extract_sbomit_packages(attestation_path):
 def analyze_trace_vs_syft(project, attestation_file, sbom_file):
     print(f"[1/2] Witness trace vs syft SBOM...")
 
-    trace_modules, version_map = extract_trace_modules(attestation_file)
+    trace_modules, version_map, per_process, attestor_times, material_modules = \
+        extract_trace_modules(attestation_file)
     sbom_packages = extract_sbom_packages(sbom_file)
 
     norm_trace = normalize(trace_modules)
@@ -172,6 +254,13 @@ def analyze_trace_vs_syft(project, attestation_file, sbom_file):
 
     multi_ver = {k: sorted(v) for k, v in version_map.items() if len(v) > 1}
 
+    # Per-process summary: top processes by number of modules opened
+    proc_summary = sorted(
+        [{"program": p["program"], "pid": p["pid"], "cmdline": p["cmdline"],
+          "module_count": len(p["modules"])} for p in per_process],
+        key=lambda x: x["module_count"], reverse=True
+    )[:10]
+
     return {
         "analysis":             "trace_vs_syft",
         "trace_count":          len(trace_modules),
@@ -180,6 +269,10 @@ def analyze_trace_vs_syft(project, attestation_file, sbom_file):
         "compiled_not_in_sbom": sorted(trace_keys - sbom_keys),
         "in_sbom_not_compiled": sorted(sbom_keys - trace_keys),
         "multi_version":        multi_ver,
+        "attestor_timing":      attestor_times,
+        "material_modules":     len(material_modules),
+        "processes_traced":     len(per_process),
+        "top_processes":        proc_summary,
     }
 
 
@@ -291,6 +384,27 @@ def print_text(r):
     print(f"   Modules compiled (witness trace): {t['trace_count']}")
     print(f"   Packages in SBOM (syft):          {t['syft_count']}")
     print(f"   Correctly reported in both:       {len(t['correctly_reported'])}")
+    print(f"   Processes traced:                 {t.get('processes_traced', 'n/a')}")
+    print(f"   Modules seen in material phase:   {t.get('material_modules', 'n/a')}")
+    print()
+
+    # Attestor timing
+    timing = t.get("attestor_timing", {})
+    if timing:
+        print("   Attestor timing:")
+        for atype, info in sorted(timing.items()):
+            d = info.get("duration_s")
+            dur = f"{d}s" if d is not None else "n/a"
+            print(f"     {atype:<15} start={info['starttime'][:19]}  duration={dur}")
+    print()
+
+    # Top processes by module usage
+    top = t.get("top_processes", [])
+    if top:
+        print("   Top processes by modules opened:")
+        for p in top[:5]:
+            prog = p['program'].split('/')[-1]
+            print(f"     [{p['module_count']:3d} modules] {prog}  — {p['cmdline'][:60]}")
     print()
 
     if t["multi_version"]:
