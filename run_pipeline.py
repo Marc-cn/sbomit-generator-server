@@ -295,7 +295,7 @@ def warm_go_cache(project_dir):
 # Build system detection and pipeline execution
 # ─────────────────────────────────────────────────────────────────────────────
 
-def run_pipeline(project_dir, skip_targets, mode):
+def run_pipeline(project_dir, skip_targets, mode, prewarm=False):
     """Detect build system and run witness attestation on each target."""
     project_name = project_dir.name
     attestation_dir = SBOMIT_DIR / "attestations" / project_name
@@ -308,7 +308,8 @@ def run_pipeline(project_dir, skip_targets, mode):
 
     if (project_dir / "Makefile").exists():
         print("Detected: Makefile")
-        warm_go_cache(project_dir)
+        if prewarm:
+            warm_go_cache(project_dir)
         targets = parse_makefile(project_dir / "Makefile", project_name)
         if not targets:
             print("ERROR: no targets found in Makefile")
@@ -327,7 +328,8 @@ def run_pipeline(project_dir, skip_targets, mode):
 
     elif (project_dir / "go.mod").exists():
         print("Detected: go.mod (no Makefile)")
-        warm_go_cache(project_dir)
+        if prewarm:
+            warm_go_cache(project_dir)
         run_step("go-build", "go build ./...", attestation_dir, mode, skip_set)
         run_step("go-test",  "go test ./...",  attestation_dir, mode, skip_set)
         run_step("go-fmt",   "gofmt -l .",     attestation_dir, mode, skip_set)
@@ -358,6 +360,10 @@ def main():
     parser.add_argument("--mode", default="quick",
                         choices=["quick", "full", "deep"],
                         help="Run mode: quick, full, or deep (default: quick)")
+    parser.add_argument("--prewarm", action="store_true", default=False,
+                        help="Pre-warm Go module cache before attestation (go mod download). "
+                             "Useful for offline builds but changes file access patterns. "
+                             "Disable to capture go mod download in network attestor.")
     args = parser.parse_args()
 
     # Resolve project directory
@@ -374,7 +380,7 @@ def main():
         print(f"Skipping: {args.skip_targets}")
     print()
 
-    run_pipeline(project_dir, args.skip_targets, args.mode)
+    run_pipeline(project_dir, args.skip_targets, args.mode, args.prewarm)
 
 
 if __name__ == "__main__":
