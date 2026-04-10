@@ -245,6 +245,10 @@ def run_step(step_name, cmd, attestation_dir, mode, skip_set):
     out_file = attestation_dir / f"{step_name}.json"
     print(f"ATTESTING: {step_name}")
 
+    # Clear Go test cache before test steps to ensure fresh attestation
+    if step_name in ("test", "go-test") or "test" in step_name.lower():
+        subprocess.run(["go", "clean", "-testcache"], capture_output=True)
+
     trace_flag = get_trace_flag(step_name, mode)
 
     witness_cmd = [
@@ -255,7 +259,7 @@ def run_step(step_name, cmd, attestation_dir, mode, skip_set):
     ]
     if trace_flag:
         witness_cmd.append(trace_flag)
-    witness_cmd += ["-o", str(out_file), "--", "bash", "-c", f"{cmd}; true"]
+    witness_cmd += ["-o", str(out_file), "--"] + cmd.split()
 
     subprocess.run(witness_cmd)
 
