@@ -19,9 +19,11 @@ import argparse
 import subprocess
 from pathlib import Path
 
+import shutil
+
 # ── Directory layout ──────────────────────────────────────────────────────────
 SBOMIT_DIR   = Path(__file__).parent.resolve()
-WITNESS      = SBOMIT_DIR / "witness"
+WITNESS      = shutil.which("witness") or (SBOMIT_DIR / "witness")
 SIGNING_KEY  = SBOMIT_DIR / "signing.key"
 
 # ── Targets never worth attesting ─────────────────────────────────────────────
@@ -89,8 +91,6 @@ def _is_fake_target(target):
     """Return True for ALL_CAPS Makefile variable definitions, not real targets."""
     if re.match(r'^[A-Z][A-Z0-9_]+$', target):
         return True
-    if '/' in target or target.startswith('.'):
-        return True
     return False
 
 
@@ -115,7 +115,7 @@ def parse_makefile(path, project_name=None):
             phony.add(t.strip())
 
     # Collect explicit target definitions
-    for m in re.finditer(r'^([a-zA-Z][a-zA-Z0-9_.-]*)\s*:', content, re.MULTILINE):
+    for m in re.finditer(r'^([a-zA-Z0-9_./-]+)\s*:', content, re.MULTILINE):
         if m.group(1) not in targets:
             targets[m.group(1)] = []
 
@@ -127,7 +127,7 @@ def parse_makefile(path, project_name=None):
     # Parse recipe lines
     current_target = None
     for line in content.split('\n'):
-        m = re.match(r'^([a-zA-Z][a-zA-Z0-9_.-]*)\s*:', line)
+        m = re.match(r'^([a-zA-Z0-9_./-]+)\s*:', line)
         if m:
             current_target = m.group(1)
             if current_target not in targets:
@@ -182,9 +182,10 @@ def parse_tox(path):
 
 def get_trace_flag(step_name, mode):
     """Determine whether --trace should be passed for this step."""
-    if step_name in NO_TRACE_STEPS:
+    step_lower = step_name.lower()
+    if step_name in NO_TRACE_STEPS or "test" in step_lower or "lint" in step_lower or "vet" in step_lower:
         return None
-    if step_name in DEEP_TRACE_STEPS:
+    if step_name in DEEP_TRACE_STEPS or "build" in step_lower or "install" in step_lower:
         return "--trace" if mode == "deep" else None
     return "--trace"  # default: trace all other steps (fmt, tidy, vet, etc.)
 
@@ -259,7 +260,13 @@ def run_step(step_name, cmd, attestation_dir, mode, skip_set):
     ]
     if trace_flag:
         witness_cmd.append(trace_flag)
-    witness_cmd += ["-o", str(out_file), "--"] + cmd.split()
+        
+    cmd_parts = cmd.split()
+    if step_name != "test" and "test" not in step_name.lower():
+        # Prevent test recursion for other targets by overriding test with a no-op
+        cmd_parts.append('test=true')
+
+    witness_cmd += ["-o", str(out_file), "--"] + cmd_parts
 
     subprocess.run(witness_cmd)
 
