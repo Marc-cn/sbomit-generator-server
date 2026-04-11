@@ -38,7 +38,7 @@ PROJECT_SKIP = {
         "install-tools", "build-images", "ko-build", "docker-build",
         "kind-create-cluster", "kind-delete-cluster", "deploy",
     },
-    "argocd": {
+    "argo-cd": {
         "mockgen", "gogen", "protogen", "protogen-fast", "openapigen",
         "clientgen", "clidocsgen", "actionsdocsgen", "resourceiconsgen",
         "codegen", "codegen-local", "codegen-local-fast",
@@ -262,9 +262,9 @@ def run_step(step_name, cmd, attestation_dir, mode, skip_set):
         witness_cmd.append(trace_flag)
         
     cmd_parts = cmd.split()
-    if step_name != "test" and "test" not in step_name.lower():
-        # Prevent test recursion for other targets by overriding test with a no-op
-        cmd_parts.append('test=true')
+    if cmd_parts and cmd_parts[0] == "make" and step_name != "test" and "test" not in step_name.lower():
+        # Tell Make to assume 'test' is up-to-date to prevent recursive testing
+        cmd_parts.extend(['-o', 'test'])
 
     witness_cmd += ["-o", str(out_file), "--"] + cmd_parts
 
