@@ -292,7 +292,10 @@ def run_step(step_name, cmd, attestation_dir, mode, skip_set):
 
     witness_cmd += ["-o", str(out_file), "--"] + cmd_parts
 
-    subprocess.run(witness_cmd)
+    import os
+    env = os.environ.copy()
+    env["PATH"] = os.path.expanduser("~/.local/bin") + ":" + env.get("PATH", "")
+    subprocess.run(witness_cmd, env=env)
 
     if out_file.exists():
         size = subprocess.check_output(["du", "-h", str(out_file)]).decode().split()[0]
