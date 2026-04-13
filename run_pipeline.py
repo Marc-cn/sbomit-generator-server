@@ -63,6 +63,7 @@ PROJECT_SKIP = {
     },
     "protobom": {
         "proto",
+        "proto",
         "help", "conformance-test", "conformance", "fakes", "buf-format", "buf-lint",
     }
 }
