@@ -62,6 +62,7 @@ PROJECT_SKIP = {
         "setup-bootstrap-patch", "setup-image-automation",
     },
     "protobom": {
+        "proto",
         "help", "conformance-test", "conformance", "fakes", "buf-format", "buf-lint",
     }
 }
