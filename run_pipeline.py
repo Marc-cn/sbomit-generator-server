@@ -171,8 +171,27 @@ def parse_tox(path):
     if envlist_block:
         raw = re.sub(r'#[^\n]*', '', envlist_block.group(1))
         raw = raw.replace('\\\n', ' ')
-        for token in re.split(r'[\s,]+', raw):
-            token = token.strip()
+        # Split on whitespace/commas only outside braces
+        tokens = []
+        depth, current = 0, []
+        for ch in raw:
+            if ch == '{':
+                depth += 1
+                current.append(ch)
+            elif ch == '}':
+                depth -= 1
+                current.append(ch)
+            elif ch in (',', ' ', '\t', '\n') and depth == 0:
+                t = ''.join(current).strip()
+                if t:
+                    tokens.append(t)
+                current = []
+            else:
+                current.append(ch)
+        t = ''.join(current).strip()
+        if t:
+            tokens.append(t)
+        for token in tokens:
             if token:
                 for expanded in _expand_brace(token):
                     if expanded:
