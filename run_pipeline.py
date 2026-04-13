@@ -59,7 +59,7 @@ PROJECT_SKIP = {
     "flux2": {
         "setup-kind", "cleanup-kind", "e2e", "test-with-kind",
         "install-envtest", "setup-envtest", "envtest",
-        "setup-bootstrap-patch", "setup-image-automation",
+        "setup-bootstrap-patch", "setup-image-automation", "tidy", "mod-tidy",
     },
     "protobom": {
         "proto",
