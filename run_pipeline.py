@@ -61,6 +61,9 @@ PROJECT_SKIP = {
         "install-envtest", "setup-envtest", "envtest",
         "setup-bootstrap-patch", "setup-image-automation",
     },
+    "protobom": {
+        "help", "conformance-test", "conformance", "fakes", "buf-format", "buf-lint",
+    }
 }
 
 # ── Steps that must NOT use --trace ───────────────────────────────────────────
@@ -319,10 +322,15 @@ def run_pipeline(project_dir, skip_targets, mode, prewarm=False):
             warm_go_cache(project_dir)
         targets = parse_makefile(project_dir / "Makefile", project_name)
         if not targets:
-            print("ERROR: no targets found in Makefile")
-            sys.exit(1)
+            print("WARNING: no valid targets found in Makefile")
         for target in targets:
             run_step(target, f"make {target}", attestation_dir, mode, skip_set)
+        
+        # If it's a Go project but its Makefile doesn't explicitly have a build target,
+        # we still want to ensure the actual code gets compiled and attested.
+        if (project_dir / "go.mod").exists() and "build" not in targets and "go-build" not in skip_set:
+            print("Notice: Makefile lacks 'build' target. Injecting standard 'go build' for go.mod")
+            run_step("go-build", "go build ./...", attestation_dir, mode, skip_set)
 
     elif (project_dir / "tox.ini").exists():
         print("Detected: tox.ini")
