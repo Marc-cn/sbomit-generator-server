@@ -35,13 +35,14 @@ SBOMIT_BIN = SBOMIT_DIR / "sbomit"
 SYFT_BIN   = Path.home() / "bin" / "syft"
 
 PROJECTS = {
-    "gittuf":  Path.home() / "projects/gittuf",
-    "tuf":     Path.home() / "projects/tuf",
-    "intoto":  Path.home() / "projects/intoto",
-    "sbomit":  Path.home() / "projects/sbomit",
-    "kyverno": Path.home() / "projects/kyverno",
-    "argocd":  Path.home() / "projects/argo-cd",
-    "flux2":   Path.home() / "projects/flux2",
+    "gittuf":  Path.cwd().parent / "benchmark-projects/gittuf",
+    "tuf":     Path.cwd().parent / "benchmark-projects/tuf",
+    "intoto":  Path.cwd().parent / "benchmark-projects/intoto",
+    "sbomit":  Path.cwd().parent / "benchmark-projects/sbomit",
+    "kyverno": Path.cwd().parent / "benchmark-projects/kyverno",
+    "argocd":  Path.cwd().parent / "benchmark-projects/argo-cd",
+    "flux2":   Path.cwd().parent / "benchmark-projects/flux2",
+    "protobom": Path.cwd().parent / "benchmark-projects/protobom",
 }
 
 
