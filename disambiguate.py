@@ -42,6 +42,7 @@ PROJECTS = {
     "kyverno": Path.home() / "projects/kyverno",
     "argocd":  Path.home() / "projects/argo-cd",
     "flux2":   Path.home() / "projects/flux2",
+    "protobom": Path.home() / "projects/protobom",
 }
 
 
