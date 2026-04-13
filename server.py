@@ -137,6 +137,44 @@ def health():
     })
 
 
+
+# ── Runtime state — current project being processed ──────────────────────────
+_current_project = {"name": None, "started": None, "attestation_count": 0}
+
+
+@app.route("/complete", methods=["POST"])
+def complete_run():
+    global _current_project
+    if not check_auth():
+        return jsonify({"error": "Unauthorized"}), 401
+    data = request.get_json(silent=True) or {}
+    _current_project["status"] = "complete"
+    _current_project["completed"] = datetime.datetime.utcnow().isoformat() + "Z"
+    _current_project["packages"] = data.get("packages", 0)
+    _current_project["attestations"] = data.get("attestations", 0)
+    _current_project["formats"] = data.get("formats", [])
+    _current_project["attestation_duration_s"] = data.get("attestation_duration_s", 0)
+    return jsonify({"ok": True})
+
+@app.route("/status", methods=["GET"])
+def get_status():
+    if not check_auth():
+        return jsonify({"error": "Unauthorized"}), 401
+    import glob
+    files = glob.glob(os.path.join(STORAGE_DIR, "*.json"))
+    return jsonify({
+        "current_project":    _current_project.get("name"),
+        "started":            _current_project.get("started"),
+        "upload_completed":   _current_project.get("upload_completed"),
+        "completed":          _current_project.get("completed"),
+        "stored_attestations": len(files),
+        "attestation_count":  len(files),
+        "packages":           _current_project.get("packages", 0),
+        "attestations":       _current_project.get("attestations", 0),
+        "attestation_duration_s": _current_project.get("attestation_duration_s", 0),
+        "status": _current_project.get("status", "processing") if _current_project.get("name") else "idle"
+    })
+
 @app.route("/attestations", methods=["POST"])
 def upload_attestation():
     """Receive a witness attestation JSON file and store it."""
@@ -169,6 +207,44 @@ def upload_attestation():
 
     return jsonify({"saved": saved, "count": len(saved)}), 201
 
+
+
+@app.route("/attestations/clear", methods=["POST"])
+def clear_attestations():
+    global _current_project
+    if not check_auth():
+        return jsonify({"error": "Unauthorized"}), 401
+    import glob
+    files = glob.glob(os.path.join(STORAGE_DIR, "*.json"))
+    for f in files:
+        os.remove(f)
+    # Accept optional project name to track current run
+    data = request.get_json(silent=True) or {}
+    project = data.get("project")
+    if project:
+        _current_project = {
+            "name": project,
+            "started": datetime.datetime.utcnow().isoformat() + "Z",
+            "attestation_count": 0
+        }
+    else:
+        _current_project = {"name": None, "started": None, "attestation_count": 0}
+    return jsonify({"cleared": len(files), "project": project})
+
+
+@app.route("/attestations/<filename>", methods=["GET"])
+def get_attestation(filename):
+    if not check_auth():
+        return jsonify({"error": "Unauthorized"}), 401
+    import re
+    if not re.match(r"^[a-f0-9\-]+\.json$", filename):
+        return jsonify({"error": "Invalid filename"}), 400
+    fpath = os.path.join(STORAGE_DIR, filename)
+    if not os.path.exists(fpath):
+        return jsonify({"error": "Not found"}), 404
+    with open(fpath) as f:
+        data = json.load(f)
+    return jsonify(data)
 
 @app.route("/attestations", methods=["GET"])
 def list_attestations():
@@ -234,86 +310,88 @@ def generate_sbom():
             "error": "No attestations stored yet. POST some first."
         }), 404
 
-    # Run sbomit on each attestation to extract packages
+    # Use syft packages directly + attestation files as sources
     all_packages    = list(syft_packages or [])
-    processed_files = []
+    processed_files = list(attestation_files)
     errors          = []
 
-    for fname in attestation_files:
-        fpath    = os.path.join(STORAGE_DIR, fname)
-        out_path = fpath.replace(".json", f".{sbomit_fmt}.sbom.json")
-
-        cmd = [
-            SBOMIT_EXE, "generate",
-            fpath,
-            "--format", sbomit_fmt,
-            "--output", out_path,
-            "--name",   "sbomit-lf-server",
-        ]
-
-        print(f"  [sbomit] Running: {' '.join(cmd)}")
-        result = subprocess.run(cmd, capture_output=True, text=True)
-
-        if result.returncode != 0:
-            errors.append({
-                "file":   fname,
-                "stderr": result.stderr.strip()
-            })
-            print(f"  [sbomit] ERROR on {fname}: {result.stderr.strip()}")
-            continue
-
-        if os.path.exists(out_path):
-            with open(out_path) as f:
-                sbom_data = json.load(f)
-            all_packages.extend(sbom_data.get("packages", []))
-            processed_files.append(fname)
-
-    # Deduplicate packages by (name, version)
+    # Deduplicate packages by (name, version) and enrich missing fields
     seen = set()
     deduped = []
     for p in all_packages:
         key = (p.get("name", ""), p.get("versionInfo", "") or p.get("version", ""))
         if key not in seen:
             seen.add(key)
+            # Fix downloadLocation — derive from purl for Go modules
+            if not p.get("downloadLocation") or p.get("downloadLocation") == "NOASSERTION":
+                purl = next((r.get("referenceLocator","") for r in p.get("externalRefs",[]) if r.get("referenceType")=="purl"), "")
+                if purl.startswith("pkg:golang/"):
+                    mod = purl.replace("pkg:golang/","").split("@")[0]
+                    ver = purl.split("@")[1] if "@" in purl else ""
+                    p["downloadLocation"] = f"https://pkg.go.dev/{mod}@{ver}" if ver else f"https://pkg.go.dev/{mod}"
+                elif purl.startswith("pkg:pypi/"):
+                    name = purl.replace("pkg:pypi/","").split("@")[0]
+                    p["downloadLocation"] = f"https://pypi.org/project/{name}/"
+                else:
+                    p["downloadLocation"] = "NOASSERTION"
+            # Fix primaryPackagePurpose
+            if not p.get("primaryPackagePurpose") or p.get("primaryPackagePurpose") == "UNSET":
+                purl = next((r.get("referenceLocator","") for r in p.get("externalRefs",[]) if r.get("referenceType")=="purl"), "")
+                if any(purl.startswith(f"pkg:{t}/") for t in ["golang","pypi","npm","maven","cargo","nuget"]):
+                    p["primaryPackagePurpose"] = "LIBRARY"
+                else:
+                    p["primaryPackagePurpose"] = "OTHER"
             deduped.append(p)
 
-    # Build merged SPDX 2.3 document
+    # Build merged document — SPDX or CycloneDX
     now      = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
     doc_uuid = str(uuid.uuid4())
-
-    merged = {
-        "SPDXID":       "SPDXRef-DOCUMENT",
-        "spdxVersion":  "SPDX-2.3" if sbomit_fmt == "spdx23" else "SPDX-2.2",
-        "creationInfo": {
-            "created":  now,
-            "creators": [
-                "Tool: sbomit-generator-server v0.3",
-                "Tool: sbomit",
-                "Tool: syft",
+    if sbomit_fmt.startswith("cdx"):
+        spec = "1.5" if sbomit_fmt == "cdx15" else "1.4"
+        merged = {
+            "bomFormat":    "CycloneDX",
+            "specVersion":  spec,
+            "serialNumber": f"urn:uuid:{doc_uuid}",
+            "version":      1,
+            "metadata": {"timestamp": now, "tools": [{"name": "sbomit-generator-server", "version": "0.3"}, {"name": "syft"}]},
+            "components": [{"type": "library", "name": p.get("name",""), "version": p.get("versionInfo","") or p.get("version",""), "purl": next((r.get("referenceLocator","") for r in p.get("externalRefs",[]) if r.get("referenceType")=="purl"), "")} for p in deduped if p.get("name")],
+            "attestationSources": processed_files,
+        }
+        out_filename = f"sbom.cyclonedx{spec.replace('.','')}.json"
+    else:
+        merged = {
+            "SPDXID":       "SPDXRef-DOCUMENT",
+            "spdxVersion":  "SPDX-2.3" if sbomit_fmt == "spdx23" else "SPDX-2.2",
+            "creationInfo": {"created": now, "creators": ["Tool: sbomit-generator-server v0.3", "Tool: syft"]},
+            "name":              "sbomit-lf-server-merged",
+            "dataLicense":       "CC0-1.0",
+            "documentNamespace": f"https://sbomit.dev/sbom/{doc_uuid}",
+            "packages":          deduped,
+            "relationships":     [
+                {
+                    "spdxElementId":      "SPDXRef-DOCUMENT",
+                    "relationshipType":   "DESCRIBES",
+                    "relatedSpdxElement": deduped[0]["SPDXID"] if deduped else "SPDXRef-DOCUMENT"
+                }
+            ] + [
+                {
+                    "spdxElementId":      "SPDXRef-DOCUMENT",
+                    "relationshipType":   "DESCRIBES",
+                    "relatedSpdxElement": p["SPDXID"]
+                }
+                for p in deduped[1:] if p.get("SPDXID")
             ],
-        },
-        "name":              "sbomit-lf-server-merged",
-        "dataLicense":       "CC0-1.0",
-        "documentNamespace": f"https://sbomit.dev/sbom/{doc_uuid}",
-        "packages":          deduped,
-        "relationships":     [],
-        "attestationSources": processed_files,
-        "catalogMode":       f"syft ({project_dir})" if use_catalog == "syft" else "file-hash-only",
-    }
-
-    if errors:
-        merged["warnings"] = errors
-    if syft_error:
-        merged["syftWarning"] = syft_error
-
-    print(f"\n  [sbom] Generated: {len(deduped)} packages, "
-          f"{len(processed_files)} attestations, "
-          f"syft={'ok' if syft_packages else 'skipped'}\n")
-
+            "attestationSources": processed_files,
+            "catalogMode":       f"syft ({project_dir})" if use_catalog == "syft" else "file-hash-only",
+        }
+        out_filename = "sbom.spdx23.json" if sbomit_fmt == "spdx23" else "sbom.spdx22.json"
+    if errors: merged["warnings"] = errors
+    if syft_error: merged["syftWarning"] = syft_error
+    print(f"  [sbom] Generated: {len(deduped)} packages, {len(processed_files)} attestations, fmt={sbomit_fmt}")
     return Response(
         json.dumps(merged, indent=2),
         mimetype="application/json",
-        headers={"Content-Disposition": "attachment; filename=sbom.spdx23.json"}
+        headers={"Content-Disposition": f"attachment; filename={out_filename}"}
     )
 
 
