@@ -14,10 +14,9 @@ The pipeline runs on two GCP VMs:
 
 For each supported project, the pipeline:
 1. Detects the build system (Makefile, tox.ini, or go.mod)
-2. Pre-warms the Go module cache
-3. Runs witness on each build target, signing attestations with an ED25519 key
-4. Uploads attestation JSON to sbomit-server
-5. Generates enriched SBOM in SPDX 2.3, CycloneDX 1.5, and SPDX 2.2
+2. Runs witness on each build target, signing attestations with an ED25519 key
+3. Uploads attestation JSON to sbomit-server
+4. Generates enriched SBOM in SPDX 2.3, CycloneDX 1.5, and SPDX 2.2
 
 ---
 
@@ -28,10 +27,19 @@ Unified Python runner — replaces the previous run_pipeline.sh + parse_makefile
 - Detects build system: Makefile → tox.ini → go.mod
 - Parses Makefile targets, filters fake ALL_CAPS variable definitions
 - Expands tox brace syntax (py{38,39,310,311} → individual envs)
-- Pre-warms Go module cache before attestation
-- Runs witness on each target with selective --trace (fast steps only)
-- Per-project skip sets (kyverno, argocd, flux2)
+- Calls make/tox directly — no bash -c wrapper (cleaner attestations)
+- `--prewarm` flag — pre-warm Go module cache before attestation (default: off, so network activity is captured)
+- `make -o test` override — prevents recursive test tracing during build steps
+- Go build fallback — if Makefile has no build target, injects `go build ./...`
+- Per-project skip sets (kyverno, argo-cd, flux2, protobom)
 - Prints attestor timing after each step (environment, material, command-run, product)
+
+```bash
+python3 run_pipeline.py --project-dir projects/gittuf --mode quick
+python3 run_pipeline.py --project-dir projects/gittuf --mode full
+python3 run_pipeline.py --project-dir projects/gittuf --mode deep  # enables --trace for disambiguation
+python3 run_pipeline.py --project-dir projects/gittuf --mode quick --prewarm  # pre-warm cache
+```
 
 ### `disambiguate.py`
 Disambiguates which packages were actually compiled into the binary vs declared but never used.
@@ -45,20 +53,28 @@ python3 disambiguate.py --project gittuf --format csv  --output report.csv
 
 **How it works:** runs sbomit alone (--trace syscall data) then sbomit --catalog syft (+ filesystem scan). The delta = packages syft reports that the compiler never opened.
 
-**Results on gittuf:** 442 compiled packages, 94 syft-only (all GitHub Actions CI packages — never compiled into binary, safe to suppress in CVE scans). No multi-version conflicts.
+**Results:**
+- gittuf: 442 compiled, 94 syft-only (GitHub Actions CI packages)
+- protobom: 48 compiled, 35 syft-only (linter tools, CI actions)
+
+### `test_makefile_parser.py`
+Automated validation tests for the Makefile parsing logic.
+
+```bash
+python3 test_makefile_parser.py
+```
 
 ### `server.py`
-Flask API running on the server VM (Docker). New endpoints added:
-- `GET /status` — current project, processing state, attestation count, timing
-- `POST /complete` — called by worker after SBOM generation
-- `GET /attestations/<filename>` — individual attestation detail
-- `POST /attestations/clear` — now accepts `{"project": "name"}` to track current run
-
-### `pipeline_api.py`
-Flask API on the worker VM. New features:
-- Passes project name to server on clear so server tracks which project is processing
-- Calls POST /complete after SBOM generation
-- Proxy routes for server dashboard: /server-status, /server-attestations, /server-sbom, /guac-collect
+Flask API running on the server VM (Docker). Endpoints:
+- `POST /attestations` — upload witness attestation JSON
+- `POST /attestations/clear` — clear store (accepts `{"project": "name"}`)
+- `GET /attestations` — list stored attestations
+- `GET /attestations/<filename>` — get individual attestation
+- `GET /sbom?format=spdx&catalog=syft&project_dir=/path` — generate enriched SBOM
+- `GET /status` — current run status, timing, package count
+- `POST /complete` — signal run completion with package count
+- `GET /guac/collect` — GUAC collector endpoint
+- `GET /health` — health check
 
 ---
 
@@ -73,10 +89,11 @@ Three run modes:
 - **Deep** — same as full with --trace on build for disambiguation analysis
 
 ### Server dashboard — http://localhost:8080/server-dashboard
-Shows server state in real time:
+Real-time server state:
 - Status banner: orange spinner while processing, green with download buttons when complete
+- Timing metrics: attestation generation time
 - Attestation store: list of received files, expandable to show attestor timestamps
-- Clear store button for manual cleanup
+- Clear store button
 
 ---
 
@@ -91,28 +108,11 @@ Shows server state in real time:
 | kyverno | Go       | Makefile    | 505      | 19           |
 | flux2   | Go       | Makefile    | —        | 5            |
 | argo-cd | Go       | Makefile    | —        | —            |
+| protobom| Go       | Makefile    | 48       | 1            |
 
 ---
 
-## Server API Endpoints
-
-| Method | Path | Description |
-|--------|------|-------------|
-| POST | `/attestations` | Upload witness attestation JSON |
-| POST | `/attestations/clear` | Clear store (accepts `{"project": "name"}`) |
-| GET | `/attestations` | List stored attestations |
-| GET | `/attestations/<filename>` | Get individual attestation |
-| GET | `/sbom?format=spdx&catalog=syft&project_dir=/path` | Generate enriched SBOM |
-| GET | `/status` | Current run status and timing |
-| POST | `/complete` | Signal run completion with package count |
-| GET | `/guac/collect` | GUAC collector endpoint |
-| GET | `/health` | Health check |
-
-All endpoints require: `Authorization: Bearer <APTOKEN>`
-
----
-
-## Environment Variables
+## Environment Variables (server.py)
 
 | Variable | Default | Description |
 |----------|---------|-------------|
