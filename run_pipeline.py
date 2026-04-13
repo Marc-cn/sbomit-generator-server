@@ -54,7 +54,7 @@ PROJECT_SKIP = {
         "manifests", "manifests-local",
         "checksums", "snyk-container-tests", "snyk-non-container-tests",
         "snyk-report", "list", "start", "start-local", "run",
-        "mod-vendor", "mod-vendor-local",
+        "mod-vendor", "mod-vendor-local", "mod-download-local", "mod-download",
     },
     "flux2": {
         "setup-kind", "cleanup-kind", "e2e", "test-with-kind",
