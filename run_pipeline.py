@@ -120,7 +120,7 @@ def parse_makefile(path, project_name=None):
             phony.add(t.strip())
 
     # Collect explicit target definitions
-    for m in re.finditer(r'^([a-zA-Z0-9_./-]+)\s*:', content, re.MULTILINE):
+    for m in re.finditer(r'^([a-zA-Z0-9_./-]+)\s*:[^=]', content, re.MULTILINE):
         if m.group(1) not in targets:
             targets[m.group(1)] = []
 
@@ -132,7 +132,7 @@ def parse_makefile(path, project_name=None):
     # Parse recipe lines
     current_target = None
     for line in content.split('\n'):
-        m = re.match(r'^([a-zA-Z0-9_./-]+)\s*:', line)
+        m = re.match(r'^([a-zA-Z0-9_./-]+)\s*:[^=]', line)
         if m:
             current_target = m.group(1)
             if current_target not in targets:
