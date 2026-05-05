@@ -1,0 +1,1053 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2026-05-05T20:49:12Z",
+    "creators": [
+      "Tool: sbomit-generator-server v0.3",
+      "Tool: syft"
+    ]
+  },
+  "name": "sbomit-lf-server-merged",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://sbomit.dev/sbom/68736e2a-fa85-4d53-8e0d-4f0701e4eb90",
+  "packages": [
+    {
+      "name": "cffi",
+      "SPDXID": "SPDXRef-ptrace-887911545410",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "https://pypi.org/project/cffi/2.0.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/cffi@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "coverage",
+      "SPDXID": "SPDXRef-ptrace-172204915182",
+      "versionInfo": "7.13.5",
+      "downloadLocation": "https://pypi.org/project/coverage/7.13.5/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/coverage@7.13.5"
+        }
+      ]
+    },
+    {
+      "name": "cryptography",
+      "SPDXID": "SPDXRef-ptrace-275598706811",
+      "versionInfo": "46.0.5",
+      "downloadLocation": "https://pypi.org/project/cryptography/46.0.5/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/cryptography@46.0.5"
+        }
+      ]
+    },
+    {
+      "name": "freezegun",
+      "SPDXID": "SPDXRef-ptrace-768542237093",
+      "versionInfo": "1.5.5",
+      "downloadLocation": "https://pypi.org/project/freezegun/1.5.5/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/freezegun@1.5.5"
+        }
+      ]
+    },
+    {
+      "name": "pip",
+      "SPDXID": "SPDXRef-ptrace-185113738940",
+      "versionInfo": "26.0.1",
+      "downloadLocation": "https://pypi.org/project/pip/26.0.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pip@26.0.1"
+        }
+      ]
+    },
+    {
+      "name": "pycparser",
+      "SPDXID": "SPDXRef-ptrace-274229811363",
+      "versionInfo": "3.0",
+      "downloadLocation": "https://pypi.org/project/pycparser/3.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pycparser@3.0"
+        }
+      ]
+    },
+    {
+      "name": "python_dateutil",
+      "SPDXID": "SPDXRef-ptrace-390960616083",
+      "versionInfo": "2.9.0.post0",
+      "downloadLocation": "https://pypi.org/project/python-dateutil/2.9.0.post0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/python_dateutil@2.9.0.post0"
+        }
+      ]
+    },
+    {
+      "name": "securesystemslib",
+      "SPDXID": "SPDXRef-ptrace-674758672820",
+      "versionInfo": "1.3.1",
+      "downloadLocation": "https://pypi.org/project/securesystemslib/1.3.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/securesystemslib@1.3.1"
+        }
+      ]
+    },
+    {
+      "name": "setuptools",
+      "SPDXID": "SPDXRef-ptrace-926695224051",
+      "versionInfo": "82.0.1",
+      "downloadLocation": "https://pypi.org/project/setuptools/82.0.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/setuptools@82.0.1"
+        }
+      ]
+    },
+    {
+      "name": "six",
+      "SPDXID": "SPDXRef-ptrace-372076738803",
+      "versionInfo": "1.17.0",
+      "downloadLocation": "https://pypi.org/project/six/1.17.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/six@1.17.0"
+        }
+      ]
+    },
+    {
+      "name": "tomli",
+      "SPDXID": "SPDXRef-ptrace-580551103315",
+      "versionInfo": "2.4.1",
+      "downloadLocation": "https://pypi.org/project/tomli/2.4.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/tomli@2.4.1"
+        }
+      ]
+    },
+    {
+      "name": "typing_extensions",
+      "SPDXID": "SPDXRef-ptrace-686705167660",
+      "versionInfo": "4.15.0",
+      "downloadLocation": "https://pypi.org/project/typing-extensions/4.15.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/typing_extensions@4.15.0"
+        }
+      ]
+    },
+    {
+      "name": "urllib3",
+      "SPDXID": "SPDXRef-ptrace-570164102461",
+      "versionInfo": "2.6.3",
+      "downloadLocation": "https://pypi.org/project/urllib3/2.6.3/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/urllib3@2.6.3"
+        }
+      ]
+    },
+    {
+      "name": "hatchling",
+      "SPDXID": "SPDXRef-ptrace-131116522578",
+      "versionInfo": "1.29.0",
+      "downloadLocation": "https://pypi.org/project/hatchling/1.29.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/hatchling@1.29.0"
+        }
+      ]
+    },
+    {
+      "name": "packaging",
+      "SPDXID": "SPDXRef-ptrace-2015539978",
+      "versionInfo": "26.0",
+      "downloadLocation": "https://pypi.org/project/packaging/26.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/packaging@26.0"
+        }
+      ]
+    },
+    {
+      "name": "pathspec",
+      "SPDXID": "SPDXRef-ptrace-934067720022",
+      "versionInfo": "1.1.1",
+      "downloadLocation": "https://pypi.org/project/pathspec/1.1.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pathspec@1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "pluggy",
+      "SPDXID": "SPDXRef-ptrace-632608759849",
+      "versionInfo": "1.6.0",
+      "downloadLocation": "https://pypi.org/project/pluggy/1.6.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pluggy@1.6.0"
+        }
+      ]
+    },
+    {
+      "name": "trove_classifiers",
+      "SPDXID": "SPDXRef-ptrace-396096672443",
+      "versionInfo": "2026.4.28.13",
+      "downloadLocation": "https://pypi.org/project/trove-classifiers/2026.4.28.13/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/trove_classifiers@2026.4.28.13"
+        }
+      ]
+    },
+    {
+      "name": "python_discovery",
+      "SPDXID": "SPDXRef-ptrace-753356140431",
+      "versionInfo": "1.2.2",
+      "downloadLocation": "https://pypi.org/project/python-discovery/1.2.2/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/python_discovery@1.2.2"
+        }
+      ]
+    },
+    {
+      "name": "tox",
+      "SPDXID": "SPDXRef-ptrace-311004890325",
+      "versionInfo": "4.52.1",
+      "downloadLocation": "https://pypi.org/project/tox/4.52.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/tox@4.52.1"
+        }
+      ]
+    },
+    {
+      "name": "virtualenv",
+      "SPDXID": "SPDXRef-ptrace-754079009743",
+      "versionInfo": "21.2.1",
+      "downloadLocation": "https://pypi.org/project/virtualenv/21.2.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/virtualenv@21.2.1"
+        }
+      ]
+    },
+    {
+      "name": "cachetools",
+      "SPDXID": "SPDXRef-ptrace-257062909215",
+      "versionInfo": "7.0.5",
+      "downloadLocation": "https://pypi.org/project/cachetools/7.0.5/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/cachetools@7.0.5"
+        }
+      ]
+    },
+    {
+      "name": "colorama",
+      "SPDXID": "SPDXRef-ptrace-361300811426",
+      "versionInfo": "0.4.6",
+      "downloadLocation": "https://pypi.org/project/colorama/0.4.6/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/colorama@0.4.6"
+        }
+      ]
+    },
+    {
+      "name": "distlib",
+      "SPDXID": "SPDXRef-ptrace-270410617304",
+      "versionInfo": "0.4.0",
+      "downloadLocation": "https://pypi.org/project/distlib/0.4.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/distlib@0.4.0"
+        }
+      ]
+    },
+    {
+      "name": "filelock",
+      "SPDXID": "SPDXRef-ptrace-767379189577",
+      "versionInfo": "3.25.2",
+      "downloadLocation": "https://pypi.org/project/filelock/3.25.2/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/filelock@3.25.2"
+        }
+      ]
+    },
+    {
+      "name": "platformdirs",
+      "SPDXID": "SPDXRef-ptrace-7495611964",
+      "versionInfo": "4.9.6",
+      "downloadLocation": "https://pypi.org/project/platformdirs/4.9.6/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/platformdirs@4.9.6"
+        }
+      ]
+    },
+    {
+      "name": "pyproject_api",
+      "SPDXID": "SPDXRef-ptrace-452413538258",
+      "versionInfo": "1.10.0",
+      "downloadLocation": "https://pypi.org/project/pyproject-api/1.10.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pyproject_api@1.10.0"
+        }
+      ]
+    },
+    {
+      "name": "tomli_w",
+      "SPDXID": "SPDXRef-ptrace-922990392732",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "https://pypi.org/project/tomli-w/1.2.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/tomli_w@1.2.0"
+        }
+      ]
+    },
+    {
+      "name": "alabaster",
+      "SPDXID": "SPDXRef-ptrace-946096256645",
+      "versionInfo": "1.0.0",
+      "downloadLocation": "https://pypi.org/project/alabaster/1.0.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/alabaster@1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "babel",
+      "SPDXID": "SPDXRef-ptrace-72646379786",
+      "versionInfo": "2.18.0",
+      "downloadLocation": "https://pypi.org/project/babel/2.18.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/babel@2.18.0"
+        }
+      ]
+    },
+    {
+      "name": "certifi",
+      "SPDXID": "SPDXRef-ptrace-294232837570",
+      "versionInfo": "2026.2.25",
+      "downloadLocation": "https://pypi.org/project/certifi/2026.2.25/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/certifi@2026.2.25"
+        }
+      ]
+    },
+    {
+      "name": "charset_normalizer",
+      "SPDXID": "SPDXRef-ptrace-875937867466",
+      "versionInfo": "3.4.7",
+      "downloadLocation": "https://pypi.org/project/charset-normalizer/3.4.7/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/charset_normalizer@3.4.7"
+        }
+      ]
+    },
+    {
+      "name": "docutils",
+      "SPDXID": "SPDXRef-ptrace-477923654139",
+      "versionInfo": "0.21.2",
+      "downloadLocation": "https://pypi.org/project/docutils/0.21.2/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/docutils@0.21.2"
+        }
+      ]
+    },
+    {
+      "name": "idna",
+      "SPDXID": "SPDXRef-ptrace-671910333264",
+      "versionInfo": "3.11",
+      "downloadLocation": "https://pypi.org/project/idna/3.11/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/idna@3.11"
+        }
+      ]
+    },
+    {
+      "name": "imagesize",
+      "SPDXID": "SPDXRef-ptrace-859621100007",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "https://pypi.org/project/imagesize/2.0.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/imagesize@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "jinja2",
+      "SPDXID": "SPDXRef-ptrace-516441400814",
+      "versionInfo": "3.1.6",
+      "downloadLocation": "https://pypi.org/project/jinja2/3.1.6/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/jinja2@3.1.6"
+        }
+      ]
+    },
+    {
+      "name": "markupsafe",
+      "SPDXID": "SPDXRef-ptrace-686094115614",
+      "versionInfo": "3.0.3",
+      "downloadLocation": "https://pypi.org/project/markupsafe/3.0.3/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/markupsafe@3.0.3"
+        }
+      ]
+    },
+    {
+      "name": "pygments",
+      "SPDXID": "SPDXRef-ptrace-440512470379",
+      "versionInfo": "2.20.0",
+      "downloadLocation": "https://pypi.org/project/pygments/2.20.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/pygments@2.20.0"
+        }
+      ]
+    },
+    {
+      "name": "requests",
+      "SPDXID": "SPDXRef-ptrace-564980548115",
+      "versionInfo": "2.33.1",
+      "downloadLocation": "https://pypi.org/project/requests/2.33.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/requests@2.33.1"
+        }
+      ]
+    },
+    {
+      "name": "snowballstemmer",
+      "SPDXID": "SPDXRef-ptrace-384143306832",
+      "versionInfo": "3.0.1",
+      "downloadLocation": "https://pypi.org/project/snowballstemmer/3.0.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/snowballstemmer@3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "sphinx",
+      "SPDXID": "SPDXRef-ptrace-629487180719",
+      "versionInfo": "8.1.3",
+      "downloadLocation": "https://pypi.org/project/sphinx/8.1.3/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinx@8.1.3"
+        }
+      ]
+    },
+    {
+      "name": "sphinx_rtd_theme",
+      "SPDXID": "SPDXRef-ptrace-966140188151",
+      "versionInfo": "3.1.0",
+      "downloadLocation": "https://pypi.org/project/sphinx-rtd-theme/3.1.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinx_rtd_theme@3.1.0"
+        }
+      ]
+    },
+    {
+      "name": "sphinxcontrib_applehelp",
+      "SPDXID": "SPDXRef-ptrace-503287872818",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "https://pypi.org/project/sphinxcontrib-applehelp/2.0.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinxcontrib_applehelp@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "sphinxcontrib_devhelp",
+      "SPDXID": "SPDXRef-ptrace-411053490326",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "https://pypi.org/project/sphinxcontrib-devhelp/2.0.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinxcontrib_devhelp@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "sphinxcontrib_htmlhelp",
+      "SPDXID": "SPDXRef-ptrace-495797146353",
+      "versionInfo": "2.1.0",
+      "downloadLocation": "https://pypi.org/project/sphinxcontrib-htmlhelp/2.1.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinxcontrib_htmlhelp@2.1.0"
+        }
+      ]
+    },
+    {
+      "name": "sphinxcontrib_jquery",
+      "SPDXID": "SPDXRef-ptrace-260455272533",
+      "versionInfo": "4.1",
+      "downloadLocation": "https://pypi.org/project/sphinxcontrib-jquery/4.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinxcontrib_jquery@4.1"
+        }
+      ]
+    },
+    {
+      "name": "sphinxcontrib_jsmath",
+      "SPDXID": "SPDXRef-ptrace-673916352604",
+      "versionInfo": "1.0.1",
+      "downloadLocation": "https://pypi.org/project/sphinxcontrib-jsmath/1.0.1/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinxcontrib_jsmath@1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "sphinxcontrib_qthelp",
+      "SPDXID": "SPDXRef-ptrace-554337476421",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "https://pypi.org/project/sphinxcontrib-qthelp/2.0.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinxcontrib_qthelp@2.0.0"
+        }
+      ]
+    },
+    {
+      "name": "sphinxcontrib_serializinghtml",
+      "SPDXID": "SPDXRef-ptrace-239396342809",
+      "versionInfo": "2.0.0",
+      "downloadLocation": "https://pypi.org/project/sphinxcontrib-serializinghtml/2.0.0/",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:pypi/sphinxcontrib_serializinghtml@2.0.0"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-887911545410"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-172204915182"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-275598706811"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-768542237093"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-185113738940"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-274229811363"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-390960616083"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-674758672820"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-926695224051"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-372076738803"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-580551103315"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-686705167660"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-570164102461"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-131116522578"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-2015539978"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-934067720022"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-632608759849"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-396096672443"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-753356140431"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-311004890325"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-754079009743"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-257062909215"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-361300811426"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-270410617304"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-767379189577"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-7495611964"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-452413538258"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-922990392732"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-946096256645"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-72646379786"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-294232837570"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-875937867466"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-477923654139"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-671910333264"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-859621100007"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-516441400814"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-686094115614"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-440512470379"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-564980548115"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-384143306832"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-629487180719"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-966140188151"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-503287872818"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-411053490326"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-495797146353"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-260455272533"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-673916352604"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-554337476421"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-239396342809"
+    }
+  ],
+  "attestationSources": [
+    "dbb8229e-d619-4bf9-aa75-1253965b0a01.json",
+    "eed5aef7-9977-4a61-8cdf-0d2c053ff3a0.json",
+    "fff08967-c2b4-4098-959a-9a2266da709c.json"
+  ],
+  "catalogMode": "file-hash-only"
+}

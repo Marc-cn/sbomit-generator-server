@@ -1,0 +1,1872 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2026-05-05T20:49:23Z",
+    "creators": [
+      "Tool: sbomit-generator-server v0.3",
+      "Tool: syft"
+    ]
+  },
+  "name": "sbomit-lf-server-merged",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://sbomit.dev/sbom/a193f5ff-ba49-4ecd-9214-b358006087e2",
+  "packages": [
+    {
+      "name": "autocfg",
+      "SPDXID": "SPDXRef-ptrace-640314130735",
+      "versionInfo": "1.5.0",
+      "downloadLocation": "https://crates.io/crates/autocfg/1.5.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/autocfg@1.5.0"
+        }
+      ]
+    },
+    {
+      "name": "bitflags",
+      "SPDXID": "SPDXRef-ptrace-598109511587",
+      "versionInfo": "2.11.1",
+      "downloadLocation": "https://crates.io/crates/bitflags/2.11.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/bitflags@2.11.1"
+        }
+      ]
+    },
+    {
+      "name": "bytes",
+      "SPDXID": "SPDXRef-ptrace-333983015976",
+      "versionInfo": "1.11.1",
+      "downloadLocation": "https://crates.io/crates/bytes/1.11.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/bytes@1.11.1"
+        }
+      ]
+    },
+    {
+      "name": "cc",
+      "SPDXID": "SPDXRef-ptrace-47432541467",
+      "versionInfo": "1.2.61",
+      "downloadLocation": "https://crates.io/crates/cc/1.2.61",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/cc@1.2.61"
+        }
+      ]
+    },
+    {
+      "name": "cfg-if",
+      "SPDXID": "SPDXRef-ptrace-169844332667",
+      "versionInfo": "1.0.4",
+      "downloadLocation": "https://crates.io/crates/cfg-if/1.0.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/cfg-if@1.0.4"
+        }
+      ]
+    },
+    {
+      "name": "chrono",
+      "SPDXID": "SPDXRef-ptrace-804867993553",
+      "versionInfo": "0.4.44",
+      "downloadLocation": "https://crates.io/crates/chrono/0.4.44",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/chrono@0.4.44"
+        }
+      ]
+    },
+    {
+      "name": "data-encoding",
+      "SPDXID": "SPDXRef-ptrace-412155393066",
+      "versionInfo": "2.11.0",
+      "downloadLocation": "https://crates.io/crates/data-encoding/2.11.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/data-encoding@2.11.0"
+        }
+      ]
+    },
+    {
+      "name": "displaydoc",
+      "SPDXID": "SPDXRef-ptrace-404059479988",
+      "versionInfo": "0.2.5",
+      "downloadLocation": "https://crates.io/crates/displaydoc/0.2.5",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/displaydoc@0.2.5"
+        }
+      ]
+    },
+    {
+      "name": "errno",
+      "SPDXID": "SPDXRef-ptrace-213757510618",
+      "versionInfo": "0.3.14",
+      "downloadLocation": "https://crates.io/crates/errno/0.3.14",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/errno@0.3.14"
+        }
+      ]
+    },
+    {
+      "name": "fastrand",
+      "SPDXID": "SPDXRef-ptrace-978742487557",
+      "versionInfo": "2.4.1",
+      "downloadLocation": "https://crates.io/crates/fastrand/2.4.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/fastrand@2.4.1"
+        }
+      ]
+    },
+    {
+      "name": "find-msvc-tools",
+      "SPDXID": "SPDXRef-ptrace-338739856539",
+      "versionInfo": "0.1.9",
+      "downloadLocation": "https://crates.io/crates/find-msvc-tools/0.1.9",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/find-msvc-tools@0.1.9"
+        }
+      ]
+    },
+    {
+      "name": "fnv",
+      "SPDXID": "SPDXRef-ptrace-218944910492",
+      "versionInfo": "1.0.7",
+      "downloadLocation": "https://crates.io/crates/fnv/1.0.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/fnv@1.0.7"
+        }
+      ]
+    },
+    {
+      "name": "form_urlencoded",
+      "SPDXID": "SPDXRef-ptrace-616921571250",
+      "versionInfo": "1.2.2",
+      "downloadLocation": "https://crates.io/crates/form_urlencoded/1.2.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/form_urlencoded@1.2.2"
+        }
+      ]
+    },
+    {
+      "name": "futures-channel",
+      "SPDXID": "SPDXRef-ptrace-605028613190",
+      "versionInfo": "0.3.32",
+      "downloadLocation": "https://crates.io/crates/futures-channel/0.3.32",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/futures-channel@0.3.32"
+        }
+      ]
+    },
+    {
+      "name": "futures-core",
+      "SPDXID": "SPDXRef-ptrace-474842407256",
+      "versionInfo": "0.3.32",
+      "downloadLocation": "https://crates.io/crates/futures-core/0.3.32",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/futures-core@0.3.32"
+        }
+      ]
+    },
+    {
+      "name": "futures-executor",
+      "SPDXID": "SPDXRef-ptrace-44329640237",
+      "versionInfo": "0.3.32",
+      "downloadLocation": "https://crates.io/crates/futures-executor/0.3.32",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/futures-executor@0.3.32"
+        }
+      ]
+    },
+    {
+      "name": "futures-io",
+      "SPDXID": "SPDXRef-ptrace-526496336380",
+      "versionInfo": "0.3.32",
+      "downloadLocation": "https://crates.io/crates/futures-io/0.3.32",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/futures-io@0.3.32"
+        }
+      ]
+    },
+    {
+      "name": "futures-macro",
+      "SPDXID": "SPDXRef-ptrace-909821796665",
+      "versionInfo": "0.3.32",
+      "downloadLocation": "https://crates.io/crates/futures-macro/0.3.32",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/futures-macro@0.3.32"
+        }
+      ]
+    },
+    {
+      "name": "futures-task",
+      "SPDXID": "SPDXRef-ptrace-89969729267",
+      "versionInfo": "0.3.32",
+      "downloadLocation": "https://crates.io/crates/futures-task/0.3.32",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/futures-task@0.3.32"
+        }
+      ]
+    },
+    {
+      "name": "futures-util",
+      "SPDXID": "SPDXRef-ptrace-968252712763",
+      "versionInfo": "0.3.32",
+      "downloadLocation": "https://crates.io/crates/futures-util/0.3.32",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/futures-util@0.3.32"
+        }
+      ]
+    },
+    {
+      "name": "getrandom",
+      "SPDXID": "SPDXRef-ptrace-633994025566",
+      "versionInfo": "0.4.2",
+      "downloadLocation": "https://crates.io/crates/getrandom/0.4.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/getrandom@0.4.2"
+        }
+      ]
+    },
+    {
+      "name": "http",
+      "SPDXID": "SPDXRef-ptrace-165070702918",
+      "versionInfo": "0.2.12",
+      "downloadLocation": "https://crates.io/crates/http/0.2.12",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/http@0.2.12"
+        }
+      ]
+    },
+    {
+      "name": "http-body",
+      "SPDXID": "SPDXRef-ptrace-297382076142",
+      "versionInfo": "0.4.6",
+      "downloadLocation": "https://crates.io/crates/http-body/0.4.6",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/http-body@0.4.6"
+        }
+      ]
+    },
+    {
+      "name": "httparse",
+      "SPDXID": "SPDXRef-ptrace-340936623336",
+      "versionInfo": "1.10.1",
+      "downloadLocation": "https://crates.io/crates/httparse/1.10.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/httparse@1.10.1"
+        }
+      ]
+    },
+    {
+      "name": "httpdate",
+      "SPDXID": "SPDXRef-ptrace-576363889884",
+      "versionInfo": "1.0.3",
+      "downloadLocation": "https://crates.io/crates/httpdate/1.0.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/httpdate@1.0.3"
+        }
+      ]
+    },
+    {
+      "name": "hyper",
+      "SPDXID": "SPDXRef-ptrace-241727046387",
+      "versionInfo": "0.14.32",
+      "downloadLocation": "https://crates.io/crates/hyper/0.14.32",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/hyper@0.14.32"
+        }
+      ]
+    },
+    {
+      "name": "iana-time-zone",
+      "SPDXID": "SPDXRef-ptrace-417454134179",
+      "versionInfo": "0.1.65",
+      "downloadLocation": "https://crates.io/crates/iana-time-zone/0.1.65",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/iana-time-zone@0.1.65"
+        }
+      ]
+    },
+    {
+      "name": "icu_collections",
+      "SPDXID": "SPDXRef-ptrace-221617227968",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://crates.io/crates/icu_collections/2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/icu_collections@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "icu_locale_core",
+      "SPDXID": "SPDXRef-ptrace-173041446363",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://crates.io/crates/icu_locale_core/2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/icu_locale_core@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "icu_normalizer",
+      "SPDXID": "SPDXRef-ptrace-227227795761",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://crates.io/crates/icu_normalizer/2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/icu_normalizer@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "icu_normalizer_data",
+      "SPDXID": "SPDXRef-ptrace-64909074911",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://crates.io/crates/icu_normalizer_data/2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/icu_normalizer_data@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "icu_properties",
+      "SPDXID": "SPDXRef-ptrace-377545001237",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://crates.io/crates/icu_properties/2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/icu_properties@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "icu_properties_data",
+      "SPDXID": "SPDXRef-ptrace-704793257040",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://crates.io/crates/icu_properties_data/2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/icu_properties_data@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "icu_provider",
+      "SPDXID": "SPDXRef-ptrace-981978333277",
+      "versionInfo": "2.2.0",
+      "downloadLocation": "https://crates.io/crates/icu_provider/2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/icu_provider@2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "idna",
+      "SPDXID": "SPDXRef-ptrace-447989270866",
+      "versionInfo": "1.1.0",
+      "downloadLocation": "https://crates.io/crates/idna/1.1.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/idna@1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "idna_adapter",
+      "SPDXID": "SPDXRef-ptrace-884240267924",
+      "versionInfo": "1.2.2",
+      "downloadLocation": "https://crates.io/crates/idna_adapter/1.2.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/idna_adapter@1.2.2"
+        }
+      ]
+    },
+    {
+      "name": "itoa",
+      "SPDXID": "SPDXRef-ptrace-32324137853",
+      "versionInfo": "1.0.18",
+      "downloadLocation": "https://crates.io/crates/itoa/1.0.18",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/itoa@1.0.18"
+        }
+      ]
+    },
+    {
+      "name": "libc",
+      "SPDXID": "SPDXRef-ptrace-174818714034",
+      "versionInfo": "0.2.186",
+      "downloadLocation": "https://crates.io/crates/libc/0.2.186",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/libc@0.2.186"
+        }
+      ]
+    },
+    {
+      "name": "linux-raw-sys",
+      "SPDXID": "SPDXRef-ptrace-32027366259",
+      "versionInfo": "0.12.1",
+      "downloadLocation": "https://crates.io/crates/linux-raw-sys/0.12.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/linux-raw-sys@0.12.1"
+        }
+      ]
+    },
+    {
+      "name": "litemap",
+      "SPDXID": "SPDXRef-ptrace-56641566767",
+      "versionInfo": "0.8.2",
+      "downloadLocation": "https://crates.io/crates/litemap/0.8.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/litemap@0.8.2"
+        }
+      ]
+    },
+    {
+      "name": "log",
+      "SPDXID": "SPDXRef-ptrace-697059918680",
+      "versionInfo": "0.4.29",
+      "downloadLocation": "https://crates.io/crates/log/0.4.29",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/log@0.4.29"
+        }
+      ]
+    },
+    {
+      "name": "memchr",
+      "SPDXID": "SPDXRef-ptrace-538837985497",
+      "versionInfo": "2.8.0",
+      "downloadLocation": "https://crates.io/crates/memchr/2.8.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/memchr@2.8.0"
+        }
+      ]
+    },
+    {
+      "name": "mio",
+      "SPDXID": "SPDXRef-ptrace-491709530293",
+      "versionInfo": "1.2.0",
+      "downloadLocation": "https://crates.io/crates/mio/1.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/mio@1.2.0"
+        }
+      ]
+    },
+    {
+      "name": "num-traits",
+      "SPDXID": "SPDXRef-ptrace-450224586419",
+      "versionInfo": "0.2.19",
+      "downloadLocation": "https://crates.io/crates/num-traits/0.2.19",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/num-traits@0.2.19"
+        }
+      ]
+    },
+    {
+      "name": "once_cell",
+      "SPDXID": "SPDXRef-ptrace-226127123560",
+      "versionInfo": "1.21.4",
+      "downloadLocation": "https://crates.io/crates/once_cell/1.21.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/once_cell@1.21.4"
+        }
+      ]
+    },
+    {
+      "name": "percent-encoding",
+      "SPDXID": "SPDXRef-ptrace-983909996386",
+      "versionInfo": "2.3.2",
+      "downloadLocation": "https://crates.io/crates/percent-encoding/2.3.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/percent-encoding@2.3.2"
+        }
+      ]
+    },
+    {
+      "name": "pin-project-lite",
+      "SPDXID": "SPDXRef-ptrace-141703190583",
+      "versionInfo": "0.2.17",
+      "downloadLocation": "https://crates.io/crates/pin-project-lite/0.2.17",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/pin-project-lite@0.2.17"
+        }
+      ]
+    },
+    {
+      "name": "potential_utf",
+      "SPDXID": "SPDXRef-ptrace-554426746856",
+      "versionInfo": "0.1.5",
+      "downloadLocation": "https://crates.io/crates/potential_utf/0.1.5",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/potential_utf@0.1.5"
+        }
+      ]
+    },
+    {
+      "name": "proc-macro2",
+      "SPDXID": "SPDXRef-ptrace-913627905861",
+      "versionInfo": "1.0.106",
+      "downloadLocation": "https://crates.io/crates/proc-macro2/1.0.106",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/proc-macro2@1.0.106"
+        }
+      ]
+    },
+    {
+      "name": "quote",
+      "SPDXID": "SPDXRef-ptrace-96143141471",
+      "versionInfo": "1.0.45",
+      "downloadLocation": "https://crates.io/crates/quote/1.0.45",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/quote@1.0.45"
+        }
+      ]
+    },
+    {
+      "name": "ring",
+      "SPDXID": "SPDXRef-ptrace-34306069855",
+      "versionInfo": "0.17.14",
+      "downloadLocation": "https://crates.io/crates/ring/0.17.14",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/ring@0.17.14"
+        }
+      ]
+    },
+    {
+      "name": "rustix",
+      "SPDXID": "SPDXRef-ptrace-618782035596",
+      "versionInfo": "1.1.4",
+      "downloadLocation": "https://crates.io/crates/rustix/1.1.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/rustix@1.1.4"
+        }
+      ]
+    },
+    {
+      "name": "same-file",
+      "SPDXID": "SPDXRef-ptrace-480070176742",
+      "versionInfo": "1.0.6",
+      "downloadLocation": "https://crates.io/crates/same-file/1.0.6",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/same-file@1.0.6"
+        }
+      ]
+    },
+    {
+      "name": "serde",
+      "SPDXID": "SPDXRef-ptrace-971421773812",
+      "versionInfo": "1.0.228",
+      "downloadLocation": "https://crates.io/crates/serde/1.0.228",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/serde@1.0.228"
+        }
+      ]
+    },
+    {
+      "name": "serde_core",
+      "SPDXID": "SPDXRef-ptrace-458267965064",
+      "versionInfo": "1.0.228",
+      "downloadLocation": "https://crates.io/crates/serde_core/1.0.228",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/serde_core@1.0.228"
+        }
+      ]
+    },
+    {
+      "name": "serde_derive",
+      "SPDXID": "SPDXRef-ptrace-236650672510",
+      "versionInfo": "1.0.228",
+      "downloadLocation": "https://crates.io/crates/serde_derive/1.0.228",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/serde_derive@1.0.228"
+        }
+      ]
+    },
+    {
+      "name": "serde_json",
+      "SPDXID": "SPDXRef-ptrace-977921279985",
+      "versionInfo": "1.0.149",
+      "downloadLocation": "https://crates.io/crates/serde_json/1.0.149",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/serde_json@1.0.149"
+        }
+      ]
+    },
+    {
+      "name": "shlex",
+      "SPDXID": "SPDXRef-ptrace-343233179425",
+      "versionInfo": "1.3.0",
+      "downloadLocation": "https://crates.io/crates/shlex/1.3.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/shlex@1.3.0"
+        }
+      ]
+    },
+    {
+      "name": "slab",
+      "SPDXID": "SPDXRef-ptrace-643251691695",
+      "versionInfo": "0.4.12",
+      "downloadLocation": "https://crates.io/crates/slab/0.4.12",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/slab@0.4.12"
+        }
+      ]
+    },
+    {
+      "name": "smallvec",
+      "SPDXID": "SPDXRef-ptrace-80620914688",
+      "versionInfo": "1.15.1",
+      "downloadLocation": "https://crates.io/crates/smallvec/1.15.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/smallvec@1.15.1"
+        }
+      ]
+    },
+    {
+      "name": "socket2",
+      "SPDXID": "SPDXRef-ptrace-62708258815",
+      "versionInfo": "0.6.3",
+      "downloadLocation": "https://crates.io/crates/socket2/0.6.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/socket2@0.6.3"
+        }
+      ]
+    },
+    {
+      "name": "stable_deref_trait",
+      "SPDXID": "SPDXRef-ptrace-547198395861",
+      "versionInfo": "1.2.1",
+      "downloadLocation": "https://crates.io/crates/stable_deref_trait/1.2.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/stable_deref_trait@1.2.1"
+        }
+      ]
+    },
+    {
+      "name": "syn",
+      "SPDXID": "SPDXRef-ptrace-150548139596",
+      "versionInfo": "2.0.117",
+      "downloadLocation": "https://crates.io/crates/syn/2.0.117",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/syn@2.0.117"
+        }
+      ]
+    },
+    {
+      "name": "synstructure",
+      "SPDXID": "SPDXRef-ptrace-652153815253",
+      "versionInfo": "0.13.2",
+      "downloadLocation": "https://crates.io/crates/synstructure/0.13.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/synstructure@0.13.2"
+        }
+      ]
+    },
+    {
+      "name": "tempfile",
+      "SPDXID": "SPDXRef-ptrace-960835376876",
+      "versionInfo": "3.27.0",
+      "downloadLocation": "https://crates.io/crates/tempfile/3.27.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/tempfile@3.27.0"
+        }
+      ]
+    },
+    {
+      "name": "thiserror",
+      "SPDXID": "SPDXRef-ptrace-759576306411",
+      "versionInfo": "2.0.18",
+      "downloadLocation": "https://crates.io/crates/thiserror/2.0.18",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/thiserror@2.0.18"
+        }
+      ]
+    },
+    {
+      "name": "thiserror-impl",
+      "SPDXID": "SPDXRef-ptrace-175254536901",
+      "versionInfo": "2.0.18",
+      "downloadLocation": "https://crates.io/crates/thiserror-impl/2.0.18",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/thiserror-impl@2.0.18"
+        }
+      ]
+    },
+    {
+      "name": "tinystr",
+      "SPDXID": "SPDXRef-ptrace-938216523707",
+      "versionInfo": "0.8.3",
+      "downloadLocation": "https://crates.io/crates/tinystr/0.8.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/tinystr@0.8.3"
+        }
+      ]
+    },
+    {
+      "name": "tokio",
+      "SPDXID": "SPDXRef-ptrace-600543692407",
+      "versionInfo": "1.52.1",
+      "downloadLocation": "https://crates.io/crates/tokio/1.52.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/tokio@1.52.1"
+        }
+      ]
+    },
+    {
+      "name": "tower-service",
+      "SPDXID": "SPDXRef-ptrace-446886845459",
+      "versionInfo": "0.3.3",
+      "downloadLocation": "https://crates.io/crates/tower-service/0.3.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/tower-service@0.3.3"
+        }
+      ]
+    },
+    {
+      "name": "tracing",
+      "SPDXID": "SPDXRef-ptrace-902331740357",
+      "versionInfo": "0.1.44",
+      "downloadLocation": "https://crates.io/crates/tracing/0.1.44",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/tracing@0.1.44"
+        }
+      ]
+    },
+    {
+      "name": "tracing-core",
+      "SPDXID": "SPDXRef-ptrace-897988929176",
+      "versionInfo": "0.1.36",
+      "downloadLocation": "https://crates.io/crates/tracing-core/0.1.36",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/tracing-core@0.1.36"
+        }
+      ]
+    },
+    {
+      "name": "try-lock",
+      "SPDXID": "SPDXRef-ptrace-815155984794",
+      "versionInfo": "0.2.5",
+      "downloadLocation": "https://crates.io/crates/try-lock/0.2.5",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/try-lock@0.2.5"
+        }
+      ]
+    },
+    {
+      "name": "unicode-ident",
+      "SPDXID": "SPDXRef-ptrace-632083975398",
+      "versionInfo": "1.0.24",
+      "downloadLocation": "https://crates.io/crates/unicode-ident/1.0.24",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/unicode-ident@1.0.24"
+        }
+      ]
+    },
+    {
+      "name": "untrusted",
+      "SPDXID": "SPDXRef-ptrace-12811459153",
+      "versionInfo": "0.9.0",
+      "downloadLocation": "https://crates.io/crates/untrusted/0.9.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/untrusted@0.9.0"
+        }
+      ]
+    },
+    {
+      "name": "url",
+      "SPDXID": "SPDXRef-ptrace-782668033021",
+      "versionInfo": "2.5.8",
+      "downloadLocation": "https://crates.io/crates/url/2.5.8",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/url@2.5.8"
+        }
+      ]
+    },
+    {
+      "name": "utf8_iter",
+      "SPDXID": "SPDXRef-ptrace-206111790824",
+      "versionInfo": "1.0.4",
+      "downloadLocation": "https://crates.io/crates/utf8_iter/1.0.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/utf8_iter@1.0.4"
+        }
+      ]
+    },
+    {
+      "name": "walkdir",
+      "SPDXID": "SPDXRef-ptrace-205892992505",
+      "versionInfo": "2.5.0",
+      "downloadLocation": "https://crates.io/crates/walkdir/2.5.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/walkdir@2.5.0"
+        }
+      ]
+    },
+    {
+      "name": "want",
+      "SPDXID": "SPDXRef-ptrace-831883312117",
+      "versionInfo": "0.3.1",
+      "downloadLocation": "https://crates.io/crates/want/0.3.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/want@0.3.1"
+        }
+      ]
+    },
+    {
+      "name": "writeable",
+      "SPDXID": "SPDXRef-ptrace-124161294363",
+      "versionInfo": "0.6.3",
+      "downloadLocation": "https://crates.io/crates/writeable/0.6.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/writeable@0.6.3"
+        }
+      ]
+    },
+    {
+      "name": "yoke",
+      "SPDXID": "SPDXRef-ptrace-521369320701",
+      "versionInfo": "0.8.2",
+      "downloadLocation": "https://crates.io/crates/yoke/0.8.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/yoke@0.8.2"
+        }
+      ]
+    },
+    {
+      "name": "yoke-derive",
+      "SPDXID": "SPDXRef-ptrace-45104928461",
+      "versionInfo": "0.8.2",
+      "downloadLocation": "https://crates.io/crates/yoke-derive/0.8.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/yoke-derive@0.8.2"
+        }
+      ]
+    },
+    {
+      "name": "zerofrom",
+      "SPDXID": "SPDXRef-ptrace-189720747660",
+      "versionInfo": "0.1.7",
+      "downloadLocation": "https://crates.io/crates/zerofrom/0.1.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/zerofrom@0.1.7"
+        }
+      ]
+    },
+    {
+      "name": "zerofrom-derive",
+      "SPDXID": "SPDXRef-ptrace-870328323371",
+      "versionInfo": "0.1.7",
+      "downloadLocation": "https://crates.io/crates/zerofrom-derive/0.1.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/zerofrom-derive@0.1.7"
+        }
+      ]
+    },
+    {
+      "name": "zerotrie",
+      "SPDXID": "SPDXRef-ptrace-786947579222",
+      "versionInfo": "0.2.4",
+      "downloadLocation": "https://crates.io/crates/zerotrie/0.2.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/zerotrie@0.2.4"
+        }
+      ]
+    },
+    {
+      "name": "zerovec",
+      "SPDXID": "SPDXRef-ptrace-276661647712",
+      "versionInfo": "0.11.6",
+      "downloadLocation": "https://crates.io/crates/zerovec/0.11.6",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/zerovec@0.11.6"
+        }
+      ]
+    },
+    {
+      "name": "zerovec-derive",
+      "SPDXID": "SPDXRef-ptrace-809500210229",
+      "versionInfo": "0.11.3",
+      "downloadLocation": "https://crates.io/crates/zerovec-derive/0.11.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/zerovec-derive@0.11.3"
+        }
+      ]
+    },
+    {
+      "name": "zmij",
+      "SPDXID": "SPDXRef-ptrace-225926713418",
+      "versionInfo": "1.0.21",
+      "downloadLocation": "https://crates.io/crates/zmij/1.0.21",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:cargo/zmij@1.0.21"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-640314130735"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-598109511587"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-333983015976"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-47432541467"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-169844332667"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-804867993553"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-412155393066"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-404059479988"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-213757510618"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-978742487557"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-338739856539"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-218944910492"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-616921571250"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-605028613190"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-474842407256"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-44329640237"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-526496336380"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-909821796665"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-89969729267"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-968252712763"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-633994025566"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-165070702918"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-297382076142"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-340936623336"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-576363889884"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-241727046387"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-417454134179"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-221617227968"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-173041446363"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-227227795761"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-64909074911"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-377545001237"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-704793257040"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-981978333277"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-447989270866"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-884240267924"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-32324137853"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-174818714034"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-32027366259"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-56641566767"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-697059918680"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-538837985497"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-491709530293"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-450224586419"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-226127123560"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-983909996386"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-141703190583"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-554426746856"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-913627905861"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-96143141471"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-34306069855"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-618782035596"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-480070176742"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-971421773812"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-458267965064"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-236650672510"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-977921279985"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-343233179425"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-643251691695"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-80620914688"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-62708258815"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-547198395861"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-150548139596"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-652153815253"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-960835376876"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-759576306411"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-175254536901"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-938216523707"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-600543692407"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-446886845459"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-902331740357"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-897988929176"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-815155984794"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-632083975398"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-12811459153"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-782668033021"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-206111790824"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-205892992505"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-831883312117"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-124161294363"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-521369320701"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-45104928461"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-189720747660"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-870328323371"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-786947579222"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-276661647712"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-809500210229"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-225926713418"
+    }
+  ],
+  "attestationSources": [
+    "d940b10a-9467-48d9-aa71-d557d227e1b9.json",
+    "f1031fb3-252e-4a60-a006-16657a715575.json",
+    "f2fba820-4e5e-4cac-a704-dfb5c586b646.json"
+  ],
+  "catalogMode": "file-hash-only"
+}

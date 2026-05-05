@@ -1,0 +1,51 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2026-05-05T20:49:22Z",
+    "creators": [
+      "Tool: sbomit-generator-server v0.3",
+      "Tool: syft"
+    ]
+  },
+  "name": "sbomit-lf-server-merged",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://sbomit.dev/sbom/5886fb98-8230-4926-bf3c-4b2999ea775b",
+  "packages": [
+    {
+      "name": "golang.org/toolchain",
+      "SPDXID": "SPDXRef-ptrace-762908038192",
+      "versionInfo": "v0.0.1-go1.26.1.linux-amd64",
+      "downloadLocation": "https://pkg.go.dev/golang.org/toolchain@v0.0.1-go1.26.1.linux-amd64",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/toolchain@v0.0.1-go1.26.1.linux-amd64"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-762908038192"
+    }
+  ],
+  "attestationSources": [
+    "01a73a30-e564-47fd-8170-cbb0b8fa1d69.json",
+    "0be81b9c-969c-43b1-8c3e-d820df64a9c9.json",
+    "13b5db65-6bfd-48f1-90a0-8233fd516f47.json",
+    "38205bb4-f73d-4026-891a-2fc9bb03c33b.json",
+    "45e620f3-182c-45e4-a53c-2b4c06d3bfad.json",
+    "4c51e512-8d38-4991-aeab-1824f09f0cb8.json",
+    "8818876c-0b4e-481f-9ec1-8f5342c7d9e5.json",
+    "bc2838ae-aa49-4ca9-8b19-2be20733d2ce.json",
+    "e2d1e1b2-9aa6-4918-a6ff-f221cfc7a979.json"
+  ],
+  "catalogMode": "file-hash-only"
+}

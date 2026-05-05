@@ -1,0 +1,4665 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2026-05-05T20:49:11Z",
+    "creators": [
+      "Tool: sbomit-generator-server v0.3",
+      "Tool: syft"
+    ]
+  },
+  "name": "sbomit-lf-server-merged",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://sbomit.dev/sbom/654a27ed-c3aa-4429-8afa-25bde8641da8",
+  "packages": [
+    {
+      "name": "golang.org/toolchain",
+      "SPDXID": "SPDXRef-ptrace-503741491117",
+      "versionInfo": "v0.0.1-go1.25.6.linux-amd64",
+      "downloadLocation": "https://pkg.go.dev/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/toolchain@v0.0.1-go1.25.6.linux-amd64"
+        }
+      ]
+    },
+    {
+      "name": "cloud.google.com/go/compute/metadata",
+      "SPDXID": "SPDXRef-ptrace-841031256998",
+      "versionInfo": "v0.9.0",
+      "downloadLocation": "https://pkg.go.dev/cloud.google.com/go/compute/metadata@v0.9.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com/go/compute/metadata@v0.9.0"
+        }
+      ]
+    },
+    {
+      "name": "cloud.google.com/go/iam",
+      "SPDXID": "SPDXRef-ptrace-775627248907",
+      "versionInfo": "v1.5.3",
+      "downloadLocation": "https://pkg.go.dev/cloud.google.com/go/iam@v1.5.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com/go/iam@v1.5.3"
+        }
+      ]
+    },
+    {
+      "name": "filippo.io/edwards25519",
+      "SPDXID": "SPDXRef-ptrace-653204037123",
+      "versionInfo": "v1.1.1",
+      "downloadLocation": "https://pkg.go.dev/filippo.io/edwards25519@v1.1.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/filippo.io/edwards25519@v1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/!azure!a!d/microsoft-authentication-library-for-go",
+      "SPDXID": "SPDXRef-ptrace-437500926656",
+      "versionInfo": "v1.6.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/!azure!a!d/microsoft-authentication-library-for-go@v1.6.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/!azure!a!d/microsoft-authentication-library-for-go@v1.6.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/!azure/azure-sdk-for-go/sdk/security/keyvault/azkeys",
+      "SPDXID": "SPDXRef-ptrace-717001132314",
+      "versionInfo": "v1.4.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/!azure/azure-sdk-for-go/sdk/security/keyvault/azkeys@v1.4.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/!azure/azure-sdk-for-go/sdk/security/keyvault/azkeys@v1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/asaskevich/govalidator",
+      "SPDXID": "SPDXRef-ptrace-78623229750",
+      "versionInfo": "v0.0.0-20230301143203-a9d515a09cc2",
+      "downloadLocation": "https://pkg.go.dev/github.com/asaskevich/govalidator@v0.0.0-20230301143203-a9d515a09cc2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/asaskevich/govalidator@v0.0.0-20230301143203-a9d515a09cc2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/feature/ec2/imds",
+      "SPDXID": "SPDXRef-ptrace-324776401693",
+      "versionInfo": "v1.18.17",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/feature/ec2/imds@v1.18.17",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/feature/ec2/imds@v1.18.17"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/internal/configsources",
+      "SPDXID": "SPDXRef-ptrace-122432716595",
+      "versionInfo": "v1.4.17",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/internal/configsources@v1.4.17",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/internal/configsources@v1.4.17"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding",
+      "SPDXID": "SPDXRef-ptrace-992368765200",
+      "versionInfo": "v1.13.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding@v1.13.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding@v1.13.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/service/kms",
+      "SPDXID": "SPDXRef-ptrace-221425810057",
+      "versionInfo": "v1.49.5",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/kms@v1.49.5",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/kms@v1.49.5"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/service/signin",
+      "SPDXID": "SPDXRef-ptrace-568579346500",
+      "versionInfo": "v1.0.5",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/signin@v1.0.5",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/signin@v1.0.5"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/service/ssooidc",
+      "SPDXID": "SPDXRef-ptrace-793342235017",
+      "versionInfo": "v1.35.13",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/ssooidc@v1.35.13",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/ssooidc@v1.35.13"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2",
+      "SPDXID": "SPDXRef-ptrace-2935533722",
+      "versionInfo": "v1.41.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2@v1.41.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2@v1.41.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/smithy-go",
+      "SPDXID": "SPDXRef-ptrace-111742049347",
+      "versionInfo": "v1.24.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/smithy-go@v1.24.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/smithy-go@v1.24.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/blang/semver",
+      "SPDXID": "SPDXRef-ptrace-446750504205",
+      "versionInfo": "v3.5.1+incompatible",
+      "downloadLocation": "https://pkg.go.dev/github.com/blang/semver@v3.5.1+incompatible",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/blang/semver@v3.5.1+incompatible"
+        }
+      ]
+    },
+    {
+      "name": "github.com/cenkalti/backoff/v4",
+      "SPDXID": "SPDXRef-ptrace-252665788172",
+      "versionInfo": "v4.3.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/cenkalti/backoff/v4@v4.3.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/cenkalti/backoff/v4@v4.3.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/davecgh/go-spew",
+      "SPDXID": "SPDXRef-ptrace-619780207109",
+      "versionInfo": "v1.1.2-0.20180830191138-d8f796af33cc",
+      "downloadLocation": "https://pkg.go.dev/github.com/davecgh/go-spew@v1.1.2-0.20180830191138-d8f796af33cc",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/davecgh/go-spew@v1.1.2-0.20180830191138-d8f796af33cc"
+        }
+      ]
+    },
+    {
+      "name": "github.com/docker/docker-credential-helpers",
+      "SPDXID": "SPDXRef-ptrace-590978983487",
+      "versionInfo": "v0.9.5",
+      "downloadLocation": "https://pkg.go.dev/github.com/docker/docker-credential-helpers@v0.9.5",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/docker/docker-credential-helpers@v0.9.5"
+        }
+      ]
+    },
+    {
+      "name": "github.com/dustin/go-humanize",
+      "SPDXID": "SPDXRef-ptrace-517448137648",
+      "versionInfo": "v1.0.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/dustin/go-humanize@v1.0.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/dustin/go-humanize@v1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/github/smimesign",
+      "SPDXID": "SPDXRef-ptrace-528769086417",
+      "versionInfo": "v0.2.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/github/smimesign@v0.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/github/smimesign@v0.2.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-chi/chi/v5",
+      "SPDXID": "SPDXRef-ptrace-470530674516",
+      "versionInfo": "v5.2.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-chi/chi/v5@v5.2.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-chi/chi/v5@v5.2.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-logr/logr",
+      "SPDXID": "SPDXRef-ptrace-848813180693",
+      "versionInfo": "v1.4.3",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-logr/logr@v1.4.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-logr/logr@v1.4.3"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/jsonpointer",
+      "SPDXID": "SPDXRef-ptrace-77363142140",
+      "versionInfo": "v0.22.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/jsonpointer@v0.22.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/jsonpointer@v0.22.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/google/go-github/v61",
+      "SPDXID": "SPDXRef-ptrace-321217233526",
+      "versionInfo": "v61.0.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/google/go-github/v61@v61.0.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/google/go-github/v61@v61.0.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/go-cleanhttp",
+      "SPDXID": "SPDXRef-ptrace-882761571587",
+      "versionInfo": "v0.5.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/go-cleanhttp@v0.5.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/go-cleanhttp@v0.5.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/go-rootcerts",
+      "SPDXID": "SPDXRef-ptrace-572567765142",
+      "versionInfo": "v1.0.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/go-rootcerts@v1.0.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/go-rootcerts@v1.0.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/go-secure-stdlib/strutil",
+      "SPDXID": "SPDXRef-ptrace-746304034288",
+      "versionInfo": "v0.1.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/go-secure-stdlib/strutil@v0.1.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/go-secure-stdlib/strutil@v0.1.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/jellydator/ttlcache/v3",
+      "SPDXID": "SPDXRef-ptrace-765146812953",
+      "versionInfo": "v3.4.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/jellydator/ttlcache/v3@v3.4.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/jellydator/ttlcache/v3@v3.4.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/kevinburke/ssh_config",
+      "SPDXID": "SPDXRef-ptrace-311996772479",
+      "versionInfo": "v1.4.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/kevinburke/ssh_config@v1.4.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/kevinburke/ssh_config@v1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/mitchellh/mapstructure",
+      "SPDXID": "SPDXRef-ptrace-755690435275",
+      "versionInfo": "v1.5.1-0.20231216201459-8508981c8b6c",
+      "downloadLocation": "https://pkg.go.dev/github.com/mitchellh/mapstructure@v1.5.1-0.20231216201459-8508981c8b6c",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/mitchellh/mapstructure@v1.5.1-0.20231216201459-8508981c8b6c"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/cosign/v3",
+      "SPDXID": "SPDXRef-ptrace-9815210136",
+      "versionInfo": "v3.0.5",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/cosign/v3@v3.0.5",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/cosign/v3@v3.0.5"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/protobuf-specs",
+      "SPDXID": "SPDXRef-ptrace-767893233651",
+      "versionInfo": "v0.5.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/protobuf-specs@v0.5.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/protobuf-specs@v0.5.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/sigstore/pkg/signature/kms/aws",
+      "SPDXID": "SPDXRef-ptrace-517493872115",
+      "versionInfo": "v1.10.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/sigstore/pkg/signature/kms/aws@v1.10.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/sigstore/pkg/signature/kms/aws@v1.10.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/sigstore/pkg/signature/kms/hashivault",
+      "SPDXID": "SPDXRef-ptrace-328290974708",
+      "versionInfo": "v1.10.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/sigstore/pkg/signature/kms/hashivault@v1.10.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/sigstore/pkg/signature/kms/hashivault@v1.10.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/sigstore",
+      "SPDXID": "SPDXRef-ptrace-333410942932",
+      "versionInfo": "v1.10.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/sigstore@v1.10.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/sigstore@v1.10.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sirupsen/logrus",
+      "SPDXID": "SPDXRef-ptrace-954033014741",
+      "versionInfo": "v1.9.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/sirupsen/logrus@v1.9.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sirupsen/logrus@v1.9.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/tink-crypto/tink-go/v2",
+      "SPDXID": "SPDXRef-ptrace-772232844523",
+      "versionInfo": "v2.6.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/tink-crypto/tink-go/v2@v2.6.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/tink-crypto/tink-go/v2@v2.6.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/titanous/rocacheck",
+      "SPDXID": "SPDXRef-ptrace-548599247065",
+      "versionInfo": "v0.0.0-20171023193734-afe73141d399",
+      "downloadLocation": "https://pkg.go.dev/github.com/titanous/rocacheck@v0.0.0-20171023193734-afe73141d399",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/titanous/rocacheck@v0.0.0-20171023193734-afe73141d399"
+        }
+      ]
+    },
+    {
+      "name": "github.com/transparency-dev/formats",
+      "SPDXID": "SPDXRef-ptrace-905100824432",
+      "versionInfo": "v0.0.0-20260126105629-a1e81f2894be",
+      "downloadLocation": "https://pkg.go.dev/github.com/transparency-dev/formats@v0.0.0-20260126105629-a1e81f2894be",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/transparency-dev/formats@v0.0.0-20260126105629-a1e81f2894be"
+        }
+      ]
+    },
+    {
+      "name": "github.com/xanzy/ssh-agent",
+      "SPDXID": "SPDXRef-ptrace-331926633107",
+      "versionInfo": "v0.3.3",
+      "downloadLocation": "https://pkg.go.dev/github.com/xanzy/ssh-agent@v0.3.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/xanzy/ssh-agent@v0.3.3"
+        }
+      ]
+    },
+    {
+      "name": "go.opentelemetry.io/auto/sdk",
+      "SPDXID": "SPDXRef-ptrace-367311684001",
+      "versionInfo": "v1.2.1",
+      "downloadLocation": "https://pkg.go.dev/go.opentelemetry.io/auto/sdk@v1.2.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.opentelemetry.io/auto/sdk@v1.2.1"
+        }
+      ]
+    },
+    {
+      "name": "go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp",
+      "SPDXID": "SPDXRef-ptrace-499044442035",
+      "versionInfo": "v0.64.0",
+      "downloadLocation": "https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@v0.64.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@v0.64.0"
+        }
+      ]
+    },
+    {
+      "name": "go.opentelemetry.io/otel/trace",
+      "SPDXID": "SPDXRef-ptrace-599422557608",
+      "versionInfo": "v1.39.0",
+      "downloadLocation": "https://pkg.go.dev/go.opentelemetry.io/otel/trace@v1.39.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.opentelemetry.io/otel/trace@v1.39.0"
+        }
+      ]
+    },
+    {
+      "name": "go.step.sm/crypto",
+      "SPDXID": "SPDXRef-ptrace-736682630412",
+      "versionInfo": "v0.76.0",
+      "downloadLocation": "https://pkg.go.dev/go.step.sm/crypto@v0.76.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.step.sm/crypto@v0.76.0"
+        }
+      ]
+    },
+    {
+      "name": "go.yaml.in/yaml/v2",
+      "SPDXID": "SPDXRef-ptrace-363963920474",
+      "versionInfo": "v2.4.3",
+      "downloadLocation": "https://pkg.go.dev/go.yaml.in/yaml/v2@v2.4.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.yaml.in/yaml/v2@v2.4.3"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/text",
+      "SPDXID": "SPDXRef-ptrace-901843869060",
+      "versionInfo": "v0.35.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/text@v0.35.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/text@v0.35.0"
+        }
+      ]
+    },
+    {
+      "name": "google.golang.org/genproto/googleapis/rpc",
+      "SPDXID": "SPDXRef-ptrace-997713520163",
+      "versionInfo": "v0.0.0-20260203192932-546029d2fa20",
+      "downloadLocation": "https://pkg.go.dev/google.golang.org/genproto/googleapis/rpc@v0.0.0-20260203192932-546029d2fa20",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org/genproto/googleapis/rpc@v0.0.0-20260203192932-546029d2fa20"
+        }
+      ]
+    },
+    {
+      "name": "google.golang.org/protobuf",
+      "SPDXID": "SPDXRef-ptrace-605728671854",
+      "versionInfo": "v1.36.11",
+      "downloadLocation": "https://pkg.go.dev/google.golang.org/protobuf@v1.36.11",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org/protobuf@v1.36.11"
+        }
+      ]
+    },
+    {
+      "name": "gopkg.in/warnings.v0",
+      "SPDXID": "SPDXRef-ptrace-1623729490",
+      "versionInfo": "v0.1.2",
+      "downloadLocation": "https://pkg.go.dev/gopkg.in/warnings.v0@v0.1.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/gopkg.in/warnings.v0@v0.1.2"
+        }
+      ]
+    },
+    {
+      "name": "sigs.k8s.io/yaml",
+      "SPDXID": "SPDXRef-ptrace-123430738221",
+      "versionInfo": "v1.6.0",
+      "downloadLocation": "https://pkg.go.dev/sigs.k8s.io/yaml@v1.6.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/sigs.k8s.io/yaml@v1.6.0"
+        }
+      ]
+    },
+    {
+      "name": "cloud.google.com/go/auth/oauth2adapt",
+      "SPDXID": "SPDXRef-ptrace-504057473158",
+      "versionInfo": "v0.2.8",
+      "downloadLocation": "https://pkg.go.dev/cloud.google.com/go/auth/oauth2adapt@v0.2.8",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com/go/auth/oauth2adapt@v0.2.8"
+        }
+      ]
+    },
+    {
+      "name": "cloud.google.com/go/auth",
+      "SPDXID": "SPDXRef-ptrace-195619756236",
+      "versionInfo": "v0.18.1",
+      "downloadLocation": "https://pkg.go.dev/cloud.google.com/go/auth@v0.18.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com/go/auth@v0.18.1"
+        }
+      ]
+    },
+    {
+      "name": "cloud.google.com/go/kms",
+      "SPDXID": "SPDXRef-ptrace-688088113104",
+      "versionInfo": "v1.25.0",
+      "downloadLocation": "https://pkg.go.dev/cloud.google.com/go/kms@v1.25.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com/go/kms@v1.25.0"
+        }
+      ]
+    },
+    {
+      "name": "cloud.google.com/go/longrunning",
+      "SPDXID": "SPDXRef-ptrace-346971514799",
+      "versionInfo": "v0.8.0",
+      "downloadLocation": "https://pkg.go.dev/cloud.google.com/go/longrunning@v0.8.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com/go/longrunning@v0.8.0"
+        }
+      ]
+    },
+    {
+      "name": "dario.cat/mergo",
+      "SPDXID": "SPDXRef-ptrace-477474980281",
+      "versionInfo": "v1.0.2",
+      "downloadLocation": "https://pkg.go.dev/dario.cat/mergo@v1.0.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/dario.cat/mergo@v1.0.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/!azure/azure-sdk-for-go/sdk/azcore",
+      "SPDXID": "SPDXRef-ptrace-573891554472",
+      "versionInfo": "v1.21.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/!azure/azure-sdk-for-go/sdk/azcore@v1.21.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/!azure/azure-sdk-for-go/sdk/azcore@v1.21.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/!azure/azure-sdk-for-go/sdk/azidentity",
+      "SPDXID": "SPDXRef-ptrace-653626591428",
+      "versionInfo": "v1.13.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/!azure/azure-sdk-for-go/sdk/azidentity@v1.13.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/!azure/azure-sdk-for-go/sdk/azidentity@v1.13.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/!azure/azure-sdk-for-go/sdk/internal",
+      "SPDXID": "SPDXRef-ptrace-956545501956",
+      "versionInfo": "v1.11.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/!azure/azure-sdk-for-go/sdk/internal@v1.11.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/!azure/azure-sdk-for-go/sdk/internal@v1.11.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/!azure/azure-sdk-for-go/sdk/security/keyvault/internal",
+      "SPDXID": "SPDXRef-ptrace-913155252299",
+      "versionInfo": "v1.2.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/!azure/azure-sdk-for-go/sdk/security/keyvault/internal@v1.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/!azure/azure-sdk-for-go/sdk/security/keyvault/internal@v1.2.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/!proton!mail/go-crypto",
+      "SPDXID": "SPDXRef-ptrace-919703071516",
+      "versionInfo": "v1.4.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/!proton!mail/go-crypto@v1.4.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/!proton!mail/go-crypto@v1.4.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/atotto/clipboard",
+      "SPDXID": "SPDXRef-ptrace-745910993123",
+      "versionInfo": "v0.1.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/atotto/clipboard@v0.1.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/atotto/clipboard@v0.1.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/config",
+      "SPDXID": "SPDXRef-ptrace-848831958203",
+      "versionInfo": "v1.32.7",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/config@v1.32.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/config@v1.32.7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/credentials",
+      "SPDXID": "SPDXRef-ptrace-817617937062",
+      "versionInfo": "v1.19.7",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/credentials@v1.19.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/credentials@v1.19.7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/internal/endpoints/v2",
+      "SPDXID": "SPDXRef-ptrace-933611972677",
+      "versionInfo": "v2.7.17",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/internal/endpoints/v2@v2.7.17",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/internal/endpoints/v2@v2.7.17"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/service/sso",
+      "SPDXID": "SPDXRef-ptrace-974653526796",
+      "versionInfo": "v1.30.9",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/sso@v1.30.9",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/sso@v1.30.9"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/service/sts",
+      "SPDXID": "SPDXRef-ptrace-932060705394",
+      "versionInfo": "v1.41.6",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/sts@v1.41.6",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/sts@v1.41.6"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go",
+      "SPDXID": "SPDXRef-ptrace-864452058276",
+      "versionInfo": "v1.55.8",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go@v1.55.8",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go@v1.55.8"
+        }
+      ]
+    },
+    {
+      "name": "github.com/cenkalti/backoff/v5",
+      "SPDXID": "SPDXRef-ptrace-94006529014",
+      "versionInfo": "v5.0.3",
+      "downloadLocation": "https://pkg.go.dev/github.com/cenkalti/backoff/v5@v5.0.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/cenkalti/backoff/v5@v5.0.3"
+        }
+      ]
+    },
+    {
+      "name": "github.com/cespare/xxhash/v2",
+      "SPDXID": "SPDXRef-ptrace-543847133746",
+      "versionInfo": "v2.3.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/cespare/xxhash/v2@v2.3.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/cespare/xxhash/v2@v2.3.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/charmbracelet/bubbles",
+      "SPDXID": "SPDXRef-ptrace-373060064706",
+      "versionInfo": "v1.0.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/charmbracelet/bubbles@v1.0.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/charmbracelet/bubbles@v1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/charmbracelet/bubbletea",
+      "SPDXID": "SPDXRef-ptrace-711813741172",
+      "versionInfo": "v1.3.10",
+      "downloadLocation": "https://pkg.go.dev/github.com/charmbracelet/bubbletea@v1.3.10",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/charmbracelet/bubbletea@v1.3.10"
+        }
+      ]
+    },
+    {
+      "name": "github.com/charmbracelet/colorprofile",
+      "SPDXID": "SPDXRef-ptrace-841395615736",
+      "versionInfo": "v0.4.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/charmbracelet/colorprofile@v0.4.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/charmbracelet/colorprofile@v0.4.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/charmbracelet/lipgloss",
+      "SPDXID": "SPDXRef-ptrace-369968430043",
+      "versionInfo": "v1.1.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/charmbracelet/lipgloss@v1.1.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/charmbracelet/lipgloss@v1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/charmbracelet/x/ansi",
+      "SPDXID": "SPDXRef-ptrace-19453063103",
+      "versionInfo": "v0.11.6",
+      "downloadLocation": "https://pkg.go.dev/github.com/charmbracelet/x/ansi@v0.11.6",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/charmbracelet/x/ansi@v0.11.6"
+        }
+      ]
+    },
+    {
+      "name": "github.com/charmbracelet/x/cellbuf",
+      "SPDXID": "SPDXRef-ptrace-781344989970",
+      "versionInfo": "v0.0.15",
+      "downloadLocation": "https://pkg.go.dev/github.com/charmbracelet/x/cellbuf@v0.0.15",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/charmbracelet/x/cellbuf@v0.0.15"
+        }
+      ]
+    },
+    {
+      "name": "github.com/charmbracelet/x/term",
+      "SPDXID": "SPDXRef-ptrace-540191690307",
+      "versionInfo": "v0.2.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/charmbracelet/x/term@v0.2.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/charmbracelet/x/term@v0.2.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/clipperhouse/stringish",
+      "SPDXID": "SPDXRef-ptrace-160594605709",
+      "versionInfo": "v0.1.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/clipperhouse/stringish@v0.1.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/clipperhouse/stringish@v0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/clipperhouse/uax29/v2",
+      "SPDXID": "SPDXRef-ptrace-853863283244",
+      "versionInfo": "v2.5.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/clipperhouse/uax29/v2@v2.5.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/clipperhouse/uax29/v2@v2.5.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/cloudflare/circl",
+      "SPDXID": "SPDXRef-ptrace-906887351819",
+      "versionInfo": "v1.6.3",
+      "downloadLocation": "https://pkg.go.dev/github.com/cloudflare/circl@v1.6.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/cloudflare/circl@v1.6.3"
+        }
+      ]
+    },
+    {
+      "name": "github.com/containerd/stargz-snapshotter/estargz",
+      "SPDXID": "SPDXRef-ptrace-140378936924",
+      "versionInfo": "v0.18.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/containerd/stargz-snapshotter/estargz@v0.18.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/containerd/stargz-snapshotter/estargz@v0.18.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/coreos/go-oidc/v3",
+      "SPDXID": "SPDXRef-ptrace-756047381855",
+      "versionInfo": "v3.17.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/coreos/go-oidc/v3@v3.17.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/coreos/go-oidc/v3@v3.17.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/cyphar/filepath-securejoin",
+      "SPDXID": "SPDXRef-ptrace-918306019496",
+      "versionInfo": "v0.6.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/cyphar/filepath-securejoin@v0.6.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/cyphar/filepath-securejoin@v0.6.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/danwakefield/fnmatch",
+      "SPDXID": "SPDXRef-ptrace-133050788248",
+      "versionInfo": "v0.0.0-20160403171240-cbb64ac3d964",
+      "downloadLocation": "https://pkg.go.dev/github.com/danwakefield/fnmatch@v0.0.0-20160403171240-cbb64ac3d964",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/danwakefield/fnmatch@v0.0.0-20160403171240-cbb64ac3d964"
+        }
+      ]
+    },
+    {
+      "name": "github.com/digitorus/pkcs7",
+      "SPDXID": "SPDXRef-ptrace-592537352515",
+      "versionInfo": "v0.0.0-20250730155240-ffadbf3f398c",
+      "downloadLocation": "https://pkg.go.dev/github.com/digitorus/pkcs7@v0.0.0-20250730155240-ffadbf3f398c",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/digitorus/pkcs7@v0.0.0-20250730155240-ffadbf3f398c"
+        }
+      ]
+    },
+    {
+      "name": "github.com/docker/cli",
+      "SPDXID": "SPDXRef-ptrace-508418446355",
+      "versionInfo": "v29.2.0+incompatible",
+      "downloadLocation": "https://pkg.go.dev/github.com/docker/cli@v29.2.0+incompatible",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/docker/cli@v29.2.0+incompatible"
+        }
+      ]
+    },
+    {
+      "name": "github.com/docker/distribution",
+      "SPDXID": "SPDXRef-ptrace-46930406085",
+      "versionInfo": "v2.8.3+incompatible",
+      "downloadLocation": "https://pkg.go.dev/github.com/docker/distribution@v2.8.3+incompatible",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/docker/distribution@v2.8.3+incompatible"
+        }
+      ]
+    },
+    {
+      "name": "github.com/emirpasic/gods",
+      "SPDXID": "SPDXRef-ptrace-633783504619",
+      "versionInfo": "v1.18.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/emirpasic/gods@v1.18.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/emirpasic/gods@v1.18.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/felixge/httpsnoop",
+      "SPDXID": "SPDXRef-ptrace-468461695120",
+      "versionInfo": "v1.0.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/felixge/httpsnoop@v1.0.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/felixge/httpsnoop@v1.0.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-git/gcfg",
+      "SPDXID": "SPDXRef-ptrace-583793561191",
+      "versionInfo": "v1.5.1-0.20230307220236-3a3c6141e376",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-git/gcfg@v1.5.1-0.20230307220236-3a3c6141e376",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-git/gcfg@v1.5.1-0.20230307220236-3a3c6141e376"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-git/go-billy/v5",
+      "SPDXID": "SPDXRef-ptrace-246827205234",
+      "versionInfo": "v5.8.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-git/go-billy/v5@v5.8.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-git/go-billy/v5@v5.8.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-git/go-git/v5",
+      "SPDXID": "SPDXRef-ptrace-830192574629",
+      "versionInfo": "v5.17.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-git/go-git/v5@v5.17.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-git/go-git/v5@v5.17.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-jose/go-jose/v4",
+      "SPDXID": "SPDXRef-ptrace-370988685885",
+      "versionInfo": "v4.1.3",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-jose/go-jose/v4@v4.1.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-jose/go-jose/v4@v4.1.3"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/analysis",
+      "SPDXID": "SPDXRef-ptrace-41397015992",
+      "versionInfo": "v0.24.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/analysis@v0.24.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/analysis@v0.24.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/errors",
+      "SPDXID": "SPDXRef-ptrace-814000685775",
+      "versionInfo": "v0.22.6",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/errors@v0.22.6",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/errors@v0.22.6"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/jsonreference",
+      "SPDXID": "SPDXRef-ptrace-102476539858",
+      "versionInfo": "v0.21.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/jsonreference@v0.21.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/jsonreference@v0.21.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/loads",
+      "SPDXID": "SPDXRef-ptrace-617946481974",
+      "versionInfo": "v0.23.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/loads@v0.23.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/loads@v0.23.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/runtime",
+      "SPDXID": "SPDXRef-ptrace-783165741264",
+      "versionInfo": "v0.29.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/runtime@v0.29.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/runtime@v0.29.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/spec",
+      "SPDXID": "SPDXRef-ptrace-294059934582",
+      "versionInfo": "v0.22.3",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/spec@v0.22.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/spec@v0.22.3"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/strfmt",
+      "SPDXID": "SPDXRef-ptrace-301982657576",
+      "versionInfo": "v0.25.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/strfmt@v0.25.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/strfmt@v0.25.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/conv",
+      "SPDXID": "SPDXRef-ptrace-989051490851",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/conv@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/conv@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/fileutils",
+      "SPDXID": "SPDXRef-ptrace-908451138717",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/fileutils@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/fileutils@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/jsonutils",
+      "SPDXID": "SPDXRef-ptrace-1412072504",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/jsonutils@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/jsonutils@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/netutils",
+      "SPDXID": "SPDXRef-ptrace-802665789801",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/netutils@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/netutils@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/stringutils",
+      "SPDXID": "SPDXRef-ptrace-466720649908",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/stringutils@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/stringutils@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/typeutils",
+      "SPDXID": "SPDXRef-ptrace-44154987029",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/typeutils@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/typeutils@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/yamlutils",
+      "SPDXID": "SPDXRef-ptrace-785844609224",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/yamlutils@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/yamlutils@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag",
+      "SPDXID": "SPDXRef-ptrace-268896776730",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/validate",
+      "SPDXID": "SPDXRef-ptrace-683784374693",
+      "versionInfo": "v0.25.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/validate@v0.25.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/validate@v0.25.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-viper/mapstructure/v2",
+      "SPDXID": "SPDXRef-ptrace-691642814988",
+      "versionInfo": "v2.5.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-viper/mapstructure/v2@v2.5.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-viper/mapstructure/v2@v2.5.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/golang-jwt/jwt/v5",
+      "SPDXID": "SPDXRef-ptrace-206536287773",
+      "versionInfo": "v5.3.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/golang-jwt/jwt/v5@v5.3.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/golang-jwt/jwt/v5@v5.3.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/google/certificate-transparency-go",
+      "SPDXID": "SPDXRef-ptrace-863665718692",
+      "versionInfo": "v1.3.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/google/certificate-transparency-go@v1.3.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/google/certificate-transparency-go@v1.3.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/google/go-containerregistry",
+      "SPDXID": "SPDXRef-ptrace-852179005766",
+      "versionInfo": "v0.20.7",
+      "downloadLocation": "https://pkg.go.dev/github.com/google/go-containerregistry@v0.20.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/google/go-containerregistry@v0.20.7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/google/go-querystring",
+      "SPDXID": "SPDXRef-ptrace-836340715751",
+      "versionInfo": "v1.2.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/google/go-querystring@v1.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/google/go-querystring@v1.2.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/google/s2a-go",
+      "SPDXID": "SPDXRef-ptrace-40805554988",
+      "versionInfo": "v0.1.9",
+      "downloadLocation": "https://pkg.go.dev/github.com/google/s2a-go@v0.1.9",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/google/s2a-go@v0.1.9"
+        }
+      ]
+    },
+    {
+      "name": "github.com/google/trillian",
+      "SPDXID": "SPDXRef-ptrace-393361541442",
+      "versionInfo": "v1.7.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/google/trillian@v1.7.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/google/trillian@v1.7.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/google/uuid",
+      "SPDXID": "SPDXRef-ptrace-504445476823",
+      "versionInfo": "v1.6.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/google/uuid@v1.6.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/google/uuid@v1.6.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/googleapis/enterprise-certificate-proxy",
+      "SPDXID": "SPDXRef-ptrace-550163949269",
+      "versionInfo": "v0.3.11",
+      "downloadLocation": "https://pkg.go.dev/github.com/googleapis/enterprise-certificate-proxy@v0.3.11",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/googleapis/enterprise-certificate-proxy@v0.3.11"
+        }
+      ]
+    },
+    {
+      "name": "github.com/googleapis/gax-go/v2",
+      "SPDXID": "SPDXRef-ptrace-389941316352",
+      "versionInfo": "v2.17.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/googleapis/gax-go/v2@v2.17.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/googleapis/gax-go/v2@v2.17.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/grpc-ecosystem/go-grpc-middleware",
+      "SPDXID": "SPDXRef-ptrace-256953560038",
+      "versionInfo": "v1.4.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/grpc-ecosystem/go-grpc-middleware@v1.4.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/grpc-ecosystem/go-grpc-middleware@v1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/grpc-ecosystem/grpc-gateway/v2",
+      "SPDXID": "SPDXRef-ptrace-729990477710",
+      "versionInfo": "v2.27.7",
+      "downloadLocation": "https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/v2@v2.27.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/grpc-ecosystem/grpc-gateway/v2@v2.27.7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/go-multierror",
+      "SPDXID": "SPDXRef-ptrace-12834774570",
+      "versionInfo": "v1.1.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/go-multierror@v1.1.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/go-multierror@v1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/go-retryablehttp",
+      "SPDXID": "SPDXRef-ptrace-388374905993",
+      "versionInfo": "v0.7.8",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/go-retryablehttp@v0.7.8",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/go-retryablehttp@v0.7.8"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/go-secure-stdlib/parseutil",
+      "SPDXID": "SPDXRef-ptrace-596582018207",
+      "versionInfo": "v0.2.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/go-secure-stdlib/parseutil@v0.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/go-secure-stdlib/parseutil@v0.2.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/go-sockaddr",
+      "SPDXID": "SPDXRef-ptrace-957969231467",
+      "versionInfo": "v1.0.7",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/go-sockaddr@v1.0.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/go-sockaddr@v1.0.7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/hcl",
+      "SPDXID": "SPDXRef-ptrace-852213091593",
+      "versionInfo": "v1.0.1-vault-7",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/hcl@v1.0.1-vault-7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/hcl@v1.0.1-vault-7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/vault/api",
+      "SPDXID": "SPDXRef-ptrace-849394519442",
+      "versionInfo": "v1.22.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/vault/api@v1.22.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/vault/api@v1.22.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hiddeco/sshsig",
+      "SPDXID": "SPDXRef-ptrace-404588394958",
+      "versionInfo": "v0.2.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/hiddeco/sshsig@v0.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hiddeco/sshsig@v0.2.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/in-toto/attestation",
+      "SPDXID": "SPDXRef-ptrace-60305326864",
+      "versionInfo": "v1.2.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/in-toto/attestation@v1.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/in-toto/attestation@v1.2.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/in-toto/in-toto-golang",
+      "SPDXID": "SPDXRef-ptrace-766533972411",
+      "versionInfo": "v0.10.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/in-toto/in-toto-golang@v0.10.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/in-toto/in-toto-golang@v0.10.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/jbenet/go-context",
+      "SPDXID": "SPDXRef-ptrace-920352180267",
+      "versionInfo": "v0.0.0-20150711004518-d14ea06fba99",
+      "downloadLocation": "https://pkg.go.dev/github.com/jbenet/go-context@v0.0.0-20150711004518-d14ea06fba99",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/jbenet/go-context@v0.0.0-20150711004518-d14ea06fba99"
+        }
+      ]
+    },
+    {
+      "name": "github.com/jedisct1/go-minisign",
+      "SPDXID": "SPDXRef-ptrace-507440955333",
+      "versionInfo": "v0.0.0-20241212093149-d2f9f49435c7",
+      "downloadLocation": "https://pkg.go.dev/github.com/jedisct1/go-minisign@v0.0.0-20241212093149-d2f9f49435c7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/jedisct1/go-minisign@v0.0.0-20241212093149-d2f9f49435c7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/jmespath/go-jmespath",
+      "SPDXID": "SPDXRef-ptrace-816268701333",
+      "versionInfo": "v0.4.1-0.20220621161143-b0104c826a24",
+      "downloadLocation": "https://pkg.go.dev/github.com/jmespath/go-jmespath@v0.4.1-0.20220621161143-b0104c826a24",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/jmespath/go-jmespath@v0.4.1-0.20220621161143-b0104c826a24"
+        }
+      ]
+    },
+    {
+      "name": "github.com/jonboulle/clockwork",
+      "SPDXID": "SPDXRef-ptrace-290579609642",
+      "versionInfo": "v0.5.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/jonboulle/clockwork@v0.5.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/jonboulle/clockwork@v0.5.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/klauspost/compress",
+      "SPDXID": "SPDXRef-ptrace-410565587455",
+      "versionInfo": "v1.18.3",
+      "downloadLocation": "https://pkg.go.dev/github.com/klauspost/compress@v1.18.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/klauspost/compress@v1.18.3"
+        }
+      ]
+    },
+    {
+      "name": "github.com/klauspost/cpuid/v2",
+      "SPDXID": "SPDXRef-ptrace-454237438771",
+      "versionInfo": "v2.3.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/klauspost/cpuid/v2@v2.3.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/klauspost/cpuid/v2@v2.3.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/kylelemons/godebug",
+      "SPDXID": "SPDXRef-ptrace-386191082217",
+      "versionInfo": "v1.1.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/kylelemons/godebug@v1.1.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/kylelemons/godebug@v1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/letsencrypt/boulder",
+      "SPDXID": "SPDXRef-ptrace-920029058187",
+      "versionInfo": "v0.20260126.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/letsencrypt/boulder@v0.20260126.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/letsencrypt/boulder@v0.20260126.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/lucasb-eyer/go-colorful",
+      "SPDXID": "SPDXRef-ptrace-457671521932",
+      "versionInfo": "v1.3.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/lucasb-eyer/go-colorful@v1.3.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/lucasb-eyer/go-colorful@v1.3.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/mattn/go-runewidth",
+      "SPDXID": "SPDXRef-ptrace-698790166359",
+      "versionInfo": "v0.0.19",
+      "downloadLocation": "https://pkg.go.dev/github.com/mattn/go-runewidth@v0.0.19",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/mattn/go-runewidth@v0.0.19"
+        }
+      ]
+    },
+    {
+      "name": "github.com/moby/term",
+      "SPDXID": "SPDXRef-ptrace-638225875917",
+      "versionInfo": "v0.5.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/moby/term@v0.5.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/moby/term@v0.5.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/muesli/ansi",
+      "SPDXID": "SPDXRef-ptrace-323878880570",
+      "versionInfo": "v0.0.0-20230316100256-276c6243b2f6",
+      "downloadLocation": "https://pkg.go.dev/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/muesli/ansi@v0.0.0-20230316100256-276c6243b2f6"
+        }
+      ]
+    },
+    {
+      "name": "github.com/muesli/termenv",
+      "SPDXID": "SPDXRef-ptrace-9215886036",
+      "versionInfo": "v0.16.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/muesli/termenv@v0.16.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/muesli/termenv@v0.16.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/natefinch/atomic",
+      "SPDXID": "SPDXRef-ptrace-407789922013",
+      "versionInfo": "v1.0.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/natefinch/atomic@v1.0.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/natefinch/atomic@v1.0.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/nozzle/throttler",
+      "SPDXID": "SPDXRef-ptrace-328053947694",
+      "versionInfo": "v0.0.0-20180817012639-2ea982251481",
+      "downloadLocation": "https://pkg.go.dev/github.com/nozzle/throttler@v0.0.0-20180817012639-2ea982251481",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/nozzle/throttler@v0.0.0-20180817012639-2ea982251481"
+        }
+      ]
+    },
+    {
+      "name": "github.com/oklog/ulid",
+      "SPDXID": "SPDXRef-ptrace-847698925454",
+      "versionInfo": "v1.3.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/oklog/ulid@v1.3.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/oklog/ulid@v1.3.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/pjbgf/sha1cd",
+      "SPDXID": "SPDXRef-ptrace-692906832790",
+      "versionInfo": "v0.5.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/pjbgf/sha1cd@v0.5.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/pjbgf/sha1cd@v0.5.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/pkg/browser",
+      "SPDXID": "SPDXRef-ptrace-102585912904",
+      "versionInfo": "v0.0.0-20240102092130-5ac0b6a4141c",
+      "downloadLocation": "https://pkg.go.dev/github.com/pkg/browser@v0.0.0-20240102092130-5ac0b6a4141c",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/pkg/browser@v0.0.0-20240102092130-5ac0b6a4141c"
+        }
+      ]
+    },
+    {
+      "name": "github.com/pmezard/go-difflib",
+      "SPDXID": "SPDXRef-ptrace-665042215963",
+      "versionInfo": "v1.0.1-0.20181226105442-5d4384ee4fb2",
+      "downloadLocation": "https://pkg.go.dev/github.com/pmezard/go-difflib@v1.0.1-0.20181226105442-5d4384ee4fb2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/pmezard/go-difflib@v1.0.1-0.20181226105442-5d4384ee4fb2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sassoftware/relic",
+      "SPDXID": "SPDXRef-ptrace-871721750804",
+      "versionInfo": "v7.2.1+incompatible",
+      "downloadLocation": "https://pkg.go.dev/github.com/sassoftware/relic@v7.2.1+incompatible",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sassoftware/relic@v7.2.1+incompatible"
+        }
+      ]
+    },
+    {
+      "name": "github.com/secure-systems-lab/go-securesystemslib",
+      "SPDXID": "SPDXRef-ptrace-756162123903",
+      "versionInfo": "v0.10.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/secure-systems-lab/go-securesystemslib@v0.10.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/secure-systems-lab/go-securesystemslib@v0.10.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sergi/go-diff",
+      "SPDXID": "SPDXRef-ptrace-797048656003",
+      "versionInfo": "v1.4.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/sergi/go-diff@v1.4.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sergi/go-diff@v1.4.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/fulcio",
+      "SPDXID": "SPDXRef-ptrace-274636540400",
+      "versionInfo": "v1.8.5",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/fulcio@v1.8.5",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/fulcio@v1.8.5"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/gitsign",
+      "SPDXID": "SPDXRef-ptrace-167381477573",
+      "versionInfo": "v0.14.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/gitsign@v0.14.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/gitsign@v0.14.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/rekor-tiles/v2",
+      "SPDXID": "SPDXRef-ptrace-638397820412",
+      "versionInfo": "v2.2.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/rekor-tiles/v2@v2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/rekor-tiles/v2@v2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/rekor",
+      "SPDXID": "SPDXRef-ptrace-418564927745",
+      "versionInfo": "v1.5.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/rekor@v1.5.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/rekor@v1.5.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/sigstore-go",
+      "SPDXID": "SPDXRef-ptrace-158705743308",
+      "versionInfo": "v1.1.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/sigstore-go@v1.1.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/sigstore-go@v1.1.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/sigstore/pkg/signature/kms/azure",
+      "SPDXID": "SPDXRef-ptrace-742883028356",
+      "versionInfo": "v1.10.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/sigstore/pkg/signature/kms/azure@v1.10.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/sigstore/pkg/signature/kms/azure@v1.10.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/timestamp-authority/v2",
+      "SPDXID": "SPDXRef-ptrace-719961821128",
+      "versionInfo": "v2.0.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/timestamp-authority/v2@v2.0.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/timestamp-authority/v2@v2.0.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/spf13/cobra",
+      "SPDXID": "SPDXRef-ptrace-807799352006",
+      "versionInfo": "v1.10.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/spf13/cobra@v1.10.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/spf13/cobra@v1.10.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/spf13/pflag",
+      "SPDXID": "SPDXRef-ptrace-238886131858",
+      "versionInfo": "v1.0.10",
+      "downloadLocation": "https://pkg.go.dev/github.com/spf13/pflag@v1.0.10",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/spf13/pflag@v1.0.10"
+        }
+      ]
+    },
+    {
+      "name": "github.com/stretchr/testify",
+      "SPDXID": "SPDXRef-ptrace-400334930247",
+      "versionInfo": "v1.11.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/stretchr/testify@v1.11.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/stretchr/testify@v1.11.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/syndtr/goleveldb",
+      "SPDXID": "SPDXRef-ptrace-46011407868",
+      "versionInfo": "v1.0.1-0.20220721030215-126854af5e6d",
+      "downloadLocation": "https://pkg.go.dev/github.com/syndtr/goleveldb@v1.0.1-0.20220721030215-126854af5e6d",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/syndtr/goleveldb@v1.0.1-0.20220721030215-126854af5e6d"
+        }
+      ]
+    },
+    {
+      "name": "github.com/theupdateframework/go-tuf/v2",
+      "SPDXID": "SPDXRef-ptrace-8437036459",
+      "versionInfo": "v2.4.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/theupdateframework/go-tuf/v2@v2.4.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/theupdateframework/go-tuf/v2@v2.4.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/theupdateframework/go-tuf",
+      "SPDXID": "SPDXRef-ptrace-810709878335",
+      "versionInfo": "v0.7.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/theupdateframework/go-tuf@v0.7.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/theupdateframework/go-tuf@v0.7.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/tink-crypto/tink-go-gcpkms/v2",
+      "SPDXID": "SPDXRef-ptrace-907062058105",
+      "versionInfo": "v2.2.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/tink-crypto/tink-go-gcpkms/v2@v2.2.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/tink-crypto/tink-go-gcpkms/v2@v2.2.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/transparency-dev/merkle",
+      "SPDXID": "SPDXRef-ptrace-810677818931",
+      "versionInfo": "v0.0.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/transparency-dev/merkle@v0.0.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/transparency-dev/merkle@v0.0.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/xo/terminfo",
+      "SPDXID": "SPDXRef-ptrace-84084212939",
+      "versionInfo": "v0.0.0-20220910002029-abceb7e1c41e",
+      "downloadLocation": "https://pkg.go.dev/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/xo/terminfo@v0.0.0-20220910002029-abceb7e1c41e"
+        }
+      ]
+    },
+    {
+      "name": "github.com/yuin/gopher-lua",
+      "SPDXID": "SPDXRef-ptrace-748918004548",
+      "versionInfo": "v1.1.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/yuin/gopher-lua@v1.1.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/yuin/gopher-lua@v1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "go.mongodb.org/mongo-driver",
+      "SPDXID": "SPDXRef-ptrace-666285590033",
+      "versionInfo": "v1.17.8",
+      "downloadLocation": "https://pkg.go.dev/go.mongodb.org/mongo-driver@v1.17.8",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.mongodb.org/mongo-driver@v1.17.8"
+        }
+      ]
+    },
+    {
+      "name": "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc",
+      "SPDXID": "SPDXRef-ptrace-715676998880",
+      "versionInfo": "v0.64.0",
+      "downloadLocation": "https://pkg.go.dev/go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc@v0.64.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc@v0.64.0"
+        }
+      ]
+    },
+    {
+      "name": "go.opentelemetry.io/otel/metric",
+      "SPDXID": "SPDXRef-ptrace-704795857112",
+      "versionInfo": "v1.39.0",
+      "downloadLocation": "https://pkg.go.dev/go.opentelemetry.io/otel/metric@v1.39.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.opentelemetry.io/otel/metric@v1.39.0"
+        }
+      ]
+    },
+    {
+      "name": "go.opentelemetry.io/otel",
+      "SPDXID": "SPDXRef-ptrace-342295637923",
+      "versionInfo": "v1.39.0",
+      "downloadLocation": "https://pkg.go.dev/go.opentelemetry.io/otel@v1.39.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.opentelemetry.io/otel@v1.39.0"
+        }
+      ]
+    },
+    {
+      "name": "go.uber.org/multierr",
+      "SPDXID": "SPDXRef-ptrace-640866596455",
+      "versionInfo": "v1.11.0",
+      "downloadLocation": "https://pkg.go.dev/go.uber.org/multierr@v1.11.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.uber.org/multierr@v1.11.0"
+        }
+      ]
+    },
+    {
+      "name": "go.uber.org/zap",
+      "SPDXID": "SPDXRef-ptrace-489121809179",
+      "versionInfo": "v1.27.1",
+      "downloadLocation": "https://pkg.go.dev/go.uber.org/zap@v1.27.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.uber.org/zap@v1.27.1"
+        }
+      ]
+    },
+    {
+      "name": "go.yaml.in/yaml/v3",
+      "SPDXID": "SPDXRef-ptrace-860724681575",
+      "versionInfo": "v3.0.4",
+      "downloadLocation": "https://pkg.go.dev/go.yaml.in/yaml/v3@v3.0.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/go.yaml.in/yaml/v3@v3.0.4"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/crypto",
+      "SPDXID": "SPDXRef-ptrace-492069359611",
+      "versionInfo": "v0.49.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/crypto@v0.49.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/crypto@v0.49.0"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/mod",
+      "SPDXID": "SPDXRef-ptrace-552307486752",
+      "versionInfo": "v0.33.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/mod@v0.33.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/mod@v0.33.0"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/net",
+      "SPDXID": "SPDXRef-ptrace-414103128346",
+      "versionInfo": "v0.51.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/net@v0.51.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/net@v0.51.0"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/oauth2",
+      "SPDXID": "SPDXRef-ptrace-399749667518",
+      "versionInfo": "v0.35.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/oauth2@v0.35.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/oauth2@v0.35.0"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/sync",
+      "SPDXID": "SPDXRef-ptrace-730863930873",
+      "versionInfo": "v0.20.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/sync@v0.20.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/sync@v0.20.0"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/sys",
+      "SPDXID": "SPDXRef-ptrace-503376323343",
+      "versionInfo": "v0.42.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/sys@v0.42.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/sys@v0.42.0"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/time",
+      "SPDXID": "SPDXRef-ptrace-868584256662",
+      "versionInfo": "v0.14.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/time@v0.14.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/time@v0.14.0"
+        }
+      ]
+    },
+    {
+      "name": "google.golang.org/api",
+      "SPDXID": "SPDXRef-ptrace-243216750483",
+      "versionInfo": "v0.267.0",
+      "downloadLocation": "https://pkg.go.dev/google.golang.org/api@v0.267.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org/api@v0.267.0"
+        }
+      ]
+    },
+    {
+      "name": "google.golang.org/genproto",
+      "SPDXID": "SPDXRef-ptrace-932448496909",
+      "versionInfo": "v0.0.0-20260128011058-8636f8732409",
+      "downloadLocation": "https://pkg.go.dev/google.golang.org/genproto@v0.0.0-20260128011058-8636f8732409",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org/genproto@v0.0.0-20260128011058-8636f8732409"
+        }
+      ]
+    },
+    {
+      "name": "google.golang.org/grpc",
+      "SPDXID": "SPDXRef-ptrace-894890147253",
+      "versionInfo": "v1.79.3",
+      "downloadLocation": "https://pkg.go.dev/google.golang.org/grpc@v1.79.3",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org/grpc@v1.79.3"
+        }
+      ]
+    },
+    {
+      "name": "gopkg.in/yaml.v3",
+      "SPDXID": "SPDXRef-ptrace-900314017172",
+      "versionInfo": "v3.0.1",
+      "downloadLocation": "https://pkg.go.dev/gopkg.in/yaml.v3@v3.0.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/gopkg.in/yaml.v3@v3.0.1"
+        }
+      ]
+    },
+    {
+      "name": "k8s.io/klog/v2",
+      "SPDXID": "SPDXRef-ptrace-259479567084",
+      "versionInfo": "v2.130.1",
+      "downloadLocation": "https://pkg.go.dev/k8s.io/klog/v2@v2.130.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/k8s.io/klog/v2@v2.130.1"
+        }
+      ]
+    },
+    {
+      "name": "cloud.google.com/go",
+      "SPDXID": "SPDXRef-ptrace-859620517292",
+      "versionInfo": "v0.123.0",
+      "downloadLocation": "https://pkg.go.dev/cloud.google.com/go@v0.123.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/cloud.google.com/go@v0.123.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/service/internal/presigned-url",
+      "SPDXID": "SPDXRef-ptrace-984008198224",
+      "versionInfo": "v1.13.17",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/internal/presigned-url@v1.13.17",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/service/internal/presigned-url@v1.13.17"
+        }
+      ]
+    },
+    {
+      "name": "github.com/clipperhouse/displaywidth",
+      "SPDXID": "SPDXRef-ptrace-725283223401",
+      "versionInfo": "v0.9.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/clipperhouse/displaywidth@v0.9.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/clipperhouse/displaywidth@v0.9.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/golang/groupcache",
+      "SPDXID": "SPDXRef-ptrace-286877511126",
+      "versionInfo": "v0.0.0-20241129210726-2c02b8208cf8",
+      "downloadLocation": "https://pkg.go.dev/github.com/golang/groupcache@v0.0.0-20241129210726-2c02b8208cf8",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/golang/groupcache@v0.0.0-20241129210726-2c02b8208cf8"
+        }
+      ]
+    },
+    {
+      "name": "github.com/golang/snappy",
+      "SPDXID": "SPDXRef-ptrace-182443163999",
+      "versionInfo": "v1.0.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/golang/snappy@v1.0.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/golang/snappy@v1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/hashicorp/errwrap",
+      "SPDXID": "SPDXRef-ptrace-963575087217",
+      "versionInfo": "v1.1.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/hashicorp/errwrap@v1.1.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/hashicorp/errwrap@v1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/muesli/cancelreader",
+      "SPDXID": "SPDXRef-ptrace-637512068670",
+      "versionInfo": "v0.2.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/muesli/cancelreader@v0.2.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/muesli/cancelreader@v0.2.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/rivo/uniseg",
+      "SPDXID": "SPDXRef-ptrace-328874589512",
+      "versionInfo": "v0.4.7",
+      "downloadLocation": "https://pkg.go.dev/github.com/rivo/uniseg@v0.4.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/rivo/uniseg@v0.4.7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sigstore/sigstore/pkg/signature/kms/gcp",
+      "SPDXID": "SPDXRef-ptrace-701158265017",
+      "versionInfo": "v1.10.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/sigstore/sigstore/pkg/signature/kms/gcp@v1.10.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sigstore/sigstore/pkg/signature/kms/gcp@v1.10.4"
+        }
+      ]
+    },
+    {
+      "name": "google.golang.org/genproto/googleapis/api",
+      "SPDXID": "SPDXRef-ptrace-319708903005",
+      "versionInfo": "v0.0.0-20260128011058-8636f8732409",
+      "downloadLocation": "https://pkg.go.dev/google.golang.org/genproto/googleapis/api@v0.0.0-20260128011058-8636f8732409",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/google.golang.org/genproto/googleapis/api@v0.0.0-20260128011058-8636f8732409"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/jsonname",
+      "SPDXID": "SPDXRef-ptrace-58094474050",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/jsonname@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/jsonname@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/mitchellh/go-homedir",
+      "SPDXID": "SPDXRef-ptrace-213822877760",
+      "versionInfo": "v1.1.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/mitchellh/go-homedir@v1.1.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/mitchellh/go-homedir@v1.1.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/opencontainers/image-spec",
+      "SPDXID": "SPDXRef-ptrace-151240330468",
+      "versionInfo": "v1.1.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/opencontainers/image-spec@v1.1.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/opencontainers/image-spec@v1.1.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/sahilm/fuzzy",
+      "SPDXID": "SPDXRef-ptrace-465013235739",
+      "versionInfo": "v0.1.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/sahilm/fuzzy@v0.1.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/sahilm/fuzzy@v0.1.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aws/aws-sdk-go-v2/internal/ini",
+      "SPDXID": "SPDXRef-ptrace-132076283849",
+      "versionInfo": "v1.8.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/internal/ini@v1.8.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aws/aws-sdk-go-v2/internal/ini@v1.8.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/aymanbagabas/go-osc52/v2",
+      "SPDXID": "SPDXRef-ptrace-256412949412",
+      "versionInfo": "v2.0.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/aymanbagabas/go-osc52/v2@v2.0.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/aymanbagabas/go-osc52/v2@v2.0.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/cyberphone/json-canonicalization",
+      "SPDXID": "SPDXRef-ptrace-788101005062",
+      "versionInfo": "v0.0.0-20241213102144-19d51d7fe467",
+      "downloadLocation": "https://pkg.go.dev/github.com/cyberphone/json-canonicalization@v0.0.0-20241213102144-19d51d7fe467",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/cyberphone/json-canonicalization@v0.0.0-20241213102144-19d51d7fe467"
+        }
+      ]
+    },
+    {
+      "name": "github.com/digitorus/timestamp",
+      "SPDXID": "SPDXRef-ptrace-222590347965",
+      "versionInfo": "v0.0.0-20250524132541-c45532741eea",
+      "downloadLocation": "https://pkg.go.dev/github.com/digitorus/timestamp@v0.0.0-20250524132541-c45532741eea",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/digitorus/timestamp@v0.0.0-20250524132541-c45532741eea"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-logr/stdr",
+      "SPDXID": "SPDXRef-ptrace-427745903466",
+      "versionInfo": "v1.2.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-logr/stdr@v1.2.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-logr/stdr@v1.2.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/cmdutils",
+      "SPDXID": "SPDXRef-ptrace-162962801079",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/cmdutils@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/cmdutils@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/loading",
+      "SPDXID": "SPDXRef-ptrace-986591638526",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/loading@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/loading@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-openapi/swag/mangling",
+      "SPDXID": "SPDXRef-ptrace-211226845331",
+      "versionInfo": "v0.25.4",
+      "downloadLocation": "https://pkg.go.dev/github.com/go-openapi/swag/mangling@v0.25.4",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/go-openapi/swag/mangling@v0.25.4"
+        }
+      ]
+    },
+    {
+      "name": "github.com/mattn/go-isatty",
+      "SPDXID": "SPDXRef-ptrace-142633483607",
+      "versionInfo": "v0.0.20",
+      "downloadLocation": "https://pkg.go.dev/github.com/mattn/go-isatty@v0.0.20",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/mattn/go-isatty@v0.0.20"
+        }
+      ]
+    },
+    {
+      "name": "github.com/opencontainers/go-digest",
+      "SPDXID": "SPDXRef-ptrace-411468842561",
+      "versionInfo": "v1.0.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/opencontainers/go-digest@v1.0.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/opencontainers/go-digest@v1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/pkg/errors",
+      "SPDXID": "SPDXRef-ptrace-708971469678",
+      "versionInfo": "v0.9.1",
+      "downloadLocation": "https://pkg.go.dev/github.com/pkg/errors@v0.9.1",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/pkg/errors@v0.9.1"
+        }
+      ]
+    },
+    {
+      "name": "github.com/ryanuber/go-glob",
+      "SPDXID": "SPDXRef-ptrace-496594795706",
+      "versionInfo": "v1.0.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/ryanuber/go-glob@v1.0.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/ryanuber/go-glob@v1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/shibumi/go-pathspec",
+      "SPDXID": "SPDXRef-ptrace-59126893504",
+      "versionInfo": "v1.3.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/shibumi/go-pathspec@v1.3.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/shibumi/go-pathspec@v1.3.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/skeema/knownhosts",
+      "SPDXID": "SPDXRef-ptrace-60926354265",
+      "versionInfo": "v1.3.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/skeema/knownhosts@v1.3.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/skeema/knownhosts@v1.3.2"
+        }
+      ]
+    },
+    {
+      "name": "github.com/tink-crypto/tink-go-awskms/v2",
+      "SPDXID": "SPDXRef-ptrace-715834379502",
+      "versionInfo": "v2.1.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/tink-crypto/tink-go-awskms/v2@v2.1.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/tink-crypto/tink-go-awskms/v2@v2.1.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/vbatts/tar-split",
+      "SPDXID": "SPDXRef-ptrace-82382868205",
+      "versionInfo": "v0.12.2",
+      "downloadLocation": "https://pkg.go.dev/github.com/vbatts/tar-split@v0.12.2",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/vbatts/tar-split@v0.12.2"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/term",
+      "SPDXID": "SPDXRef-ptrace-203918167041",
+      "versionInfo": "v0.41.0",
+      "downloadLocation": "https://pkg.go.dev/golang.org/x/term@v0.41.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/golang.org/x/term@v0.41.0"
+        }
+      ]
+    },
+    {
+      "name": "github.com/cpuguy83/go-md2man/v2",
+      "SPDXID": "SPDXRef-ptrace-345880380868",
+      "versionInfo": "v2.0.7",
+      "downloadLocation": "https://pkg.go.dev/github.com/cpuguy83/go-md2man/v2@v2.0.7",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/cpuguy83/go-md2man/v2@v2.0.7"
+        }
+      ]
+    },
+    {
+      "name": "github.com/russross/blackfriday/v2",
+      "SPDXID": "SPDXRef-ptrace-238569445945",
+      "versionInfo": "v2.1.0",
+      "downloadLocation": "https://pkg.go.dev/github.com/russross/blackfriday/v2@v2.1.0",
+      "filesAnalyzed": false,
+      "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+      "primaryPackagePurpose": "LIBRARY",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:golang/github.com/russross/blackfriday/v2@v2.1.0"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-503741491117"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-841031256998"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-775627248907"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-653204037123"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-437500926656"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-717001132314"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-78623229750"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-324776401693"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-122432716595"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-992368765200"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-221425810057"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-568579346500"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-793342235017"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-2935533722"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-111742049347"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-446750504205"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-252665788172"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-619780207109"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-590978983487"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-517448137648"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-528769086417"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-470530674516"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-848813180693"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-77363142140"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-321217233526"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-882761571587"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-572567765142"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-746304034288"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-765146812953"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-311996772479"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-755690435275"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-9815210136"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-767893233651"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-517493872115"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-328290974708"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-333410942932"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-954033014741"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-772232844523"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-548599247065"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-905100824432"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-331926633107"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-367311684001"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-499044442035"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-599422557608"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-736682630412"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-363963920474"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-901843869060"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-997713520163"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-605728671854"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-1623729490"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-123430738221"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-504057473158"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-195619756236"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-688088113104"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-346971514799"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-477474980281"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-573891554472"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-653626591428"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-956545501956"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-913155252299"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-919703071516"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-745910993123"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-848831958203"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-817617937062"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-933611972677"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-974653526796"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-932060705394"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-864452058276"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-94006529014"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-543847133746"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-373060064706"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-711813741172"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-841395615736"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-369968430043"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-19453063103"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-781344989970"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-540191690307"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-160594605709"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-853863283244"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-906887351819"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-140378936924"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-756047381855"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-918306019496"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-133050788248"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-592537352515"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-508418446355"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-46930406085"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-633783504619"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-468461695120"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-583793561191"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-246827205234"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-830192574629"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-370988685885"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-41397015992"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-814000685775"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-102476539858"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-617946481974"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-783165741264"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-294059934582"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-301982657576"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-989051490851"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-908451138717"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-1412072504"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-802665789801"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-466720649908"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-44154987029"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-785844609224"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-268896776730"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-683784374693"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-691642814988"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-206536287773"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-863665718692"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-852179005766"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-836340715751"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-40805554988"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-393361541442"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-504445476823"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-550163949269"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-389941316352"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-256953560038"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-729990477710"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-12834774570"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-388374905993"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-596582018207"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-957969231467"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-852213091593"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-849394519442"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-404588394958"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-60305326864"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-766533972411"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-920352180267"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-507440955333"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-816268701333"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-290579609642"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-410565587455"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-454237438771"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-386191082217"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-920029058187"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-457671521932"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-698790166359"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-638225875917"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-323878880570"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-9215886036"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-407789922013"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-328053947694"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-847698925454"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-692906832790"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-102585912904"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-665042215963"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-871721750804"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-756162123903"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-797048656003"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-274636540400"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-167381477573"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-638397820412"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-418564927745"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-158705743308"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-742883028356"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-719961821128"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-807799352006"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-238886131858"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-400334930247"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-46011407868"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-8437036459"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-810709878335"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-907062058105"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-810677818931"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-84084212939"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-748918004548"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-666285590033"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-715676998880"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-704795857112"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-342295637923"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-640866596455"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-489121809179"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-860724681575"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-492069359611"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-552307486752"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-414103128346"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-399749667518"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-730863930873"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-503376323343"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-868584256662"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-243216750483"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-932448496909"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-894890147253"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-900314017172"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-259479567084"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-859620517292"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-984008198224"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-725283223401"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-286877511126"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-182443163999"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-963575087217"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-637512068670"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-328874589512"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-701158265017"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-319708903005"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-58094474050"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-213822877760"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-151240330468"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-465013235739"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-132076283849"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-256412949412"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-788101005062"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-222590347965"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-427745903466"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-162962801079"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-986591638526"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-211226845331"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-142633483607"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-411468842561"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-708971469678"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-496594795706"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-59126893504"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-60926354265"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-715834379502"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-82382868205"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-203918167041"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-345880380868"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-ptrace-238569445945"
+    }
+  ],
+  "attestationSources": [
+    "9f4ef0f3-5ce0-47ae-899e-b644eabba82b.json",
+    "b54802e7-cf15-4bb3-aff2-b14d2de4672c.json",
+    "caf7c06c-2a5a-47be-a5f0-932371bac1e7.json"
+  ],
+  "catalogMode": "file-hash-only"
+}
