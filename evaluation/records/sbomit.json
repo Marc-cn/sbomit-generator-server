@@ -1,0 +1,82 @@
+{
+  "project": "sbomit",
+  "started_at": "2026-05-04T21:11:05.071724+00:00",
+  "sbomit": {
+    "wall_clock_s": 37.2,
+    "exit_code": 0,
+    "steps": {
+      "go-build": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 1.263,
+          "command-run": 27.485,
+          "product": 0.107
+        },
+        "total_s": 28.85
+      },
+      "go-test": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.102,
+          "command-run": 5.05,
+          "product": 0.105
+        },
+        "total_s": 5.26
+      },
+      "go-fmt": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.101,
+          "command-run": 0.313,
+          "product": 0.105
+        },
+        "total_s": 0.52
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/sbomit",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/sbomit_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 9.6,
+    "packages": 42,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/sbomit/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 2.0,
+    "packages": 18,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/sbomit/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 17,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-sbomit-rich.spdx.json"
+  },
+  "ptrace_modules": 14,
+  "ptrace_analysis": {
+    "compiled_modules": 14,
+    "syft_captures_compiled": 13,
+    "syft_captures_pct": 92.9,
+    "syft_misses_compiled": 1,
+    "syft_false_positives": 14,
+    "syft_false_positive_pct": 51.9,
+    "trivy_captures_compiled": 13,
+    "trivy_captures_pct": 92.9,
+    "trivy_misses_compiled": 1,
+    "trivy_false_positives": 3,
+    "trivy_false_positive_pct": 18.8
+  },
+  "package_counts": {
+    "sbomit": 28,
+    "syft": 27,
+    "trivy": 16
+  },
+  "sizes": {
+    "attestation_mb": 0.57,
+    "sbomit_sbom_mb": 0.02,
+    "syft_sbom_mb": 0.08,
+    "trivy_sbom_mb": 0.02
+  },
+  "completed_at": "2026-05-04T21:12:01.548149+00:00"
+}

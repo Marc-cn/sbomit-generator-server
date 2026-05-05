@@ -1,0 +1,195 @@
+{
+  "project": "argo-cd",
+  "started_at": "2026-05-04T21:13:44.660104+00:00",
+  "sbomit": {
+    "wall_clock_s": 7310.4,
+    "exit_code": 0,
+    "steps": {
+      "cli": {
+        "status": "failed",
+        "phases": {}
+      },
+      "cli-local": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 34.703,
+          "command-run": 468.82,
+          "product": 50.759
+        },
+        "total_s": 554.28
+      },
+      "gen-resources-cli-local": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 18.657,
+          "command-run": 321.205,
+          "product": 46.847
+        },
+        "total_s": 386.71
+      },
+      "argocd-all": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.02,
+          "material": 23.425,
+          "command-run": 357.997,
+          "product": 56.492
+        },
+        "total_s": 437.93
+      },
+      "server": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.069,
+          "material": 13.742,
+          "command-run": 322.417,
+          "product": 52.266
+        },
+        "total_s": 388.49
+      },
+      "repo-server": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.023,
+          "material": 13.313,
+          "command-run": 285.024,
+          "product": 51.445
+        },
+        "total_s": 349.81
+      },
+      "controller": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.014,
+          "material": 18.247,
+          "command-run": 417.725,
+          "product": 49.851
+        },
+        "total_s": 485.84
+      },
+      "lint": {
+        "status": "failed",
+        "phases": {}
+      },
+      "lint-local": {
+        "status": "failed",
+        "phases": {}
+      },
+      "build": {
+        "status": "failed",
+        "phases": {}
+      },
+      "build-local": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 6.651,
+          "command-run": 983.352,
+          "product": 63.389
+        },
+        "total_s": 1053.39
+      },
+      "test": {
+        "status": "failed",
+        "phases": {}
+      },
+      "test-local": {
+        "status": "failed",
+        "phases": {}
+      },
+      "test-gitops-engine": {
+        "status": "failed",
+        "phases": {}
+      },
+      "test-race": {
+        "status": "failed",
+        "phases": {}
+      },
+      "test-race-local": {
+        "status": "failed",
+        "phases": {}
+      },
+      "clean-debug": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.03,
+          "material": 6.767,
+          "command-run": 16.598,
+          "product": 7.1
+        },
+        "total_s": 30.49
+      },
+      "pre-commit": {
+        "status": "failed",
+        "phases": {}
+      },
+      "pre-commit-local": {
+        "status": "failed",
+        "phases": {}
+      },
+      "verify-kube-connect": {
+        "status": "failed",
+        "phases": {}
+      },
+      "show-go-version": {
+        "status": "failed",
+        "phases": {}
+      },
+      "applicationset-controller": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 7.006,
+          "command-run": 557.793,
+          "product": 52.795
+        },
+        "total_s": 617.59
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/argo-cd",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/argo-cd_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 230.8,
+    "packages": 3656,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/argo-cd/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 52.6,
+    "packages": 886,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/argo-cd/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 1826,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-argo-cd-rich.spdx.json"
+  },
+  "ptrace_modules": 371,
+  "ptrace_analysis": {
+    "ground_truth_source": "go.sum (ptrace captured toolchain only)",
+    "compiled_modules": 371,
+    "syft_captures_compiled": 314,
+    "syft_captures_pct": 84.6,
+    "syft_misses_compiled": 57,
+    "syft_false_positives": 1521,
+    "syft_false_positive_pct": 82.9,
+    "trivy_captures_compiled": 284,
+    "trivy_captures_pct": 76.5,
+    "trivy_misses_compiled": 87,
+    "trivy_false_positives": 491,
+    "trivy_false_positive_pct": 63.4
+  },
+  "package_counts": {
+    "sbomit": 1836,
+    "syft": 1835,
+    "trivy": 775
+  },
+  "sizes": {
+    "attestation_mb": 99.21,
+    "sbomit_sbom_mb": 3.33,
+    "syft_sbom_mb": 8.22,
+    "trivy_sbom_mb": 1.29
+  },
+  "completed_at": "2026-05-04T23:21:06.526791+00:00"
+}

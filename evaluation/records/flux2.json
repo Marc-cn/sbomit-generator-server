@@ -1,0 +1,86 @@
+{
+  "project": "flux2",
+  "started_at": "2026-05-04T21:12:01.548595+00:00",
+  "sbomit": {
+    "wall_clock_s": 45.3,
+    "exit_code": 0,
+    "steps": {
+      "fmt": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 2.046,
+          "command-run": 13.356,
+          "product": 0.104
+        },
+        "total_s": 15.51
+      },
+      "vet": {
+        "status": "failed",
+        "phases": {}
+      },
+      "test": {
+        "status": "failed",
+        "phases": {}
+      },
+      "build": {
+        "status": "failed",
+        "phases": {}
+      },
+      "build-dev": {
+        "status": "failed",
+        "phases": {}
+      },
+      "install": {
+        "status": "failed",
+        "phases": {}
+      },
+      "install-dev": {
+        "status": "failed",
+        "phases": {}
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/flux2",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/flux2_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 37.8,
+    "packages": 543,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/flux2/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 10.0,
+    "packages": 407,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/flux2/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 362,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-flux2-rich.spdx.json"
+  },
+  "ptrace_modules": 215,
+  "ptrace_analysis": {
+    "compiled_modules": 215,
+    "syft_captures_compiled": 199,
+    "syft_captures_pct": 92.6,
+    "syft_misses_compiled": 16,
+    "syft_false_positives": 205,
+    "syft_false_positive_pct": 50.7,
+    "trivy_captures_compiled": 199,
+    "trivy_captures_pct": 92.6,
+    "trivy_misses_compiled": 16,
+    "trivy_false_positives": 122,
+    "trivy_false_positive_pct": 38.0
+  },
+  "package_counts": {
+    "sbomit": 420,
+    "syft": 404,
+    "trivy": 321
+  },
+  "sizes": {
+    "attestation_mb": 0.73,
+    "sbomit_sbom_mb": 0.51,
+    "syft_sbom_mb": 1.25,
+    "trivy_sbom_mb": 0.69
+  },
+  "completed_at": "2026-05-04T21:13:44.659683+00:00"
+}

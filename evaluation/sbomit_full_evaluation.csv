@@ -1,0 +1,11 @@
+project,ground_truth_source,sbomit_packages,syft_packages,trivy_packages,gt_modules,confirmed_true_positives,syft_false_positives,syft_false_positive_pct,ptrace_only_missed_by_syft,syft_miss_pct,sbomit_union,syft_captures_gt_pct,trivy_captures_gt_pct,trivy_false_positives,trivy_false_positive_pct,sbomit_time_s,sbomit_time_min,syft_time_s,trivy_time_s,sbomit_vs_syft_slowdown_x,sbomit_vs_trivy_slowdown_x,step_fmt_s,step_build_s,step_test_s,step_install_s,attestation_mb,sbomit_sbom_mb,syft_sbom_mb,trivy_sbom_mb,sbomit_gt_syft,sbomit_gt_trivy
+gittuf,ptrace,322,310,232,220,209,101,32.6,11,5.0,321,95.0,94.6,23,9.9,522.0,8.7,43.5,6.9,12.0,75.7,24.05,133.13,0,58.49,12.56,0.35,1.57,0.39,YES,YES
+python-tuf,ptrace,92,66,33,50,24,42,63.6,26,52.0,92,48.0,44.0,11,33.3,150.9,2.52,69.8,0.3,2.2,150.9,0,0,0,0,12.41,0.04,1.94,0.0,YES,YES
+go-tuf,ptrace,33,32,21,15,15,17,53.1,0,0.0,32,100.0,93.8,6,28.6,126.6,2.11,6.8,1.7,18.6,74.5,2.46,4.69,0,0,8.7,0.05,0.11,0.03,YES,YES
+intoto,ptrace,55,37,11,30,12,25,67.6,18,60.0,55,40.0,30.0,2,18.2,250.6,4.18,35.9,0.2,7.0,250.6,0,0,0,0,8.41,0.06,1.17,0.0,YES,YES
+sbomit,ptrace,28,27,16,14,13,14,51.9,1,7.1,28,92.9,92.9,3,18.8,37.2,0.62,9.6,2.0,3.9,18.6,0.52,28.85,5.26,0,0.57,0.02,0.08,0.02,YES,YES
+flux2,ptrace,420,404,321,214,199,205,50.7,15,7.0,419,93.0,92.6,122,38.0,45.3,0.76,37.8,10.0,1.2,4.5,15.51,0,0,0,0.73,0.51,1.25,0.69,YES,YES
+argo-cd,go.sum,1836,1835,775,371,314,1521,82.9,57,15.4,1892,84.6,76.5,491,63.4,7310.4,121.84,230.8,52.6,31.7,139.0,0,0,0,0,99.21,3.33,8.22,1.29,YES,YES
+protobom,ptrace,55,53,39,24,23,30,56.6,1,4.2,54,95.8,92.0,16,41.0,48.3,0.8,11.9,2.0,4.1,24.1,0,40.43,0,0,0.77,0.08,0.12,0.05,YES,YES
+rust-tuf,ptrace,158,158,146,90,90,68,43.0,0,0.0,158,100.0,100.0,56,38.4,138.2,2.3,2.5,0.5,55.3,138.2,19.8,755.18,55.22,0,9.26,0.41,0.41,0.2,NO,YES
+kyverno,ptrace,1360,658,449,1254,559,99,15.0,695,55.4,1353,44.6,32.4,40,8.9,14179.6,236.33,258.4,46.2,54.9,306.9,92.22,2080.93,0,0,482.65,7.49,7.08,0.87,YES,YES

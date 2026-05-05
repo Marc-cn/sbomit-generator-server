@@ -1,0 +1,90 @@
+{
+  "project": "python-tuf",
+  "started_at": "2026-05-04T21:01:30.138468+00:00",
+  "sbomit": {
+    "wall_clock_s": 150.9,
+    "exit_code": 0,
+    "steps": {
+      "docs": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 50.301,
+          "command-run": 7.525,
+          "product": 2.655
+        },
+        "total_s": 60.48
+      },
+      "fix": {
+        "status": "failed",
+        "phases": {}
+      },
+      "lint": {
+        "status": "failed",
+        "phases": {}
+      },
+      "py": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 2.726,
+          "command-run": 20.535,
+          "product": 2.659
+        },
+        "total_s": 25.92
+      },
+      "with-sslib-main": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 2.67,
+          "command-run": 43.173,
+          "product": 2.839
+        },
+        "total_s": 48.68
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/tuf",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/python-tuf_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 69.8,
+    "packages": 66,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/python-tuf/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 0.3,
+    "packages": 11,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/python-tuf/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 16,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-python-tuf-rich.spdx.json"
+  },
+  "ptrace_modules": 50,
+  "package_counts": {
+    "sbomit": 92,
+    "syft": 66,
+    "trivy": 33
+  },
+  "sizes": {
+    "attestation_mb": 12.41,
+    "sbomit_sbom_mb": 0.04,
+    "syft_sbom_mb": 1.94,
+    "trivy_sbom_mb": 0.0
+  },
+  "completed_at": "2026-05-04T21:04:16.553317+00:00",
+  "ptrace_analysis": {
+    "compiled_modules": 50,
+    "syft_captures_compiled": 24,
+    "syft_captures_pct": 48.0,
+    "syft_misses_compiled": 26,
+    "syft_false_positives": 42,
+    "syft_false_positive_pct": 63.6,
+    "trivy_captures_compiled": 22,
+    "trivy_captures_pct": 44.0,
+    "trivy_misses_compiled": 28,
+    "trivy_false_positives": 11,
+    "trivy_false_positive_pct": 33.3
+  }
+}

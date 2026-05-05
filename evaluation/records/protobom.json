@@ -1,0 +1,62 @@
+{
+  "project": "protobom",
+  "started_at": "2026-05-04T23:21:06.649313+00:00",
+  "sbomit": {
+    "wall_clock_s": 48.3,
+    "exit_code": 0,
+    "steps": {
+      "go-build": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 2.473,
+          "command-run": 37.802,
+          "product": 0.151
+        },
+        "total_s": 40.43
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/protobom",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/protobom_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 11.9,
+    "packages": 58,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/protobom/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 2.0,
+    "packages": 42,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/protobom/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 48,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-protobom-rich.spdx.json"
+  },
+  "ptrace_modules": 25,
+  "ptrace_analysis": {
+    "compiled_modules": 25,
+    "syft_captures_compiled": 23,
+    "syft_captures_pct": 92.0,
+    "syft_misses_compiled": 2,
+    "syft_false_positives": 30,
+    "syft_false_positive_pct": 56.6,
+    "trivy_captures_compiled": 23,
+    "trivy_captures_pct": 92.0,
+    "trivy_misses_compiled": 2,
+    "trivy_false_positives": 16,
+    "trivy_false_positive_pct": 41.0
+  },
+  "package_counts": {
+    "sbomit": 55,
+    "syft": 53,
+    "trivy": 39
+  },
+  "sizes": {
+    "attestation_mb": 0.77,
+    "sbomit_sbom_mb": 0.08,
+    "syft_sbom_mb": 0.12,
+    "trivy_sbom_mb": 0.05
+  },
+  "completed_at": "2026-05-04T23:22:15.674237+00:00"
+}

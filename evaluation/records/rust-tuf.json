@@ -1,0 +1,82 @@
+{
+  "project": "rust-tuf",
+  "started_at": "2026-05-04T23:22:15.674674+00:00",
+  "sbomit": {
+    "wall_clock_s": 138.2,
+    "exit_code": 0,
+    "steps": {
+      "build": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 1.518,
+          "command-run": 747.311,
+          "product": 6.35
+        },
+        "total_s": 755.18
+      },
+      "test": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 4.084,
+          "command-run": 47.047,
+          "product": 4.089
+        },
+        "total_s": 55.22
+      },
+      "fmt": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 3.97,
+          "command-run": 11.796,
+          "product": 4.034
+        },
+        "total_s": 19.8
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/rust-tuf",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/rust-tuf_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 2.5,
+    "packages": 160,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/rust-tuf/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 0.5,
+    "packages": 149,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/rust-tuf/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 160,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-rusttuf-rich.spdx.json"
+  },
+  "ptrace_modules": 90,
+  "package_counts": {
+    "sbomit": 158,
+    "syft": 158,
+    "trivy": 146
+  },
+  "sizes": {
+    "attestation_mb": 9.26,
+    "sbomit_sbom_mb": 0.41,
+    "syft_sbom_mb": 0.41,
+    "trivy_sbom_mb": 0.2
+  },
+  "completed_at": "2026-05-04T23:24:39.944970+00:00",
+  "ptrace_analysis": {
+    "compiled_modules": 90,
+    "syft_captures_compiled": 90,
+    "syft_captures_pct": 100.0,
+    "syft_misses_compiled": 0,
+    "syft_false_positives": 68,
+    "syft_false_positive_pct": 43.0,
+    "trivy_captures_compiled": 90,
+    "trivy_captures_pct": 100.0,
+    "trivy_misses_compiled": 0,
+    "trivy_false_positives": 56,
+    "trivy_false_positive_pct": 38.4
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "project": "kyverno",
+  "sbomit": {
+    "wall_clock_s": 14179.6,
+    "exit_code": 0,
+    "steps": {
+      ".DEFAULT_GOAL": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 46.618,
+          "command-run": 1849.033,
+          "product": 33.598
+        },
+        "total_s": 1929.25
+      },
+      "fmt": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.089,
+          "material": 13.312,
+          "command-run": 73.07,
+          "product": 5.745
+        },
+        "total_s": 92.22
+      },
+      "vet": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 5.753,
+          "command-run": 208.019,
+          "product": 8.459
+        },
+        "total_s": 222.23
+      },
+      "imports": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 7.821,
+          "command-run": 14.804,
+          "product": 5.824
+        },
+        "total_s": 28.45
+      },
+      "fmt-check": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 4.89,
+          "command-run": 38.891,
+          "product": 4.644
+        },
+        "total_s": 48.42
+      },
+      "imports-check": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.001,
+          "material": 6.012,
+          "command-run": 35.472,
+          "product": 9.77
+        },
+        "total_s": 51.25
+      },
+      "unused-package-check": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.538,
+          "command-run": 32.241,
+          "product": 5.712
+        },
+        "total_s": 49.49
+      },
+      "build-background-controller": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 5.686,
+          "command-run": 396.886,
+          "product": 10.422
+        },
+        "total_s": 412.99
+      },
+      "build-cleanup-controller": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 5.727,
+          "command-run": 215.616,
+          "product": 17.213
+        },
+        "total_s": 238.56
+      },
+      "build-cli": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 5.7,
+          "command-run": 240.505,
+          "product": 5.823
+        },
+        "total_s": 252.03
+      },
+      "build-kyverno": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 5.68,
+          "command-run": 141.865,
+          "product": 5.799
+        },
+        "total_s": 153.34
+      },
+      "build-kyverno-init": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 5.685,
+          "command-run": 116.457,
+          "product": 5.803
+        },
+        "total_s": 127.94
+      },
+      "build-reports-controller": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 5.7,
+          "command-run": 234.442,
+          "product": 13.019
+        },
+        "total_s": 253.16
+      },
+      "build-readiness-checker": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 12.514,
+          "command-run": 771.724,
+          "product": 25.31
+        },
+        "total_s": 809.55
+      },
+      "test-clean": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 8.212,
+          "command-run": 0.162,
+          "product": 5.761
+        },
+        "total_s": 14.14
+      },
+      "test-unit": {
+        "status": "started",
+        "phases": {}
+      },
+      "test-cli": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.013,
+          "material": 5.863,
+          "command-run": 241.186,
+          "product": 6.407
+        },
+        "total_s": 253.47
+      },
+      "test-cli-policies": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 6.356,
+          "command-run": 80.523,
+          "product": 11.917
+        },
+        "total_s": 98.8
+      },
+      "test-cli-local": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 10.616,
+          "command-run": 49.533,
+          "product": 5.841
+        },
+        "total_s": 65.99
+      },
+      "test-cli-local-validate": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 9.61,
+          "command-run": 19.058,
+          "product": 8.363
+        },
+        "total_s": 37.03
+      },
+      "test-cli-local-vpols": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.379,
+          "command-run": 18.521,
+          "product": 11.917
+        },
+        "total_s": 41.82
+      },
+      "test-cli-local-gpols": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.037,
+          "command-run": 18.855,
+          "product": 18.991
+        },
+        "total_s": 48.88
+      },
+      "test-cli-local-mpols": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 13.359,
+          "command-run": 21.829,
+          "product": 5.75
+        },
+        "total_s": 40.94
+      },
+      "test-cli-local-ivpols": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 5.655,
+          "command-run": 16.053,
+          "product": 5.88
+        },
+        "total_s": 27.59
+      },
+      "test-cli-local-dpols": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 10.995,
+          "command-run": 15.195,
+          "product": 11.523
+        },
+        "total_s": 37.71
+      },
+      "test-cli-local-vaps": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.722,
+          "command-run": 15.338,
+          "product": 11.497
+        },
+        "total_s": 38.56
+      },
+      "test-cli-local-maps": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.458,
+          "command-run": 15.477,
+          "product": 11.77
+        },
+        "total_s": 38.7
+      },
+      "test-cli-local-mutate": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.19,
+          "command-run": 16.025,
+          "product": 11.487
+        },
+        "total_s": 38.7
+      },
+      "test-cli-local-generate": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.402,
+          "command-run": 15.526,
+          "product": 11.474
+        },
+        "total_s": 38.4
+      },
+      "test-cli-local-exceptions": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.456,
+          "command-run": 19.561,
+          "product": 11.949
+        },
+        "total_s": 42.97
+      },
+      "test-cli-local-selector": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.45,
+          "command-run": 13.568,
+          "product": 11.667
+        },
+        "total_s": 36.69
+      },
+      "test-cli-local-registry": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.353,
+          "command-run": 19.006,
+          "product": 5.658
+        },
+        "total_s": 36.02
+      },
+      "test-cli-local-scenarios": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 9.877,
+          "command-run": 15.74,
+          "product": 11.544
+        },
+        "total_s": 37.16
+      },
+      "go-build": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 11.748,
+          "command-run": 1907.901,
+          "product": 161.277
+        },
+        "total_s": 2080.93
+      }
+    }
+  },
+  "syft": {
+    "wall_clock_s": 258.4,
+    "packages": 3392
+  },
+  "trivy": {
+    "wall_clock_s": 46.2,
+    "packages": 492
+  },
+  "package_counts": {
+    "sbomit": 1360,
+    "syft": 658,
+    "trivy": 449
+  },
+  "ptrace_modules": 1261,
+  "ptrace_analysis": {
+    "compiled_modules": 1261,
+    "syft_captures_compiled": 559,
+    "syft_captures_pct": 44.3,
+    "syft_misses_compiled": 702,
+    "syft_false_positives": 99,
+    "syft_false_positive_pct": 15.0,
+    "trivy_captures_compiled": 409,
+    "trivy_captures_pct": 32.4,
+    "trivy_misses_compiled": 852,
+    "trivy_false_positives": 40,
+    "trivy_false_positive_pct": 8.9
+  },
+  "sizes": {
+    "attestation_mb": 482.65,
+    "sbomit_sbom_mb": 7.49,
+    "syft_sbom_mb": 7.08,
+    "trivy_sbom_mb": 0.87
+  }
+}

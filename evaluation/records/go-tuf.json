@@ -1,0 +1,160 @@
+{
+  "project": "go-tuf",
+  "started_at": "2026-05-04T21:04:16.553837+00:00",
+  "sbomit": {
+    "wall_clock_s": 126.6,
+    "exit_code": 0,
+    "steps": {
+      "default": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 1.441,
+          "command-run": 20.853,
+          "product": 0.078
+        },
+        "total_s": 22.37
+      },
+      "build": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.077,
+          "command-run": 4.539,
+          "product": 0.078
+        },
+        "total_s": 4.69
+      },
+      "test": {
+        "status": "failed",
+        "phases": {}
+      },
+      "lint": {
+        "status": "failed",
+        "phases": {}
+      },
+      "fmt": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.08,
+          "command-run": 2.304,
+          "product": 0.079
+        },
+        "total_s": 2.46
+      },
+      "example-all": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.077,
+          "command-run": 33.735,
+          "product": 0.078
+        },
+        "total_s": 33.89
+      },
+      "example-client": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.076,
+          "command-run": 4.591,
+          "product": 0.079
+        },
+        "total_s": 4.75
+      },
+      "example-repository": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.077,
+          "command-run": 4.433,
+          "product": 0.084
+        },
+        "total_s": 4.59
+      },
+      "example-multirepo": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.082,
+          "command-run": 5.603,
+          "product": 0.081
+        },
+        "total_s": 5.77
+      },
+      "example-tuf-client-cli": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.079,
+          "command-run": 10.376,
+          "product": 0.082
+        },
+        "total_s": 10.54
+      },
+      "example-root-signing": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.079,
+          "command-run": 10.324,
+          "product": 0.075
+        },
+        "total_s": 10.48
+      },
+      "build-%": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.081,
+          "command-run": 0.045,
+          "product": 0.077
+        },
+        "total_s": 0.2
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/go-tuf",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/go-tuf_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 6.8,
+    "packages": 58,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/go-tuf/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 1.7,
+    "packages": 23,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/go-tuf/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 33,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-go-tuf-rich.spdx.json"
+  },
+  "ptrace_modules": 16,
+  "ptrace_analysis": {
+    "compiled_modules": 16,
+    "syft_captures_compiled": 15,
+    "syft_captures_pct": 93.8,
+    "syft_misses_compiled": 1,
+    "syft_false_positives": 17,
+    "syft_false_positive_pct": 53.1,
+    "trivy_captures_compiled": 15,
+    "trivy_captures_pct": 93.8,
+    "trivy_misses_compiled": 1,
+    "trivy_false_positives": 6,
+    "trivy_false_positive_pct": 28.6
+  },
+  "package_counts": {
+    "sbomit": 33,
+    "syft": 32,
+    "trivy": 21
+  },
+  "sizes": {
+    "attestation_mb": 8.7,
+    "sbomit_sbom_mb": 0.05,
+    "syft_sbom_mb": 0.11,
+    "trivy_sbom_mb": 0.03
+  },
+  "completed_at": "2026-05-04T21:06:40.569109+00:00"
+}

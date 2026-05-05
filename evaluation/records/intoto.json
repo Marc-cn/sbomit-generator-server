@@ -1,0 +1,94 @@
+{
+  "project": "intoto",
+  "started_at": "2026-05-04T21:06:40.569808+00:00",
+  "sbomit": {
+    "wall_clock_s": 250.6,
+    "exit_code": 0,
+    "steps": {
+      "lint": {
+        "status": "failed",
+        "phases": {}
+      },
+      "py310": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 1.085,
+          "command-run": 42.577,
+          "product": 1.14
+        },
+        "total_s": 44.8
+      },
+      "py311": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.001,
+          "material": 1.079,
+          "command-run": 45.736,
+          "product": 1.117
+        },
+        "total_s": 47.93
+      },
+      "py38": {
+        "status": "failed",
+        "phases": {}
+      },
+      "py39": {
+        "status": "failed",
+        "phases": {}
+      },
+      "with-sslib-main": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 1.097,
+          "command-run": 101.307,
+          "product": 22.76
+        },
+        "total_s": 125.16
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/intoto",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/intoto_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 35.9,
+    "packages": 37,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/intoto/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 0.2,
+    "packages": 11,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/intoto/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 23,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-intoto-rich.spdx.json"
+  },
+  "ptrace_modules": 30,
+  "package_counts": {
+    "sbomit": 55,
+    "syft": 37,
+    "trivy": 11
+  },
+  "sizes": {
+    "attestation_mb": 8.41,
+    "sbomit_sbom_mb": 0.06,
+    "syft_sbom_mb": 1.17,
+    "trivy_sbom_mb": 0.0
+  },
+  "completed_at": "2026-05-04T21:11:05.049628+00:00",
+  "ptrace_analysis": {
+    "compiled_modules": 30,
+    "syft_captures_compiled": 12,
+    "syft_captures_pct": 40.0,
+    "syft_misses_compiled": 18,
+    "syft_false_positives": 25,
+    "syft_false_positive_pct": 67.6,
+    "trivy_captures_compiled": 9,
+    "trivy_captures_pct": 30.0,
+    "trivy_misses_compiled": 21,
+    "trivy_false_positives": 2,
+    "trivy_false_positive_pct": 18.2
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "project": "gittuf",
+  "started_at": "2026-05-04T20:51:41.449013+00:00",
+  "sbomit": {
+    "wall_clock_s": 522.0,
+    "exit_code": 0,
+    "steps": {
+      "build": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.504,
+          "command-run": 132.127,
+          "product": 0.502
+        },
+        "total_s": 133.13
+      },
+      "install": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.494,
+          "command-run": 57.465,
+          "product": 0.535
+        },
+        "total_s": 58.49
+      },
+      "test": {
+        "status": "failed",
+        "phases": {}
+      },
+      "fmt": {
+        "status": "ok",
+        "phases": {
+          "environment": 0.0,
+          "material": 0.505,
+          "command-run": 22.529,
+          "product": 1.017
+        },
+        "total_s": 24.05
+      }
+    },
+    "attest_dir": "/home/marcd/SBOMIT/attestations_v2/gittuf",
+    "log": "/home/marcd/SBOMIT/eval_v2/logs/gittuf_sbomit.log"
+  },
+  "syft": {
+    "wall_clock_s": 43.5,
+    "packages": 744,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/gittuf/syft_spdx23.json"
+  },
+  "trivy": {
+    "wall_clock_s": 6.9,
+    "packages": 234,
+    "output": "/home/marcd/SBOMIT/eval_v2/baselines/gittuf/trivy_spdx23.json"
+  },
+  "sbom": {
+    "packages": 257,
+    "output": "/home/marcd/SBOMIT/eval_v2/sboms_v2/sbom-gittuf-rich.spdx.json"
+  },
+  "ptrace_modules": 221,
+  "ptrace_analysis": {
+    "compiled_modules": 221,
+    "syft_captures_compiled": 209,
+    "syft_captures_pct": 94.6,
+    "syft_misses_compiled": 12,
+    "syft_false_positives": 101,
+    "syft_false_positive_pct": 32.6,
+    "trivy_captures_compiled": 209,
+    "trivy_captures_pct": 94.6,
+    "trivy_misses_compiled": 12,
+    "trivy_false_positives": 23,
+    "trivy_false_positive_pct": 9.9
+  },
+  "package_counts": {
+    "sbomit": 322,
+    "syft": 310,
+    "trivy": 232
+  },
+  "sizes": {
+    "attestation_mb": 12.56,
+    "sbomit_sbom_mb": 0.35,
+    "syft_sbom_mb": 1.57,
+    "trivy_sbom_mb": 0.39
+  },
+  "completed_at": "2026-05-04T21:01:30.138008+00:00"
+}

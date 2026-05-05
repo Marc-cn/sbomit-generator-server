@@ -259,6 +259,68 @@ def list_attestations():
     return jsonify({"attestations": files, "count": len(files)})
 
 
+
+def extract_ptrace_packages(storage_dir):
+    """Extract Go/Python/Rust packages from witness --trace openedfiles syscall data."""
+    import base64 as _b64, re as _re
+    modules = {}
+    try:
+        attest_files = [f for f in os.listdir(storage_dir)
+                        if f.endswith(".json") and not f.endswith(".sbom.json")]
+    except:
+        return []
+    for fname in attest_files:
+        try:
+            envelope = json.loads(open(os.path.join(storage_dir, fname)).read())
+            payload  = envelope.get("payload", "")
+            if not payload: continue
+            decoded  = json.loads(_b64.b64decode(payload))
+            for a in decoded.get("predicate", {}).get("attestations", []):
+                if "command-run" not in a.get("type", ""): continue
+                for proc in a.get("attestation", {}).get("processes", []):
+                    for fp in proc.get("openedfiles", {}).keys():
+                        # Go modules
+                        m = _re.match(r'.*/go/pkg/mod/([^@/]+(?:/[^@/]+)*)@([^/]+)', fp)
+                        if m and not m.group(1).startswith("cache/"):
+                            modules[f"pkg:golang/{m.group(1)}"] = m.group(2)
+                            continue
+                        # Python packages
+                        m = _re.match(r'.*/site-packages/([A-Za-z0-9_.+-]+)-([0-9][^/]*)\.dist-info/', fp)
+                        if m:
+                            name = m.group(1).lower().replace("-","_")
+                            modules[f"pkg:pypi/{name}"] = m.group(2)
+                            continue
+                        # Rust crates
+                        m = _re.match(r'.*/.cargo/registry/(?:cache|src)/[^/]+/(.+)-([0-9][0-9.]+[^/]*)\.crate$', fp)
+                        if m:
+                            modules[f"pkg:cargo/{m.group(1)}"] = m.group(2)
+        except Exception as e:
+            print(f"  [ptrace] warning {fname}: {e}")
+
+    pkgs = []
+    for mod_key, mod_ver in modules.items():
+        purl = f"{mod_key}@{mod_ver}"
+        mod_path = mod_key.split("/",1)[1] if "/" in mod_key else mod_key
+        eco = mod_key.split(":")[1].split("/")[0] if ":" in mod_key else "golang"
+        if eco == "golang":   dl = f"https://pkg.go.dev/{mod_path}@{mod_ver}"
+        elif eco == "pypi":   dl = f"https://pypi.org/project/{mod_path.replace('_','-')}/{mod_ver}/"
+        elif eco == "cargo":  dl = f"https://crates.io/crates/{mod_path}/{mod_ver}"
+        else:                 dl = "NOASSERTION"
+        pkgs.append({
+            "name": mod_path,
+            "SPDXID": f"SPDXRef-ptrace-{abs(hash(purl)) % 10**12}",
+            "versionInfo": mod_ver,
+            "downloadLocation": dl,
+            "filesAnalyzed": False,
+            "sourceInfo": "acquired via witness --trace ptrace syscall recording",
+            "primaryPackagePurpose": "LIBRARY",
+            "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER",
+                               "referenceType": "purl",
+                               "referenceLocator": purl}],
+        })
+    print(f"  [ptrace] {len(pkgs)} packages from syscall trace ({len(set(m.split(':')[1].split('/')[0] if ':' in m else 'golang' for m in modules))} ecosystems)")
+    return pkgs
+
 @app.route("/sbom", methods=["GET"])
 def generate_sbom():
     """
@@ -313,6 +375,23 @@ def generate_sbom():
     # Use syft packages directly + attestation files as sources
     all_packages    = list(syft_packages or [])
     processed_files = list(attestation_files)
+
+    # SBOMit union: add ptrace-discovered packages not already found by syft
+    ptrace_packages = extract_ptrace_packages(STORAGE_DIR)
+    existing_purls  = set()
+    for p in all_packages:
+        for ref in p.get("externalRefs", []):
+            if ref.get("referenceType") == "purl":
+                existing_purls.add(ref.get("referenceLocator", ""))
+    added = 0
+    for p in ptrace_packages:
+        purl = next((r.get("referenceLocator","") for r in p.get("externalRefs",[])
+                     if r.get("referenceType") == "purl"), "")
+        if purl and purl not in existing_purls:
+            all_packages.append(p)
+            existing_purls.add(purl)
+            added += 1
+    print(f"  [union] Added {added} ptrace-only packages (syft={len(syft_packages or [])}, ptrace={len(ptrace_packages)})")
     errors          = []
 
     # Deduplicate packages by (name, version) and enrich missing fields
