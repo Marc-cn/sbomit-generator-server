@@ -1,0 +1,20 @@
+# Signing keys (절대 commit X)
+signing.key
+signing.pub
+
+# Go 설치 파일
+go*.linux-amd64.tar.gz
+
+# 분석 대상 프로젝트 (별도 repo이므로 제외)
+projects/
+
+# Attestation 결과물 (재현 가능하므로 제외)
+attestations/
+
+# 분석 결과
+results/
+*.csv
+
+# Python
+__pycache__/
+*.pyc
