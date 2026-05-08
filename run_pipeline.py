@@ -381,6 +381,17 @@ def run_pipeline(project_dir, skip_targets, mode, prewarm=False):
         print("Detected: pyproject.toml")
         run_step("python-build", "python3 -m build", attestation_dir, mode, skip_set)
 
+    # Rust build
+    elif (project_dir / "Cargo.toml").exists():
+        print("Detected: Cargo.toml")
+        if prewarm:
+            print("Pre-warming Cargo cache...")
+            subprocess.run(["cargo", "fetch"], cwd=project_dir, capture_output=True)
+            print("Cargo cache ready.")
+        run_step("build", "cargo build --all", attestation_dir, mode, skip_set)
+        run_step("test", "cargo test --all", attestation_dir, mode, skip_set)
+        run_step("fmt", "cargo fmt --all -- --check", attestation_dir, mode, skip_set)
+
     else:
         print(f"ERROR: No recognized build system in {project_dir}")
         sys.exit(1)
