@@ -279,12 +279,15 @@ def run_step(step_name, cmd, attestation_dir, mode, skip_set):
 
     # trace_flag = get_trace_flag(step_name, mode)
 
+    # Add sudo and --ebpf to use the eBPF-based environment attestor.
     witness_cmd = [
+        "sudo",
         str(WITNESS), "run",
         "--step", step_name,
         "--signer-file-key-path", str(SIGNING_KEY),
         "--attestations", "environment",
         "--trace",
+        "--ebpf",
     ]
     # if trace_flag:
     #     witness_cmd.append(trace_flag)
