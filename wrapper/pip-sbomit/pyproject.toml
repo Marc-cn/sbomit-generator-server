@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sbomit-init"
+version = "0.1.0"
+description = "Add the SBOMit attestation pipeline to your project"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.8"
+keywords = ["sbom", "security", "supply-chain", "attestation"]
+
+[project.scripts]
+"sbomit-init" = "sbomit_init.cli:main"
+
+[project.urls]
+Homepage = "https://sbomit.dev"

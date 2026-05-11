@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# gh-sbomit -- GitHub CLI extension for SBOMit
+# Install: gh extension install sbomit/gh-sbomit
+set -euo pipefail
+
+SBOMIT_INIT_URL="https://raw.githubusercontent.com/sbomit/sbomit/main/install.sh"
+VERSION="0.1.0"
+
+usage() {
+  echo "gh sbomit -- Add the SBOMit attestation pipeline to your project"
+  echo ""
+  echo "Usage:"
+  echo "  gh sbomit init              Add SBOMit to the current repo"
+  echo "  gh sbomit init --no-pr      Commit without opening a PR"
+  echo "  gh sbomit init --no-secrets Skip setting secrets"
+  echo "  gh sbomit version           Show version"
+  echo "  gh sbomit help              Show this help"
+  echo ""
+  echo "Options:"
+  echo "  --repo-dir <path>   Path to repo (default: current directory)"
+  echo "  --server   <url>    SBOMit server URL (default: https://sbomit.dev)"
+  echo "  --no-pr             Do not open a PR"
+  echo "  --no-secrets        Skip setting GitHub secrets"
+}
+
+CMD="${1:-help}"
+shift || true
+
+case "$CMD" in
+  init)
+    TMP=$(mktemp)
+    trap "rm -f $TMP" EXIT
+    curl -sSL "$SBOMIT_INIT_URL" -o "$TMP"
+    bash "$TMP" "$@"
+    ;;
+  version)
+    echo "gh-sbomit $VERSION"
+    ;;
+  help|--help|-h)
+    usage
+    ;;
+  *)
+    echo "Unknown command: $CMD"
+    usage
+    exit 1
+    ;;
+esac

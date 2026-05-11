@@ -1,0 +1,27 @@
+{
+  "name": "sbomit-init",
+  "version": "0.1.0",
+  "description": "Add the SBOMit attestation pipeline to your project",
+  "keywords": [
+    "sbom",
+    "security",
+    "supply-chain",
+    "attestation",
+    "witness"
+  ],
+  "homepage": "https://sbomit.dev",
+  "license": "Apache-2.0",
+  "bin": {
+    "sbomit-init": "./bin/sbomit-init.js"
+  },
+  "files": [
+    "bin/"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "os": [
+    "linux",
+    "darwin"
+  ]
+}
