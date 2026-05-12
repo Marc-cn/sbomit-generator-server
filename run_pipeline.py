@@ -65,7 +65,13 @@ PROJECT_SKIP = {
         "proto",
         "proto",
         "help", "conformance-test", "conformance", "fakes", "buf-format", "buf-lint",
-    }
+    },
+    "in-toto": {
+        # Permission tests fail under sudo (root bypasses DAC checks). Affects py310, py311, py39, with-sslib-main.
+        "py310", "py311", "py39", "with-sslib-main",
+        # Python 3.8 incompatible with attrs>=26.0 (project dependency)
+        "py38",
+    },
 }
 
 # ── Steps that must NOT use --trace ───────────────────────────────────────────
