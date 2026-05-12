@@ -18,3 +18,7 @@ results/
 # Python
 __pycache__/
 *.pyc
+
+# run_full_eval 산출물
+attestations_v2/
+eval_v2/
