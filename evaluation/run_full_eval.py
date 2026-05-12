@@ -3,46 +3,74 @@
 run_full_eval.py
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Full evaluation pipeline — runs everything from scratch:
-  1. SBOMit deep pipeline (witness --trace) per project
+  1. SBOMit deep pipeline (witness --ebpf) per project
   2. Syft scan per project
   3. Trivy scan per project
   4. Upload attestations → generate SBOMs from server
   5. Extract ptrace compiled modules as ground truth
   6. Generate sbomit_full_evaluation.csv
 
-Results go to ~/SBOMIT/eval_v2/
+Paths are auto-detected from the script location. Override via env vars:
+  SBOMIT_DIR            — root of sbomit-generator-server (default: parent of this script)
+  PROJECTS_BASE         — where build targets live on worker (default: $SBOMIT_DIR/projects)
+  SERVER_URL            — server endpoint (default: http://10.10.20.2:5000)
+  SERVER_TOKEN          — API token (default: sbomit-dev-token)
+  SERVER_PROJECTS_BASE  — projects mount path inside server container (default: /projects)
+
+Results go to $SBOMIT_DIR/eval_v2/
 Previous results are NOT overwritten.
 Safe to run with nohup — survives SSH disconnect.
 """
 
-import json, csv, re, subprocess, time, base64, shutil
+import os, json, csv, re, subprocess, time, base64, shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
 # ── Config ────────────────────────────────────────────────────
-SBOMIT_DIR  = Path.home() / "SBOMIT"
-EVAL_DIR    = SBOMIT_DIR / "eval_v2"
-LOGS_DIR    = EVAL_DIR / "logs"
-RECORDS_DIR = EVAL_DIR / "records"
+# Auto-detect SBOMIT_DIR from script location (parent of evaluation/).
+# Override with SBOMIT_DIR env var if needed.
+SCRIPT_DIR  = Path(__file__).resolve().parent
+SBOMIT_DIR  = Path(os.environ.get("SBOMIT_DIR", SCRIPT_DIR.parent))
+
+# Projects base directory (where build targets live on the worker).
+# Defaults to $SBOMIT_DIR/projects. Override with PROJECTS_BASE env var.
+PROJECTS_BASE = Path(os.environ.get("PROJECTS_BASE", SBOMIT_DIR / "projects"))
+
+# Server configuration (override with env vars for different deployments).
+SERVER_URL = os.environ.get("SERVER_URL", "http://10.10.20.2:5000")
+TOKEN      = os.environ.get("SERVER_TOKEN", "sbomit-dev-token")
+
+# Server-side projects mount point (inside the docker container).
+SERVER_PROJECTS_BASE = os.environ.get("SERVER_PROJECTS_BASE", "/projects")
+
+# Derived paths
+EVAL_DIR      = SBOMIT_DIR / "eval_v2"
+LOGS_DIR      = EVAL_DIR / "logs"
+RECORDS_DIR   = EVAL_DIR / "records"
 BASELINES_DIR = EVAL_DIR / "baselines"
-SBOMS_DIR   = EVAL_DIR / "sboms_v2"
-SERVER_URL  = "http://10.10.20.2:5000"
-TOKEN       = "sbomit-dev-token"
+SBOMS_DIR     = EVAL_DIR / "sboms_v2"
 
 for d in [LOGS_DIR, RECORDS_DIR, BASELINES_DIR, SBOMS_DIR]:
     d.mkdir(parents=True, exist_ok=True)
 
-# Project config: name -> (project_dir, attest_dir, sbom_stem, server_project_dir, skip_targets)
+# Project config: name -> (project_subdir, attest_dir, sbom_stem, skip_targets)
+#   project_subdir : relative to PROJECTS_BASE (e.g. "gittuf" → $PROJECTS_BASE/gittuf)
+#   attest_dir     : subdirectory name under attestations/ and attestations_v2/
+#   sbom_stem      : filename stem for output SBOMs
+#   skip_targets   : comma-separated list of step names to skip
+#                    (passed to run_pipeline.py via --skip-targets)
+# server_project_dir is computed automatically as SERVER_PROJECTS_BASE/project_subdir.
 PROJECTS = {
-    "gittuf":     ("projects/gittuf",    "gittuf",    "gittuf",     "/home/marcd/projects/gittuf",    "default,just-install,generate"),
-    "python-tuf": ("projects/tuf",       "tuf",       "python-tuf", "/home/marcd/projects/tuf",       ""),
-    "go-tuf":     ("projects/go-tuf",    "go-tuf",    "go-tuf",     "/home/marcd/projects/go-tuf",    ""),
-    "intoto":     ("projects/intoto",    "intoto",    "intoto",     "/home/marcd/projects/intoto",     ""),
-    "sbomit":     ("projects/sbomit",    "sbomit",    "sbomit",     "/home/marcd/projects/sbomit",     ""),
-    "flux2":      ("projects/flux2",     "flux2",     "flux2",      "/home/marcd/projects/flux2",      "all,setup-kind,cleanup-kind,e2e,test-with-kind,install-envtest"),
-    "argo-cd":    ("projects/argo-cd",   "argo-cd",   "argo-cd",    "/home/marcd/projects/argo-cd",    ""),
-    "protobom":   ("projects/protobom",  "protobom",  "protobom",   "/home/marcd/projects/protobom",   "help,conformance,conformance-test,fakes,buf-format,buf-lint"),
-    "rust-tuf":   ("projects/rust-tuf",  "rust-tuf",  "rusttuf",    "/home/marcd/projects/rust-tuf",   ""),
+    "gittuf":     ("gittuf",     "gittuf",     "gittuf",     "default,just-install,generate"),
+    "python-tuf": ("python-tuf", "python-tuf", "python-tuf", ""),
+    "go-tuf":     ("go-tuf",     "go-tuf",     "go-tuf",     ""),
+    "in-toto":    ("in-toto",    "in-toto",    "in-toto",    "py38,py39,py310,py311,with-sslib-main"),
+    "sbomit":     ("sbomit",     "sbomit",     "sbomit",     ""),
+    "flux2":      ("flux2",      "flux2",      "flux2",      "all,setup-kind,cleanup-kind,e2e,test-with-kind,install-envtest"),
+    "argo-cd":    ("argo-cd",    "argo-cd",    "argo-cd",    ""),
+    "protobom":   ("protobom",   "protobom",   "protobom",   "help,conformance,conformance-test,fakes,buf-format,buf-lint"),
+    "rust-tuf":   ("rust-tuf",   "rust-tuf",   "rust-tuf",   ""),
+    "kyverno":    ("kyverno",    "kyverno",    "kyverno",    ""),
 }
 
 def log(msg):
@@ -60,14 +88,16 @@ def fmt_time(s):
     return f"{s:.0f}s" if s < 60 else f"{s/60:.1f}m"
 
 # ── Step 1: Run SBOMit pipeline ───────────────────────────────
-def run_sbomit(project, proj_dir, attest_dir, skip):
+def run_sbomit(project, project_subdir, attest_dir, skip):
     log(f"[{project}] Starting SBOMit deep pipeline...")
     attest_out = SBOMIT_DIR / "attestations_v2" / attest_dir
     attest_out.mkdir(parents=True, exist_ok=True)
 
+    project_path = PROJECTS_BASE / project_subdir
+
     cmd = [
         "python3", str(SBOMIT_DIR / "run_pipeline.py"),
-        "--project-dir", proj_dir,
+        "--project-dir", str(project_path),
         "--mode", "deep",
         "--prewarm",
     ]
@@ -115,15 +145,16 @@ def run_sbomit(project, proj_dir, attest_dir, skip):
             "attest_dir": str(attest_out), "log": str(log_path)}
 
 # ── Step 2: Run Syft ──────────────────────────────────────────
-def run_syft(project, project_dir):
+def run_syft(project, project_subdir):
     log(f"[{project}] Running Syft...")
     out_dir = BASELINES_DIR / project
     out_dir.mkdir(exist_ok=True)
     out_path = out_dir / "syft_spdx23.json"
 
     syft = shutil.which("syft") or "/usr/local/bin/syft"
+    project_path = PROJECTS_BASE / project_subdir
     t0 = time.time()
-    r = run([syft, str(Path.home() / project_dir), "-o", "spdx-json"], timeout=300)
+    r = run([syft, str(project_path), "-o", "spdx-json"], timeout=300)
     wall = round(time.time() - t0, 1)
 
     pkg_count = 0
@@ -138,16 +169,17 @@ def run_syft(project, project_dir):
     return {"wall_clock_s": wall, "packages": pkg_count, "output": str(out_path)}
 
 # ── Step 3: Run Trivy ─────────────────────────────────────────
-def run_trivy(project, project_dir):
+def run_trivy(project, project_subdir):
     log(f"[{project}] Running Trivy...")
     out_dir = BASELINES_DIR / project
     out_dir.mkdir(exist_ok=True)
     out_path = out_dir / "trivy_spdx23.json"
 
     trivy = shutil.which("trivy") or "/usr/bin/trivy"
+    project_path = PROJECTS_BASE / project_subdir
     t0 = time.time()
     r = run([trivy, "fs", "--format", "spdx-json", "--scanners", "license",
-             "--output", str(out_path), str(Path.home() / project_dir)], timeout=300)
+             "--output", str(out_path), str(project_path)], timeout=300)
     wall = round(time.time() - t0, 1)
 
     pkg_count = 0
@@ -161,20 +193,24 @@ def run_trivy(project, project_dir):
     return {"wall_clock_s": wall, "packages": pkg_count, "output": str(out_path)}
 
 # ── Step 4: Upload attestations + generate SBOM ───────────────
-def generate_sbom(project, attest_dir, sbom_stem, server_project_dir):
+def generate_sbom(project, project_subdir, attest_dir, sbom_stem):
     log(f"[{project}] Uploading attestations + generating SBOM...")
     attest_path = SBOMIT_DIR / "attestations_v2" / attest_dir
+
+    # Server-side path (inside the docker container, via volume mount)
+    server_project_dir = f"{SERVER_PROJECTS_BASE}/{project_subdir}"
 
     # Special case: rust-tuf uses local syft (server can't scan Rust)
     if project == "rust-tuf":
         log(f"[{project}] Using local syft for rust-tuf SBOM...")
+        local_path = PROJECTS_BASE / project_subdir
         syft = shutil.which("syft") or "/usr/local/bin/syft"
-        r = run([syft, str(Path.home() / "projects/rust-tuf"), "-o", "spdx-json"], timeout=300)
+        r = run([syft, str(local_path), "-o", "spdx-json"], timeout=300)
         if r.stdout.strip():
             data = json.loads(r.stdout)
             files = sorted(attest_path.glob("*.json")) if attest_path.exists() else []
             data["attestationSources"] = [f.name for f in files]
-            data["catalogMode"] = "syft (/home/marcd/projects/rust-tuf)"
+            data["catalogMode"] = f"syft ({local_path})"
             out = SBOMS_DIR / f"sbom-{sbom_stem}-rich.spdx.json"
             out.write_text(json.dumps(data, indent=2))
             pkg_count = len(data.get("packages", []))
@@ -273,12 +309,15 @@ def pct(a, b):
 def main():
     log("="*60)
     log("SBOMit Full Evaluation v2 — starting")
-    log(f"Output dir: {EVAL_DIR}")
+    log(f"SBOMIT_DIR:    {SBOMIT_DIR}")
+    log(f"PROJECTS_BASE: {PROJECTS_BASE}")
+    log(f"SERVER_URL:    {SERVER_URL}")
+    log(f"Output dir:    {EVAL_DIR}")
     log("="*60)
 
     all_records = {}
 
-    for project, (proj_dir, attest_dir, sbom_stem, server_dir, skip) in PROJECTS.items():
+    for project, (project_subdir, attest_dir, sbom_stem, skip) in PROJECTS.items():
         log(f"\n{'='*60}")
         log(f"PROJECT: {project}")
         log(f"{'='*60}")
@@ -286,16 +325,16 @@ def main():
         record = {"project": project, "started_at": datetime.now(timezone.utc).isoformat()}
 
         # 1. SBOMit
-        record["sbomit"] = run_sbomit(project, proj_dir, attest_dir, skip)
+        record["sbomit"] = run_sbomit(project, project_subdir, attest_dir, skip)
 
         # 2. Syft
-        record["syft"] = run_syft(project, proj_dir)
+        record["syft"] = run_syft(project, project_subdir)
 
         # 3. Trivy
-        record["trivy"] = run_trivy(project, proj_dir)
+        record["trivy"] = run_trivy(project, project_subdir)
 
         # 4. Generate SBOM
-        record["sbom"] = generate_sbom(project, attest_dir, sbom_stem, server_dir)
+        record["sbom"] = generate_sbom(project, project_subdir, attest_dir, sbom_stem)
 
         # 5. ptrace ground truth
         traced = extract_ptrace_modules(attest_dir)
