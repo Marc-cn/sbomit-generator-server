@@ -1,0 +1,175 @@
+#!/usr/bin/env bash
+# sbomit_run — wrap any build command with witness eBPF attestation
+#
+# Usage (run from project directory):
+#   sudo -E bash ~/sbomit_run <cmd>                        # attest only
+#   sudo -E bash ~/sbomit_run --sbom-gen syft <cmd>        # attest + local SBOM (syft)
+#   sudo -E bash ~/sbomit_run --sbom-gen trivy <cmd>       # attest + local SBOM (trivy)
+#   sudo -E bash ~/sbomit_run --upload <cmd>               # attest + upload to server
+#   sudo -E bash ~/sbomit_run --upload --sbom-gen syft <cmd>  # attest + server SBOM (syft)
+#   sudo -E bash ~/sbomit_run --upload --sbom-gen trivy <cmd> # attest + server SBOM (trivy)
+set -euo pipefail
+
+WITNESS="/usr/local/bin/witness"
+SBOMIT="/home/marcd/SBOMIT/bin/sbomit"
+SYFT="/usr/local/bin/syft"
+KEY="/home/marcd/SBOMIT/eval_v3/_keys/eval_key.pem"
+SERVER="http://10.10.20.2:5000"
+TOKEN="sbomit-dev-token"
+
+# ── Parse args ────────────────────────────────────────────────────────────────
+SBOM_GEN=""
+UPLOAD=false
+
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --sbom-gen)
+            SBOM_GEN="$2"
+            if [[ "$SBOM_GEN" != "syft" && "$SBOM_GEN" != "trivy" ]]; then
+                echo "ERROR: --sbom-gen must be syft or trivy" >&2
+                exit 1
+            fi
+            shift 2
+            ;;
+        --upload)
+            UPLOAD=true
+            shift
+            ;;
+        --server)
+            SERVER="$2"
+            shift 2
+            ;;
+        *)
+            break
+            ;;
+    esac
+done
+
+if [[ $# -eq 0 ]]; then
+    echo "Usage: sudo -E bash ~/sbomit_run [--sbom-gen syft|trivy] [--upload] <build command>"
+    exit 1
+fi
+
+BUILD_CMD="$*"
+PROJECT=$(basename "$(pwd)")
+OUT_DIR="/home/marcd/SBOMIT/results/$PROJECT"
+mkdir -p "$OUT_DIR"
+
+echo ""
+echo "================================================"
+echo " SBOMit - $PROJECT"
+echo "================================================"
+echo " Build cmd : $BUILD_CMD"
+echo " SBOM tool : ${SBOM_GEN:-none}"
+echo " Upload    : $UPLOAD"
+echo "================================================"
+echo ""
+
+# ── Step 1: witness eBPF ──────────────────────────────────────────────────────
+echo "Step 1: Running witness with eBPF tracing..."
+"$WITNESS" run \
+    --step "build" \
+    --trace \
+    --trace-backend ebpf \
+    --signer-file-key-path "$KEY" \
+    --outfile "$OUT_DIR/attestation.json" \
+    -- bash -c "$BUILD_CMD"
+echo "  -> $OUT_DIR/attestation.json"
+echo ""
+
+# ── Step 2: generate SBOM (optional) ─────────────────────────────────────────
+if [[ "$UPLOAD" == true ]]; then
+    TOOL="${SBOM_GEN:-syft}"
+    echo "Step 2: Sending attestation to SBOMit server ($TOOL)..."
+    curl -s -X POST "$SERVER/generate?tool=$TOOL&project=$PROJECT" \
+        -H "Authorization: Bearer $TOKEN" \
+        -H "Content-Type: application/json" \
+        --data-binary @"$OUT_DIR/attestation.json" \
+        -o "$OUT_DIR/sbom_server_${TOOL}.spdx.json"
+    SBOM_FILE="$OUT_DIR/sbom_server_${TOOL}.spdx.json"
+    echo "  -> $SBOM_FILE"
+    echo ""
+
+elif [[ -n "$SBOM_GEN" ]]; then
+    echo "Step 2: Generating SBOM locally ($SBOM_GEN)..."
+
+    if [[ "$SBOM_GEN" == "syft" ]]; then
+        SYFT_EXE=$SYFT "$SBOMIT" generate "$OUT_DIR/attestation.json" \
+            --name "$PROJECT" \
+            --format spdx23 \
+            --catalog syft \
+            --project-dir "$(pwd)" \
+            --output "$OUT_DIR/sbom_syft.spdx.json"
+        SBOM_FILE="$OUT_DIR/sbom_syft.spdx.json"
+    else
+        # trivy: generate eBPF SBOM then merge with trivy
+        "$SBOMIT" generate "$OUT_DIR/attestation.json" \
+            --name "$PROJECT" \
+            --format spdx23 \
+            --output "$OUT_DIR/sbom_ebpf.spdx.json"
+
+        /home/marcd/bin/trivy fs "$(pwd)" \
+            --format spdx-json \
+            --output "$OUT_DIR/sbom_trivy_raw.spdx.json" \
+            --quiet
+
+        python3 - << PYEOF
+import json
+from pathlib import Path
+
+OUT = Path("$OUT_DIR")
+def get_purls(path):
+    d = json.loads(path.read_text())
+    purls = {}
+    for p in d.get("packages", []):
+        for r in p.get("externalRefs", []):
+            if r.get("referenceType") == "purl":
+                purls[r["referenceLocator"]] = p
+    return d, purls
+
+ebpf_doc, ebpf_purls = get_purls(OUT / "sbom_ebpf.spdx.json")
+_, trivy_purls       = get_purls(OUT / "sbom_trivy_raw.spdx.json")
+
+added = 0
+for purl, pkg in trivy_purls.items():
+    if purl not in ebpf_purls:
+        ebpf_doc["packages"].append(pkg)
+        added += 1
+
+print(f"  eBPF: {len(ebpf_purls)} | trivy: {len(trivy_purls)} | added: {added} | total: {len(ebpf_doc['packages'])}")
+with open(OUT / "sbom_trivy.spdx.json", "w") as f:
+    json.dump(ebpf_doc, f, indent=2)
+PYEOF
+        SBOM_FILE="$OUT_DIR/sbom_trivy.spdx.json"
+    fi
+    echo "  -> $SBOM_FILE"
+    echo ""
+fi
+
+# ── Step 3: summary ───────────────────────────────────────────────────────────
+if [[ -n "${SBOM_FILE:-}" && -f "${SBOM_FILE:-}" ]]; then
+    echo "Step 3: SBOM summary"
+    python3 - << PYEOF
+import json
+d = json.load(open("$SBOM_FILE"))
+pkgs = d.get("packages", [])
+purls = sorted(set(r.get("referenceLocator") for p in pkgs
+               for r in p.get("externalRefs",[])
+               if r.get("referenceType")=="purl"))
+print(f"  Packages : {len(pkgs)}")
+print(f"  PURLs    : {len(purls)}")
+print("")
+print("  First 10 PURLs:")
+for p in purls[:10]:
+    print(f"    {p}")
+PYEOF
+    echo ""
+fi
+
+echo "================================================"
+echo " DONE"
+echo "================================================"
+echo ""
+echo "  Attestation : $OUT_DIR/attestation.json"
+[[ -n "${SBOM_FILE:-}" ]] && echo "  SBOM        : $SBOM_FILE"
+echo ""
