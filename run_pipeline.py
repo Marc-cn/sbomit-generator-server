@@ -65,7 +65,13 @@ PROJECT_SKIP = {
         "proto",
         "proto",
         "help", "conformance-test", "conformance", "fakes", "buf-format", "buf-lint",
-    }
+    },
+    "in-toto": {
+        # Permission tests fail under sudo (root bypasses DAC checks). Affects py310, py311, py39, with-sslib-main.
+        "py310", "py311", "py39", "with-sslib-main",
+        # Python 3.8 incompatible with attrs>=26.0 (project dependency)
+        "py38",
+    },
 }
 
 # ── Steps that must NOT use --trace ───────────────────────────────────────────
@@ -204,14 +210,17 @@ def parse_tox(path):
 # Witness invocation
 # ─────────────────────────────────────────────────────────────────────────────
 
-def get_trace_flag(step_name, mode):
-    """Determine whether --trace should be passed for this step."""
-    step_lower = step_name.lower()
-    if step_name in NO_TRACE_STEPS or "test" in step_lower or "lint" in step_lower or "vet" in step_lower:
-        return None
-    if step_name in DEEP_TRACE_STEPS or "build" in step_lower or "install" in step_lower:
-        return "--trace" if mode == "deep" else None
-    return "--trace"  # default: trace all other steps (fmt, tidy, vet, etc.)
+# def get_trace_flag(step_name, mode):
+#     """Determine whether --trace should be passed for this step."""
+#     step_lower = step_name.lower()
+#     if step_name in NO_TRACE_STEPS or "test" in step_lower or "lint" in step_lower or "vet" in step_lower:
+#         return None
+#     if step_name in DEEP_TRACE_STEPS or "build" in step_lower or "install" in step_lower:
+#         return "--trace" if mode == "deep" else None
+#     return "--trace"  # default: trace all other steps (fmt, tidy, vet, etc.)
+
+# def get_trace_flag(step_name, mode):
+#     return "--trace"  # 모든 step에 trace 강제 켜기
 
 
 def parse_attestation_timing(out_file):
@@ -274,16 +283,20 @@ def run_step(step_name, cmd, attestation_dir, mode, skip_set):
     if step_name in ("test", "go-test") or "test" in step_name.lower():
         subprocess.run(["go", "clean", "-testcache"], capture_output=True)
 
-    trace_flag = get_trace_flag(step_name, mode)
+    # trace_flag = get_trace_flag(step_name, mode)
 
+    # Add sudo and --ebpf to use the eBPF-based environment attestor.
     witness_cmd = [
+        "sudo",
         str(WITNESS), "run",
         "--step", step_name,
         "--signer-file-key-path", str(SIGNING_KEY),
         "--attestations", "environment",
+        "--trace",
+        "--ebpf",
     ]
-    if trace_flag:
-        witness_cmd.append(trace_flag)
+    # if trace_flag:
+    #     witness_cmd.append(trace_flag)
         
     cmd_parts = cmd.split()
     if cmd_parts and cmd_parts[0] == "make" and step_name != "test" and "test" not in step_name.lower():
@@ -376,6 +389,17 @@ def run_pipeline(project_dir, skip_targets, mode, prewarm=False):
     elif (project_dir / "pyproject.toml").exists():
         print("Detected: pyproject.toml")
         run_step("python-build", "python3 -m build", attestation_dir, mode, skip_set)
+
+    # Rust build
+    elif (project_dir / "Cargo.toml").exists():
+        print("Detected: Cargo.toml")
+        if prewarm:
+            print("Pre-warming Cargo cache...")
+            subprocess.run(["cargo", "fetch"], cwd=project_dir, capture_output=True)
+            print("Cargo cache ready.")
+        run_step("build", "cargo build --all", attestation_dir, mode, skip_set)
+        run_step("test", "cargo test --all", attestation_dir, mode, skip_set)
+        run_step("fmt", "cargo fmt --all -- --check", attestation_dir, mode, skip_set)
 
     else:
         print(f"ERROR: No recognized build system in {project_dir}")
